@@ -1,3 +1,5 @@
+import Btnicon from "./Btnicon/Btnicon";
+
 const Header = () => {
   return (
     <>
@@ -92,9 +94,6 @@ const Header = () => {
                         <a href="#">Tienda</a>
                       </li>
                       <li>
-                        <a href="#">Detalles</a>
-                      </li>
-                      <li>
                         <a href="#">Pagar</a>
                       </li>
                       <li>
@@ -130,24 +129,25 @@ const Header = () => {
                 </button>
               </form>
             </div>
-
-            <div class="favourite-area">
-              <a href="#">
-                <img src="assets/img/core-img/heart.svg" alt="" />
-              </a>
-            </div>
-
-            <div class="user-login-info">
-              <a href="#">
-                <img src="assets/img/core-img/user.svg" alt="" />
-              </a>
-            </div>
-
-            <div class="cart-area">
-              <a href="#" id="essenceCartBtn">
-                <img src="assets/img/core-img/bag.svg" alt="" /> <span>3</span>
-              </a>
-            </div>
+            <Btnicon
+              className="favourite-area"
+              href="#"
+              src="assets/img/core-img/heart.svg"
+              alternative="iconoFav"
+            />
+            <Btnicon
+              className="user-login-info"
+              href="#"
+              src="assets/img/core-img/user.svg"
+              alternative="iconoUser"
+            />
+            <Btnicon
+              className="cart-area"
+              href="#"
+              src="assets/img/core-img/bag.svg"
+              alternative="iconoCart"
+              span="3"
+            />
           </div>
         </div>
       </header>
