@@ -5,7 +5,7 @@ const Header = () => {
         <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
           <nav class="classy-navbar" id="essenceNav">
             <a class="nav-brand" href="#">
-              Jassa
+              Komorebi
             </a>
 
             <div class="classy-navbar-toggler">
@@ -27,10 +27,10 @@ const Header = () => {
               <div class="classynav">
                 <ul>
                   <li>
-                    <a href="#">Shop</a>
+                    <a href="#">Tienda</a>
                     <div class="megamenu">
                       <ul class="single-mega cn-col-4">
-                        <li class="title">Women's Collection</li>
+                        <li class="title">Coleccion para ellas</li>
                         <li>
                           <a href="#">Dresses</a>
                         </li>
@@ -48,7 +48,7 @@ const Header = () => {
                         </li>
                       </ul>
                       <ul class="single-mega cn-col-4">
-                        <li class="title">Men's Collection</li>
+                        <li class="title">Para ellos</li>
                         <li>
                           <a href="#">T-Shirts</a>
                         </li>
@@ -63,7 +63,7 @@ const Header = () => {
                         </li>
                       </ul>
                       <ul class="single-mega cn-col-4">
-                        <li class="title">Kid's Collection</li>
+                        <li class="title">Unisex</li>
                         <li>
                           <a href="#">Dresses</a>
                         </li>
@@ -86,28 +86,22 @@ const Header = () => {
                     <a href="#">Pages</a>
                     <ul class="dropdown">
                       <li>
-                        <a href="#">Home</a>
+                        <a href="#">Portada</a>
                       </li>
                       <li>
-                        <a href="#">Shop</a>
+                        <a href="#">Tienda</a>
                       </li>
                       <li>
-                        <a href="#">Product Details</a>
+                        <a href="#">Detalles</a>
                       </li>
                       <li>
-                        <a href="#">Checkout</a>
+                        <a href="#">Pagar</a>
                       </li>
                       <li>
                         <a href="#">Blog</a>
                       </li>
                       <li>
-                        <a href="#">Single Blog</a>
-                      </li>
-                      <li>
-                        <a href="#">Regular Page</a>
-                      </li>
-                      <li>
-                        <a href="#">Contact</a>
+                        <a href="#">Contacto</a>
                       </li>
                     </ul>
                   </li>
@@ -115,7 +109,7 @@ const Header = () => {
                     <a href="#">Blog</a>
                   </li>
                   <li>
-                    <a href="#">Contact</a>
+                    <a href="#">Contacto</a>
                   </li>
                 </ul>
               </div>
@@ -129,7 +123,7 @@ const Header = () => {
                   type="search"
                   name="search"
                   id="headerSearch"
-                  placeholder="Type for search"
+                  placeholder="Buscar..."
                 />
                 <button type="submit">
                   <i class="fa fa-search" aria-hidden="true"></i>
