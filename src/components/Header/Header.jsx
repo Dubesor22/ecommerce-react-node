@@ -122,7 +122,7 @@ const Header = () => {
                   type="search"
                   name="search"
                   id="headerSearch"
-                  placeholder="Buscar..."
+                  placeholder="Buscar"
                 />
                 <button type="submit">
                   <i class="fa fa-search" aria-hidden="true"></i>
