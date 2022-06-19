@@ -116,7 +116,7 @@ const Footer = () => {
             <div class="col-md-12 text-center">
               <p>
                 Copyright &copy; {year} All rights reserved | Made with{" 💖"} by{" "}
-                <a href="github.com/dubesor22" target="_blank">
+                <a href="https://github.com/Dubesor22/ecommerce-react-node" target="_blank">
                   David & Gabo
                 </a>
                 , distributed by{" "}
