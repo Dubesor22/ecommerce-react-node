@@ -1,15 +1,18 @@
+import React  from 'react';
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Sociallink({ href, toggle, placement, title, icon }) {
+export default function Sociallink({ href, title, icon }) {
   return (
     <>
       <a
         href={href}
-        data-toggle={toggle}
-        data-placement={placement}
+        data-toggle="tooltip"
+        data-placement="top"
         title={title}
-      ></a>
-      <FontAwesomeIcon icon={icon} />
+      >
+        <FontAwesomeIcon icon={icon}/>
+      </a>
     </>
   );
 }

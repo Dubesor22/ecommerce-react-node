@@ -1,7 +1,12 @@
 import React from "react";
 import Sociallink from "./Sociallink/Sociallink";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faInstagram, faTwitter, faPinterest, faYoutube } from "@fortawesome/free-brands-svg-icons"
 
 const Footer = () => {
+  const icon = <FontAwesomeIcon icon={faFacebook} />
+
+  const year =  new Date().getFullYear();
   return (
     <>
       <footer class="footer_area clearfix">
@@ -79,52 +84,29 @@ const Footer = () => {
                 <div class="footer_social_area">
                   <Sociallink
                     href="#"
-                    data-toggle="tooltip"
-                    data-placement="top"
                     title="Facebook"
-                    icon="fa fa-facebook"
+                    icon={faFacebook}
                   />
-
-                  {/* <a
+                  <Sociallink
                     href="#"
-                    data-toggle="tooltip"
-                    data-placement="top"
-                    title="Facebook"
-                  >
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                  </a> */}
-                  <a
-                    href="#"
-                    data-toggle="tooltip"
-                    data-placement="top"
                     title="Instagram"
-                  >
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                  </a>
-                  <a
+                    icon={faInstagram}
+                  />
+                  <Sociallink
                     href="#"
-                    data-toggle="tooltip"
-                    data-placement="top"
                     title="Twitter"
-                  >
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </a>
-                  <a
+                    icon={faTwitter}
+                  />
+                  <Sociallink
                     href="#"
-                    data-toggle="tooltip"
-                    data-placement="top"
                     title="Pinterest"
-                  >
-                    <i class="fa fa-pinterest" aria-hidden="true"></i>
-                  </a>
-                  <a
+                    icon={faPinterest}
+                  />
+                  <Sociallink
                     href="#"
-                    data-toggle="tooltip"
-                    data-placement="top"
-                    title="Youtube"
-                  >
-                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                  </a>
+                    title="YouTube"
+                    icon={faYoutube}
+                  />
                 </div>
               </div>
             </div>
@@ -133,7 +115,7 @@ const Footer = () => {
           <div class="row mt-5">
             <div class="col-md-12 text-center">
               <p>
-                Copyright &copy;2021 All rights reserved | Made with{" 💖"}by{" "}
+                Copyright &copy; {year} All rights reserved | Made with{" 💖"} by{" "}
                 <a href="github.com/dubesor22" target="_blank">
                   David & Gabo
                 </a>

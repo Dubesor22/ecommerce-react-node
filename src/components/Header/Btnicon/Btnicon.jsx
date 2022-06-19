@@ -1,3 +1,5 @@
+import React  from 'react';
+
 export default function Btnicon({ src, className, href, span, alternative }) {
   return (
     <>
