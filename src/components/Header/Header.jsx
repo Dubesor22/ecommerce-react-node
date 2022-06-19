@@ -85,7 +85,7 @@ const Header = () => {
                     </div>
                   </li>
                   <li>
-                    <a href="#">Pages</a>
+                    <a href="#">Menu</a>
                     <ul class="dropdown">
                       <li>
                         <a href="#">Portada</a>
