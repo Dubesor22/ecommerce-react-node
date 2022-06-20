@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Main = () => {
   return (
@@ -26,11 +27,11 @@ const Main = () => {
                   <span class="product-remove">
                     <i class="fa fa-close" aria-hidden="true"></i>
                   </span>
-                  <span class="badge">Mango</span>
+                  <span class="badge">Acero</span>
                   <h6>Button Through Strap Mini Dress</h6>
                   <p class="size">Size: S</p>
                   <p class="color">Color: Red</p>
-                  <p class="price">$45.00</p>
+                  <p class="price">45.00</p>
                 </div>
               </a>
             </div>
@@ -96,7 +97,7 @@ const Main = () => {
             </ul>
             <div class="checkout-btn mt-100">
               <a href="#" class="btn essence-btn">
-                check out
+                Finalizar Compra
               </a>
             </div>
           </div>
@@ -142,7 +143,7 @@ const Main = () => {
                 style={{ backgroundImage: "url(assets/img/bg-img/bg-3.jpg)" }}
               >
                 <div class="catagory-content">
-                  <a href="#">Piercing</a>
+                  <Link to="/products">Piercing</Link>
                 </div>
               </div>
             </div>
