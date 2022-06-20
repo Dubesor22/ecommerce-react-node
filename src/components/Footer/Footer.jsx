@@ -1,10 +1,8 @@
 import React from "react";
 import Sociallink from "./Sociallink/Sociallink";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram, faTwitter, faPinterest, faYoutube } from "@fortawesome/free-brands-svg-icons"
 
 const Footer = () => {
-  const icon = <FontAwesomeIcon icon={faFacebook} />
 
   const year =  new Date().getFullYear();
   return (
