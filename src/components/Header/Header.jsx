@@ -1,4 +1,5 @@
-import React  from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 import Btnicon from "./Btnicon/Btnicon";
 
@@ -8,9 +9,9 @@ const Header = () => {
       <header class="header_area">
         <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
           <nav class="classy-navbar" id="essenceNav">
-            <a class="nav-brand" href="#">
+            <Link class="nav-brand" to="/">
               Komorebi
-            </a>
+            </Link>
 
             <div class="classy-navbar-toggler">
               <span class="navbarToggler">
@@ -31,54 +32,44 @@ const Header = () => {
               <div class="classynav">
                 <ul>
                   <li>
-                    <a href="#">Tienda</a>
+                    <Link to="/products">Tienda</Link>
                     <div class="megamenu">
                       <ul class="single-mega cn-col-4">
                         <li class="title">Coleccion para ellas</li>
                         <li>
-                          <a href="#">Dresses</a>
+                          <a href="#">
+                            <span>Titanio</span>
+                          </a>
                         </li>
                         <li>
-                          <a href="#">Blouses &amp; Shirts</a>
+                          <a href="#">Oro</a>
                         </li>
                         <li>
-                          <a href="#">T-shirts</a>
-                        </li>
-                        <li>
-                          <a href="#">Rompers</a>
-                        </li>
-                        <li>
-                          <a href="#">Bras &amp; Panties</a>
+                          <a href="#">Acero</a>
                         </li>
                       </ul>
                       <ul class="single-mega cn-col-4">
                         <li class="title">Para ellos</li>
                         <li>
-                          <a href="#">T-Shirts</a>
+                          <a href="#">Titanio</a>
                         </li>
                         <li>
-                          <a href="#">Polo</a>
+                          <a href="#">Oro</a>
                         </li>
                         <li>
-                          <a href="#">Shirts</a>
-                        </li>
-                        <li>
-                          <a href="#">Jackets</a>
+                          <a href="#">Acero</a>
                         </li>
                       </ul>
                       <ul class="single-mega cn-col-4">
                         <li class="title">Unisex</li>
                         <li>
-                          <a href="#">Dresses</a>
+                          <a href="#">Titanio</a>
                         </li>
                         <li>
-                          <a href="#">Shirts</a>
+                          <a href="#">Oro</a>
                         </li>
                         <li>
-                          <a href="#">T-shirts</a>
-                        </li>
-                        <li>
-                          <a href="#">Jackets</a>
+                          <a href="#">Acero</a>
                         </li>
                       </ul>
                       <div class="single-mega cn-col-4">
