@@ -6,7 +6,7 @@ import Main from "./components/Main/Main";
 import Products from "./components/Products/Products";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { GlobalProvider } from "./context/GlobalState";
-import Loguin from "./components/Loguin/Loguin";
+import Login from "./components/Login/Login";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/loguin" element={<Loguin />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
           <Footer />
         </GlobalProvider>

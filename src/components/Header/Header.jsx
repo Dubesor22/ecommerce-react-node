@@ -33,7 +33,7 @@ const Header = () => {
                 <ul>
                   <li>
                     <Link to="/products">Tienda</Link>
-                    <div class="megamenu">
+                    {/* <div class="megamenu">
                       <ul class="single-mega cn-col-4">
                         <li class="title">Coleccion para ellas</li>
                         <li>
@@ -75,16 +75,16 @@ const Header = () => {
                       <div class="single-mega cn-col-4">
                         <img src="assets/img/bg-img/bg-6.jpg" alt="" />
                       </div>
-                    </div>
+                    </div> */}
                   </li>
                   <li>
                     <a href="#">Menu</a>
                     <ul class="dropdown">
                       <li>
-                        <a href="#">Portada</a>
+                        <Link to="/">Potrtada</Link>
                       </li>
                       <li>
-                        <a href="#">Tienda</a>
+                        <Link to="/products">Tienda</Link>
                       </li>
                       <li>
                         <a href="#">Pagar</a>
@@ -130,7 +130,7 @@ const Header = () => {
             />
             <Btnicon
               className="user-login-info"
-              href="#"
+              href="/login"
               src="assets/img/core-img/user.svg"
               alternative="iconoUser"
             />
