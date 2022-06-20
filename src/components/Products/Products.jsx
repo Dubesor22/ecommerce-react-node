@@ -10,8 +10,8 @@ const Products = () => {
 
   if (products.length <= 0) {
     return (
-      <div class="spinner-border text-dark spin" role="status">
-        <span class="sr-only">.</span>
+      <div className="spinner-border text-dark spin" role="status">
+        <span className="sr-only">.</span>
       </div>
     );
   }
@@ -19,13 +19,13 @@ const Products = () => {
   const product = products.map((product) => {
     return (
       <div className="card card-product container-sm">
-        <div class="card-body" key={product.id}>
-          <h3 class="card-title">{product.name}</h3>
+        <div className="card-body" key={product.id}>
+          <h3 className="card-title">{product.name}</h3>
           <img src={product.image} alt={product.name} />
-          <p class="card-text">{product.description}</p>
-          <p class="card-text">{product.price} €</p>
+          <p className="card-text">{product.description}</p>
+          <p className="card-text">{product.price} €</p>
 
-          <a class="btn btn-primary" href={product.url}>
+          <a className="btn btn-primary" href={product.url}>
             Detalles...
           </a>
         </div>

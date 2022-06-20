@@ -6,36 +6,36 @@ import Btnicon from "./Btnicon/Btnicon";
 const Header = () => {
   return (
     <>
-      <header class="header_area">
-        <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
-          <nav class="classy-navbar" id="essenceNav">
-            <Link class="nav-brand" to="/">
+      <header className="header_area">
+        <div className="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
+          <nav className="classy-navbar" id="essenceNav">
+            <Link className="nav-brand" to="/">
               Komorebi
             </Link>
 
-            <div class="classy-navbar-toggler">
-              <span class="navbarToggler">
+            <div className="classy-navbar-toggler">
+              <span className="navbarToggler">
                 <span></span>
                 <span></span>
                 <span></span>
               </span>
             </div>
 
-            <div class="classy-menu">
-              <div class="classycloseIcon">
-                <div class="cross-wrap">
-                  <span class="top"></span>
-                  <span class="bottom"></span>
+            <div className="classy-menu">
+              <div className="classycloseIcon">
+                <div className="cross-wrap">
+                  <span className="top"></span>
+                  <span className="bottom"></span>
                 </div>
               </div>
 
-              <div class="classynav">
+              <div className="classynav">
                 <ul>
                   <li>
                     <Link to="/products">Tienda</Link>
-                    {/* <div class="megamenu">
-                      <ul class="single-mega cn-col-4">
-                        <li class="title">Coleccion para ellas</li>
+                    {/* <div className="megamenu">
+                      <ul className="single-mega cn-col-4">
+                        <li className="title">Coleccion para ellas</li>
                         <li>
                           <a href="#">
                             <span>Titanio</span>
@@ -48,8 +48,8 @@ const Header = () => {
                           <a href="#">Acero</a>
                         </li>
                       </ul>
-                      <ul class="single-mega cn-col-4">
-                        <li class="title">Para ellos</li>
+                      <ul className="single-mega cn-col-4">
+                        <li className="title">Para ellos</li>
                         <li>
                           <a href="#">Titanio</a>
                         </li>
@@ -60,8 +60,8 @@ const Header = () => {
                           <a href="#">Acero</a>
                         </li>
                       </ul>
-                      <ul class="single-mega cn-col-4">
-                        <li class="title">Unisex</li>
+                      <ul className="single-mega cn-col-4">
+                        <li className="title">Unisex</li>
                         <li>
                           <a href="#">Titanio</a>
                         </li>
@@ -72,14 +72,14 @@ const Header = () => {
                           <a href="#">Acero</a>
                         </li>
                       </ul>
-                      <div class="single-mega cn-col-4">
+                      <div className="single-mega cn-col-4">
                         <img src="assets/img/bg-img/bg-6.jpg" alt="" />
                       </div>
                     </div> */}
                   </li>
                   <li>
                     <a href="#">Menu</a>
-                    <ul class="dropdown">
+                    <ul className="dropdown">
                       <li>
                         <Link to="/">Potrtada</Link>
                       </li>
@@ -108,8 +108,8 @@ const Header = () => {
             </div>
           </nav>
 
-          <div class="header-meta d-flex clearfix justify-content-end">
-            <div class="search-area">
+          <div className="header-meta d-flex clearfix justify-content-end">
+            <div className="search-area">
               <form action="#" method="post">
                 <input
                   type="search"
@@ -118,7 +118,7 @@ const Header = () => {
                   placeholder="Buscar..."
                 />
                 <button type="submit">
-                  <i class="fa fa-search" aria-hidden="true"></i>
+                  <i className="fa fa-search" aria-hidden="true"></i>
                 </button>
               </form>
             </div>
