@@ -6,7 +6,6 @@ const Products = () => {
   const { products, getProducts } = useContext(GlobalContext);
   useEffect(() => {
     getProducts();
-    console.log("holiiiiii " + getProducts());
   }, []);
 
   if (products.length <= 0) {
@@ -18,7 +17,6 @@ const Products = () => {
   }
 
   const product = products.map((product) => {
-    console.log("holiiiiii " + product);
     return (
       <div className="card card-product container-sm">
         <div class="card-body" key={product.id}>

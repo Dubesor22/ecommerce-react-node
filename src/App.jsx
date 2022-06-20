@@ -6,6 +6,7 @@ import Main from "./components/Main/Main";
 import Products from "./components/Products/Products";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { GlobalProvider } from "./context/GlobalState";
+import Loguin from "./components/Loguin/Loguin";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/loguin" element={<Loguin />} />
           </Routes>
           <Footer />
         </GlobalProvider>
