@@ -36,7 +36,25 @@ const Products = () => {
   return (
     <>
       <h2>Productos disponibles</h2>
-      <div className="group">{product}</div>
+      <div className="container-fluid container-products">
+        <div className="side-bar">
+          <div className="side-bar-item">
+            <h3>Categorias</h3>
+            <ul className="list-group">
+              <li className="list-group-item">
+                <a href="#">Titanio</a>
+              </li>
+              <li className="list-group-item">
+                <a href="#">Oro</a>
+              </li>
+              <li className="list-group-item">
+                <a href="#">Acero</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="group">{product}</div>
+      </div>
     </>
   );
 };

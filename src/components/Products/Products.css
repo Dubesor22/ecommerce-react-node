@@ -35,3 +35,10 @@
   right: 0;
   top: 50%;
 }
+
+.container-products {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  justify-content: space-between;
+}

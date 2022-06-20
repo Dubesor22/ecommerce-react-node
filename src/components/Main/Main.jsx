@@ -132,7 +132,7 @@ const Main = () => {
                 style={{ backgroundImage: "url(assets/img/bg-img/bg-2.jpg)" }}
               >
                 <div class="catagory-content">
-                  <a href="#">Tatuajes</a>
+                  <Link to="#">Tatuajes</Link>
                 </div>
               </div>
             </div>
@@ -154,7 +154,7 @@ const Main = () => {
                 style={{ backgroundImage: "url(assets/img/bg-img/bg-4.jpg)" }}
               >
                 <div class="catagory-content">
-                  <a href="#">microBlading</a>
+                  <Link to="#">microBlading</Link>
                 </div>
               </div>
             </div>
@@ -174,9 +174,9 @@ const Main = () => {
                   <div class="cta--text">
                     <h6>-60%</h6>
                     <h2>Lanzamiento</h2>
-                    <a href="#" class="btn essence-btn">
+                    <Link to="#" class="btn essence-btn">
                       Comprar
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
