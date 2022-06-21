@@ -16,7 +16,7 @@ export default function ProfilePage() {
                             type="text"
                             className="inputProfile"
                             placeholder="Username"
-                            value="@SofiLaProfe"
+                            defaultValue="@SofiLaProfe"
                             id="username"
                             required
                             />
@@ -30,7 +30,7 @@ export default function ProfilePage() {
                             type="text"
                             className="inputProfile"
                             placeholder="Nombre"
-                            value="Sofía"
+                            defaultValue="Sofía"
                             id="name"
                             required
                             />
@@ -40,7 +40,7 @@ export default function ProfilePage() {
                             type="text"
                             className="inputProfile"
                             placeholder="Apellido"
-                            value=""
+                            defaultValue=""
                             id="surname"
                             />
                         </div>
@@ -51,7 +51,7 @@ export default function ProfilePage() {
                             type="password"
                             className="inputProfile"
                             placeholder="New password"
-                            value=""
+                            defaultValue=""
                             id="password"
                             />
                         </div>
@@ -60,7 +60,7 @@ export default function ProfilePage() {
                             type="password"
                             className="inputProfile"
                             placeholder="Confirm new password"
-                            value=""
+                            defaultValue=""
                             id="confirmed-pasword"
                             />
                         </div>
@@ -71,7 +71,7 @@ export default function ProfilePage() {
                             type="email"
                             className="inputProfile"
                             placeholder="Email"
-                            value="sofia@gmail.com"
+                            defaultValue="sofia@gmail.com"
                             id="email"
                             required
                             />
@@ -81,7 +81,7 @@ export default function ProfilePage() {
                             type="tel"
                             className="inputProfile"
                             placeholder="Phone"
-                            value=""
+                            defaultValue=""
                             id="tel"
                             pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
                             />
@@ -93,7 +93,7 @@ export default function ProfilePage() {
                             type="text"
                             className="inputProfile"
                             placeholder="Address"
-                            value=""
+                            defaultValue=""
                             id="adress"
                             />
                         </div>
@@ -106,7 +106,7 @@ export default function ProfilePage() {
                             type="text"
                             className="inputProfile"
                             placeholder="Ciudad"
-                            value=""
+                            defaultValue=""
                             id="name"
                             required
                             />
@@ -116,7 +116,7 @@ export default function ProfilePage() {
                             type="text"
                             className="inputProfile"
                             placeholder="Provincia"
-                            value=""
+                            defaultValue=""
                             id="surname"
                             />
                         </div>
@@ -125,7 +125,7 @@ export default function ProfilePage() {
                             type="text"
                             className="inputProfile"
                             placeholder="Código Postal"
-                            value=""
+                            defaultValue=""
                             id="surname"
                             />
                         </div>
@@ -133,7 +133,7 @@ export default function ProfilePage() {
                     </div>
                     <input
                     type="submit"
-                    value="Guardar"
+                    defaultValue="Guardar"
                     className="btn btn-block btn-primary"
                   />
                 </div>
