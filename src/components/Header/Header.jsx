@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Btnicon from "./Btnicon/Btnicon";
 import Cart from "./Cart/Cart";
 import OutsideClickHandler from 'react-outside-click-handler';
+import DarkMode from "./DarkMode/DarkMode.tsx";
 
 export default function Header(){
   const token = localStorage.getItem('user_session_token');
@@ -115,6 +116,7 @@ export default function Header(){
                     <a href="#">Contacto</a>
                   </li>
                 </ul>
+              <DarkMode/>
               </div>
             </div>
           </nav>
