@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Login.css";
 
 export default function Login(){
@@ -14,7 +15,7 @@ export default function Login(){
                   Entra en <strong>Komorebi</strong>
                 </h3>
                 <p className="mb-4">
-                  Date de alta y pertenece a esta exclusiva tienda de Piercings
+                  Entra y pertenece a esta exclusiva tienda de Piercings
                   con envio a toda España.
                 </p>
                 <form action="#" method="post">
@@ -25,6 +26,7 @@ export default function Login(){
                       className="form-control"
                       placeholder="tu usuario"
                       id="username"
+                      required
                     />
                   </div>
                   <div className="form-group last mb-3">
@@ -34,6 +36,7 @@ export default function Login(){
                       className="form-control"
                       placeholder="tu secretito"
                       id="password"
+                      required
                     />
                   </div>
 
@@ -55,6 +58,9 @@ export default function Login(){
                     value="Log In"
                     className="btn btn-block btn-primary"
                   />
+                  <span className="ml-auto align-items-center">
+                        ¿Todavía no eres miembro? <Link to="/register">Registrate aquí</Link>.
+                    </span>
                 </form>
               </div>
             </div>
