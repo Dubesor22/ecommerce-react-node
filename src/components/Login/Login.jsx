@@ -1,7 +1,7 @@
 import React from "react";
 import "./Login.css";
 
-const Login = () => {
+export default function Login(){
   return (
     <>
       <div className="d-lg-flex half">
@@ -64,5 +64,3 @@ const Login = () => {
     </>
   );
 };
-
-export default Login;

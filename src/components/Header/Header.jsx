@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import Btnicon from "./Btnicon/Btnicon";
 
-const Header = () => {
+export default function Header(){
   return (
     <>
       <header className="header_area">
@@ -122,30 +122,12 @@ const Header = () => {
                 </button>
               </form>
             </div>
-            <Btnicon
-              className="favourite-area"
-              href="#"
-              src="assets/img/core-img/heart.svg"
-              alternative="iconoFav"
-            />
-            <Btnicon
-              className="user-login-info"
-              href="/login"
-              src="assets/img/core-img/user.svg"
-              alternative="iconoUser"
-            />
-            <Btnicon
-              className="cart-area"
-              href="#"
-              src="assets/img/core-img/bag.svg"
-              alternative="iconoCart"
-              span="3"
-            />
+            <Btnicon className="favourite-area" href="#" src="assets/img/core-img/heart.svg" alternative="iconoFav"/>
+            <Btnicon className="user-login-info" href="/login" src="assets/img/core-img/user.svg" alternative="iconoUser"/>
+            <Btnicon className="cart-area" href="#" src="assets/img/core-img/bag.svg" alternative="iconoCart" span="3"/>
           </div>
         </div>
       </header>
     </>
   );
 };
-
-export default Header;

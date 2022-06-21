@@ -2,7 +2,7 @@ import React from "react";
 import Sociallink from "./Sociallink/Sociallink";
 import { faFacebook, faInstagram, faTwitter, faPinterest, faYoutube } from "@fortawesome/free-brands-svg-icons"
 
-const Footer = () => {
+export default function Footer(){
 
   const year =  new Date().getFullYear();
   return (
@@ -80,31 +80,11 @@ const Footer = () => {
             <div className="col-12 col-md-6">
               <div className="single_widget_area">
                 <div className="footer_social_area">
-                  <Sociallink
-                    href="#"
-                    title="Facebook"
-                    icon={faFacebook}
-                  />
-                  <Sociallink
-                    href="#"
-                    title="Instagram"
-                    icon={faInstagram}
-                  />
-                  <Sociallink
-                    href="#"
-                    title="Twitter"
-                    icon={faTwitter}
-                  />
-                  <Sociallink
-                    href="#"
-                    title="Pinterest"
-                    icon={faPinterest}
-                  />
-                  <Sociallink
-                    href="#"
-                    title="YouTube"
-                    icon={faYoutube}
-                  />
+                  <Sociallink href="#" title="Facebook" icon={faFacebook}/>
+                  <Sociallink href="#" title="Instagram" icon={faInstagram}/>
+                  <Sociallink href="#" title="Twitter" icon={faTwitter}/>
+                  <Sociallink href="#" title="Pinterest" icon={faPinterest}/>
+                  <Sociallink href="#" title="YouTube" icon={faYoutube}/>
                 </div>
               </div>
             </div>
@@ -129,5 +109,3 @@ const Footer = () => {
     </>
   );
 };
-
-export default Footer;

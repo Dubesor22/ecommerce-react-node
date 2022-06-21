@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import "./Products.css";
 
-const Products = () => {
+export default function Products(){
   const { products, getProducts } = useContext(GlobalContext);
   useEffect(() => {
     getProducts();
@@ -58,5 +58,3 @@ const Products = () => {
     </>
   );
 };
-
-export default Products;

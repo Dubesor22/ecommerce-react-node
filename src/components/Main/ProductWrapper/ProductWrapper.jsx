@@ -50,4 +50,3 @@ export default function ProductWrapper({image1, image2, nuevo, offer, href1, nam
     </>
   )
 }
-

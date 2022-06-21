@@ -8,7 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { GlobalProvider } from "./context/GlobalState";
 import Login from "./components/Login/Login";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <BrowserRouter>
@@ -25,5 +25,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

@@ -4,7 +4,7 @@ import CartItem from "./CartItem/CartItem";
 import LinkP from "./Link/LinkP";
 import ProductWrapper from "./ProductWrapper/ProductWrapper";
 
-const Main = () => {
+export default function Main(){
   return (
     <div>
       <div className="cart-bg-overlay"></div>
@@ -127,5 +127,3 @@ const Main = () => {
     </div>
   );
 };
-
-export default Main;
