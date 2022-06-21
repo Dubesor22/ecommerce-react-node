@@ -60,7 +60,7 @@ export default function ProfilePage() {
                         </div>
                         
                     </div>
-                    <input type="submit" defaultValue="Guardar" className="btn btn-block btn-primary"/>
+                    <input type="submit" value="Guardar" className="btn btn-block btn-primary padding"/>
                 </div>
             </div>
         </div>

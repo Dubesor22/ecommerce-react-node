@@ -8,9 +8,9 @@
 html[data-theme="dark"] {
     filter: invert(1) hue-rotate(180deg);
 }
-html[data-theme="dark"] img{
+/* html[data-theme="dark"] img{
     filter: invert(1) hue-rotate(180deg);
-}
+} */
 html {
     transition: color 300ms, background-color 300ms;
 }
