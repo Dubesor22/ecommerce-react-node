@@ -7,16 +7,16 @@ const Footer = () => {
   const year =  new Date().getFullYear();
   return (
     <>
-      <footer class="footer_area clearfix">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-md-6">
-              <div class="single_widget_area d-flex mb-30">
-                <div class="footer-logo mr-50">
+      <footer className="footer_area clearfix">
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-md-6">
+              <div className="single_widget_area d-flex mb-30">
+                <div className="footer-logo mr-50">
                   <a href="#">Komorebi</a>
                 </div>
 
-                <div class="footer_menu">
+                <div className="footer_menu">
                   <ul>
                     <li>
                       <a href="#">Tienda</a>
@@ -29,9 +29,9 @@ const Footer = () => {
               </div>
             </div>
 
-            <div class="col-12 col-md-6">
-              <div class="single_widget_area mb-30">
-                <ul class="footer_widget_menu">
+            <div className="col-12 col-md-6">
+              <div className="single_widget_area mb-30">
+                <ul className="footer_widget_menu">
                   <li>
                     <a href="#">Estado del pedido</a>
                   </li>
@@ -55,31 +55,31 @@ const Footer = () => {
             </div>
           </div>
 
-          <div class="row align-items-end">
-            <div class="col-12 col-md-6">
-              <div class="single_widget_area">
-                <div class="footer_heading mb-30">
+          <div className="row align-items-end">
+            <div className="col-12 col-md-6">
+              <div className="single_widget_area">
+                <div className="footer_heading mb-30">
                   <h6>Subscribete</h6>
                 </div>
-                <div class="subscribtion_form">
+                <div className="subscribtion_form">
                   <form>
                     <input
                       type="email"
                       name="mail"
-                      class="mail"
+                      className="mail"
                       placeholder="Your email here"
                     />
-                    <button type="button" class="submit">
-                      <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    <button type="button" className="submit">
+                      <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
                     </button>
                   </form>
                 </div>
               </div>
             </div>
 
-            <div class="col-12 col-md-6">
-              <div class="single_widget_area">
-                <div class="footer_social_area">
+            <div className="col-12 col-md-6">
+              <div className="single_widget_area">
+                <div className="footer_social_area">
                   <Sociallink
                     href="#"
                     title="Facebook"
@@ -110,8 +110,8 @@ const Footer = () => {
             </div>
           </div>
 
-          <div class="row mt-5">
-            <div class="col-md-12 text-center">
+          <div className="row mt-5">
+            <div className="col-md-12 text-center">
               <p>
                 Copyright &copy; {year} All rights reserved | Made with{" 💖"} by{" "}
                 <a href="https://github.com/Dubesor22/ecommerce-react-node" target="_blank">
