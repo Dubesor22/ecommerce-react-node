@@ -1,6 +1,7 @@
 import React from 'react'
 import CartItem from '../CartItem/CartItem'
 import Btnicon from '../Btnicon/Btnicon'
+import "./Cart.css";
 
 export default function Cart(){
   return (
@@ -16,7 +17,6 @@ export default function Cart(){
                   <CartItem href="#" src="assets/img/product-img/product-2.jpg" badge="Mango" item="Button Through Strap Mini Dress" size="S" color="Red" price="45.00"/>
                   <CartItem href="#" src="assets/img/product-img/product-3.jpg" badge="Mango" item="Button Through Strap Mini Dress" size="S" color="Red" price="45.00"/>
                 </div>
-      
                 <div className="cart-amount-summary">
                   <h2>Summary</h2>
                   <ul className="summary-table">
@@ -34,7 +34,7 @@ export default function Cart(){
                     </li>
                   </ul>
                   <div className="checkout-btn mt-100">
-                    <a href="#" className="btn essence-btn">
+                    <a href="#" className="btn essence-btn" id="btnWrong">
                       Finalizar Compra
                     </a>
                   </div>
