@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CartItem from "./CartItem/CartItem";
+import LinkP from "./Link/LinkP";
+import ProductWrapper from "./ProductWrapper/ProductWrapper";
 
 const Main = () => {
   return (
@@ -15,68 +18,9 @@ const Main = () => {
 
         <div className="cart-content d-flex">
           <div className="cart-list">
-            <div className="single-cart-item">
-              <a href="#" className="product-image">
-                <img
-                  src="assets/img/product-img/product-1.jpg"
-                  className="cart-thumb"
-                  alt=""
-                />
-
-                <div className="cart-item-desc">
-                  <span className="product-remove">
-                    <i className="fa fa-close" aria-hidden="true"></i>
-                  </span>
-                  <span className="badge">Acero</span>
-                  <h6>Button Through Strap Mini Dress</h6>
-                  <p className="size">Size: S</p>
-                  <p className="color">Color: Red</p>
-                  <p className="price">45.00</p>
-                </div>
-              </a>
-            </div>
-
-            <div className="single-cart-item">
-              <a href="#" className="product-image">
-                <img
-                  src="assets/img/product-img/product-2.jpg"
-                  className="cart-thumb"
-                  alt=""
-                />
-
-                <div className="cart-item-desc">
-                  <span className="product-remove">
-                    <i className="fa fa-close" aria-hidden="true"></i>
-                  </span>
-                  <span className="badge">Mango</span>
-                  <h6>Button Through Strap Mini Dress</h6>
-                  <p className="size">Size: S</p>
-                  <p className="color">Color: Red</p>
-                  <p className="price">$45.00</p>
-                </div>
-              </a>
-            </div>
-
-            <div className="single-cart-item">
-              <a href="#" className="product-image">
-                <img
-                  src="assets/img/product-img/product-3.jpg"
-                  className="cart-thumb"
-                  alt=""
-                />
-
-                <div className="cart-item-desc">
-                  <span className="product-remove">
-                    <i className="fa fa-close" aria-hidden="true"></i>
-                  </span>
-                  <span className="badge">Mango</span>
-                  <h6>Button Through Strap Mini Dress</h6>
-                  <p className="size">Size: S</p>
-                  <p className="color">Color: Red</p>
-                  <p className="price">45.00</p>
-                </div>
-              </a>
-            </div>
+            <CartItem href="#" src="assets/img/product-img/product-1.jpg" badge="Acero" item="Button Through Strap Mini Dress" size="S" color="Red" price="45.00"/>
+            <CartItem href="#" src="assets/img/product-img/product-2.jpg" badge="Mango" item="Button Through Strap Mini Dress" size="S" color="Red" price="45.00"/>
+            <CartItem href="#" src="assets/img/product-img/product-3.jpg" badge="Mango" item="Button Through Strap Mini Dress" size="S" color="Red" price="45.00"/>
           </div>
 
           <div className="cart-amount-summary">
@@ -126,38 +70,9 @@ const Main = () => {
       <div className="top_catagory_area section-padding-80 clearfix">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-12 col-sm-6 col-md-4">
-              <div
-                className="single_catagory_area d-flex align-items-center justify-content-center bg-img"
-                style={{ backgroundImage: "url(assets/img/bg-img/bg-2.jpg)" }}
-              >
-                <div className="catagory-content">
-                  <Link to="#">Tatuajes</Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-12 col-sm-6 col-md-4">
-              <div
-                className="single_catagory_area d-flex align-items-center justify-content-center bg-img"
-                style={{ backgroundImage: "url(assets/img/bg-img/bg-3.jpg)" }}
-              >
-                <div className="catagory-content">
-                  <Link to="/products">Piercing</Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-12 col-sm-6 col-md-4">
-              <div
-                className="single_catagory_area d-flex align-items-center justify-content-center bg-img"
-                style={{ backgroundImage: "url(assets/img/bg-img/bg-4.jpg)" }}
-              >
-                <div className="catagory-content">
-                  <Link to="#">microBlading</Link>
-                </div>
-              </div>
-            </div>
+            <LinkP image="url(assets/img/bg-img/bg-2.jpg)" href="#" linkTitle="Tatuajes"/>
+            <LinkP image="url(assets/img/bg-img/bg-3.jpg)" href="#" linkTitle="Piercing"/>
+            <LinkP image="url(assets/img/bg-img/bg-4.jpg)" href="#" linkTitle="microBlading"/>
           </div>
         </div>
       </div>
@@ -200,143 +115,10 @@ const Main = () => {
           <div className="row">
             <div className="col-12">
               <div className="popular-products-slides owl-carousel">
-                <div className="single-product-wrapper">
-                  <div className="product-img">
-                    <img src="assets/img/product-img/product-1.jpg" alt="" />
-
-                    <img
-                      className="hover-img"
-                      src="assets/img/product-img/product-2.jpg"
-                      alt=""
-                    />
-
-                    <div className="product-favourite">
-                      <a href="#" className="favme fa fa-heart"></a>
-                    </div>
-                  </div>
-
-                  <div className="product-description">
-                    <span>Disenyo oreja</span>
-                    <a href="#">
-                      <h6>Plata de ley</h6>
-                    </a>
-                    <p className="product-price">$80.00</p>
-
-                    <div className="hover-content">
-                      <div className="add-to-cart-btn">
-                        <a href="#" className="btn essence-btn">
-                          Sumar al Carro
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="single-product-wrapper">
-                  <div className="product-img">
-                    <img src="assets/img/product-img/product-2.jpg" alt="" />
-
-                    <img
-                      className="hover-img"
-                      src="assets/img/product-img/product-3.jpg"
-                      alt=""
-                    />
-
-                    <div className="product-favourite">
-                      <a href="#" className="favme fa fa-heart"></a>
-                    </div>
-                  </div>
-
-                  <div className="product-description">
-                    <span>Trabus</span>
-                    <a href="#">
-                      <h6>Oro</h6>
-                    </a>
-                    <p className="product-price">80.00</p>
-
-                    <div className="hover-content">
-                      <div className="add-to-cart-btn">
-                        <a href="#" className="btn essence-btn">
-                          Sumar al Carro
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="single-product-wrapper">
-                  <div className="product-img">
-                    <img src="assets/img/product-img/product-3.jpg" alt="" />
-
-                    <img
-                      className="hover-img"
-                      src="assets/img/product-img/product-4.jpg"
-                      alt=""
-                    />
-
-                    <div className="product-badge offer-badge">
-                      <span>-30%</span>
-                    </div>
-
-                    <div className="product-favourite">
-                      <a href="#" className="favme fa fa-heart"></a>
-                    </div>
-                  </div>
-
-                  <div className="product-description">
-                    <span>Conch</span>
-                    <a href="#">
-                      <h6>Titanio</h6>
-                    </a>
-                    <p className="product-price">
-                      <span className="old-price">75.00</span> 55.00
-                    </p>
-
-                    <div className="hover-content">
-                      <div className="add-to-cart-btn">
-                        <a href="#" className="btn essence-btn">
-                          Sumar al Carro
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="single-product-wrapper">
-                  <div className="product-img">
-                    <img src="assets/img/product-img/product-4.jpg" alt="" />
-
-                    <img
-                      className="hover-img"
-                      src="assets/img/product-img/product-5.jpg"
-                      alt=""
-                    />
-
-                    <div className="product-badge new-badge">
-                      <span>Nuevo</span>
-                    </div>
-
-                    <div className="product-favourite">
-                      <a href="#" className="favme fa fa-heart"></a>
-                    </div>
-                  </div>
-
-                  <div className="product-description">
-                    <span>Titanio</span>
-                    <a href="#">
-                      <h6>Helix</h6>
-                    </a>
-                    <p className="product-price">30 Euros</p>
-
-                    <div className="hover-content">
-                      <div className="add-to-cart-btn">
-                        <a href="#" className="btn essence-btn">
-                          Sumar al Carro
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <ProductWrapper image1="assets/img/product-img/product-1.jpg" image2="assets/img/product-img/product-2.jpg" href1="#" name="Disenyo oreja" href2="#" material="Plata de ley" price="80.00"/>
+                <ProductWrapper image1="assets/img/product-img/product-2.jpg" image2="assets/img/product-img/product-3.jpg" href1="#" name="Trabus" href2="#" material="Oro" price="80.00"/>
+                <ProductWrapper image1="assets/img/product-img/product-3.jpg" image2="assets/img/product-img/product-4.jpg" offer="30" href1="#" name="Conch" href2="#" material="Titanio" price="55.00"/>
+                <ProductWrapper image1="assets/img/product-img/product-4.jpg" image2="assets/img/product-img/product-5.jpg" nuevo="true" href1="#" name="Titanio" href2="#" material="Helix" price="30.00"/>
               </div>
             </div>
           </div>
