@@ -2,8 +2,10 @@ import React, { createContext, useReducer } from "react";
 import AppReducer from "./AppReducer";
 import axios from "axios";
 
+const cart = JSON.parse(localStorage.getItem("cart"));
 const initialState = {
   products: [],
+  cart: cart ? cart : [],
 };
 
 export const GlobalContext = createContext(initialState);
@@ -19,11 +21,28 @@ export const GlobalProvider = ({ children }) => {
       payload: res.data.product,
     });
   };
+
+  const addCart = (product) => {
+    dispatch({
+      type: "ADD_CART",
+      payload: product,
+    });
+  };
+
+  const clearCart = () => {
+    dispatch({
+      type: "CLEAR_CART",
+    });
+  };
+
   return (
     <GlobalContext.Provider
       value={{
         products: state.products,
+        cart: state.cart,
         getProducts,
+        addCart,
+        clearCart,
       }}
     >
       {children}
