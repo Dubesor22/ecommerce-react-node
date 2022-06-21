@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { GlobalProvider } from "./context/GlobalState";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
+import ProfilePage from "./components/ProfilePage/ProfilePage";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/profile" element={<ProfilePage />} />
           </Routes>
           <Footer />
         </GlobalProvider>

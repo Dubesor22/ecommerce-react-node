@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Btnicon from "./Btnicon/Btnicon";
 
 export default function Header(){
+  const token = localStorage.getItem('user_session_token');
   return (
     <>
       <header className="header_area">
@@ -123,7 +124,11 @@ export default function Header(){
               </form>
             </div>
             <Btnicon className="favourite-area" href="#" src="assets/img/core-img/heart.svg" alternative="iconoFav"/>
-            <Btnicon className="user-login-info" href="/login" src="assets/img/core-img/user.svg" alternative="iconoUser"/>
+            {token ? (
+              <Btnicon className="user-login-info" href="/profile" src="assets/img/core-img/user.svg" alternative="iconoUser"/>
+            ) : (
+              <Btnicon className="user-login-info" href="/login" src="assets/img/core-img/user.svg" alternative="iconoUser"/>
+            )}
             <Btnicon className="cart-area" href="#" src="assets/img/core-img/bag.svg" alternative="iconoCart" span="3"/>
           </div>
         </div>
