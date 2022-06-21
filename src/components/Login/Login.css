@@ -1,3 +1,7 @@
 .portada {
   background-image: url("../../assets/img/modelo-piercing-1.jpg");
 }
+
+.pt-n5 {
+  padding-top: -15em !important;
+}
