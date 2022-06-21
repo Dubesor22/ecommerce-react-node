@@ -115,7 +115,7 @@ export default function Header() {
                   type="search"
                   name="search"
                   id="headerSearch"
-                  placeholder="Buscar..."
+                  placeholder="Buscar... "
                 />
                 <button type="submit">
                   <i className="fa fa-search" aria-hidden="true"></i>
