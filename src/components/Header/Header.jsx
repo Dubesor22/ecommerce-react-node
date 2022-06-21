@@ -153,7 +153,6 @@ export default function Header(){
                 alternative="iconoUser"
               />
             )}
-<<<<<<< HEAD
             <div  onClick={handleClick}>
               <Btnicon onClick={handleClick} className="cart-area" href="#" src="assets/img/core-img/bag.svg" alternative="iconoCart" span="3"/>
             </div>
@@ -164,15 +163,6 @@ export default function Header(){
             ):(
               <></>
             )}
-=======
-            <Btnicon
-              className="cart-area"
-              href="#"
-              src="assets/img/core-img/bag.svg"
-              alternative="iconoCart"
-              span="3"
-            />
->>>>>>> develop
           </div>
         </div>
 

@@ -9,7 +9,7 @@ export default function LinkP({ image, href, linkTitle }) {
       <div className="col-12 col-sm-6 col-md-4">
         <div
           className=" single_catagory_area d-flex align-items-center justify-content-center bg-img"
-          style={ backgroundImage: {image }}
+          // style="background-image:{image}"
         >
           <div className="catagory-content">
             <Link to={href}>{linkTitle}</Link>
