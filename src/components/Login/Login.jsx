@@ -21,7 +21,7 @@ const Login = () => {
                   <div class="form-group first">
                     <label for="username">Como te llamas?</label>
                     <input
-                      type="text"
+                      type="email"
                       class="form-control"
                       placeholder="tu usuario"
                       id="username"

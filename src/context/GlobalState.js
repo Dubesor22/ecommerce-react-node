@@ -26,7 +26,7 @@ export const GlobalProvider = ({ children }) => {
         getProducts,
       }}
     >
-      {children} {/* children son mis componentes hijos */}
+      {children}
     </GlobalContext.Provider>
   );
 };
