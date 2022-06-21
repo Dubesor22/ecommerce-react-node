@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import CartItem from "./CartItem/CartItem";
+// import CartItem from "../Header/CartItem/CartItem";
 import LinkP from "./Link/LinkP";
 import ProductWrapper from "./ProductWrapper/ProductWrapper";
 
@@ -8,7 +8,7 @@ export default function Main(){
   return (
     <div>
       <div className="cart-bg-overlay"></div>
-
+{/* 
       <div className="right-side-cart-area">
         <div className="cart-button">
           <a href="#" id="rightSideCart">
@@ -46,7 +46,7 @@ export default function Main(){
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <section
         className="welcome_area bg-img background-overlay"

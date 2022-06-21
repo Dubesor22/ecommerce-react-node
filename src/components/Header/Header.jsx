@@ -1,10 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
-
 import Btnicon from "./Btnicon/Btnicon";
+import Cart from "./Cart/Cart";
+import OutsideClickHandler from 'react-outside-click-handler';
 
 export default function Header(){
   const token = localStorage.getItem('user_session_token');
+  const [cart, setCart] = useState(false);
+  function handleClick(){
+    if(cart == false){
+      setCart(true)
+    } else {
+      setCart(false)
+    }
+  }
+
   return (
     <>
       <header className="header_area">
@@ -129,7 +139,16 @@ export default function Header(){
             ) : (
               <Btnicon className="user-login-info" href="/login" src="assets/img/core-img/user.svg" alternative="iconoUser"/>
             )}
-            <Btnicon className="cart-area" href="#" src="assets/img/core-img/bag.svg" alternative="iconoCart" span="3"/>
+            <div  onClick={handleClick}>
+              <Btnicon onClick={handleClick} className="cart-area" href="#" src="assets/img/core-img/bag.svg" alternative="iconoCart" span="3"/>
+            </div>
+            {cart == true ? (
+              <OutsideClickHandler onOutsideClick={() => {handleClick();}}>
+                <Cart/>
+              </OutsideClickHandler>
+            ):(
+              <></>
+            )}
           </div>
         </div>
       </header>

@@ -1,0 +1,32 @@
+.thirty {
+  width: 30%;
+  display: block;
+  float: right;
+}
+
+.seventy {
+  width: 70%;
+  height: 80vh;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  float: left;
+}
+.portada_perfil {
+  margin: 2rem;
+  background-image: url("../../assets/img/modelo-piercing-3.jpg");
+  background-size: cover;
+  border-radius: 50%;
+  height: 18rem;
+}
+.padding > el {
+  padding: 2rem;
+  margin:1rem;
+}
+.inputProfile{
+  margin: 2rem;
+  border: none;
+  border-bottom: 2px solid blue;
+}
