@@ -2,11 +2,15 @@ import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import "./Products.css";
 
-export default function Products(){
-  const { products, getProducts } = useContext(GlobalContext);
+export default function Products() {
+  const { products, getProducts, addCart, cart } = useContext(GlobalContext);
   useEffect(() => {
     getProducts();
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   if (products.length <= 0) {
     return (
@@ -25,12 +29,13 @@ export default function Products(){
           <p className="card-text">{product.description}</p>
           <p className="card-text">{product.price} €</p>
           <div className="d-flex justify-content-around">
-            <a className="btn btn-primary text-white" href={product.url}>
+            <button
+              onClick={() => addCart(product)}
+              className="btn btn-primary text-white"
+            >
               Anadir al carro
-            </a>
-            <a className="btn btn-primary text-white" href={product.url}>
-              Detalles...
-            </a>
+            </button>
+            <button className="btn btn-primary text-white">Detalles...</button>
           </div>
         </div>
       </div>
@@ -61,4 +66,4 @@ export default function Products(){
       </div>
     </>
   );
-};
+}

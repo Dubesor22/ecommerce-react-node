@@ -98,7 +98,7 @@ export default function Header(){
                         <Link to="/products">Tienda</Link>
                       </li>
                       <li>
-                        <a href="#">Pagar</a>
+                        <Link to="/cart">Cesta de la compra</Link>
                       </li>
                       <li>
                         <a href="#">Blog</a>
@@ -118,7 +118,6 @@ export default function Header(){
               </div>
             </div>
           </nav>
-
           <div className="header-meta d-flex clearfix justify-content-end">
             <div className="search-area">
               <form action="#" method="post">
@@ -133,12 +132,28 @@ export default function Header(){
                 </button>
               </form>
             </div>
-            <Btnicon className="favourite-area" href="#" src="assets/img/core-img/heart.svg" alternative="iconoFav"/>
+            <Btnicon
+              className="favourite-area"
+              href="#"
+              src="assets/img/core-img/heart.svg"
+              alternative="iconoFav"
+            />
             {token ? (
-              <Btnicon className="user-login-info" href="/profile" src="assets/img/core-img/user.svg" alternative="iconoUser"/>
+              <Btnicon
+                className="user-login-info"
+                href="/profile"
+                src="assets/img/core-img/user.svg"
+                alternative="iconoUser"
+              />
             ) : (
-              <Btnicon className="user-login-info" href="/login" src="assets/img/core-img/user.svg" alternative="iconoUser"/>
+              <Btnicon
+                className="user-login-info"
+                href="/login"
+                src="assets/img/core-img/user.svg"
+                alternative="iconoUser"
+              />
             )}
+<<<<<<< HEAD
             <div  onClick={handleClick}>
               <Btnicon onClick={handleClick} className="cart-area" href="#" src="assets/img/core-img/bag.svg" alternative="iconoCart" span="3"/>
             </div>
@@ -149,9 +164,82 @@ export default function Header(){
             ):(
               <></>
             )}
+=======
+            <Btnicon
+              className="cart-area"
+              href="#"
+              src="assets/img/core-img/bag.svg"
+              alternative="iconoCart"
+              span="3"
+            />
+>>>>>>> develop
           </div>
         </div>
+
+        {/* <div className="cart-bg-overlay"></div>
+        <div className="right-side-cart-area">
+          <div className="cart-button">
+            <a href="#" id="rightSideCart">
+              <img src="assets/img/core-img/bag.svg" alt="" /> <span>3</span>
+            </a>
+          </div>
+
+          <div className="cart-content d-flex">
+            <div className="cart-list">
+              <CartItem
+                href="#"
+                src="assets/img/product-img/product-1.jpg"
+                badge="Acero"
+                item="Button Through Strap Mini Dress"
+                size="S"
+                color="Red"
+                price="45.00"
+              />
+              <CartItem
+                href="#"
+                src="assets/img/product-img/product-2.jpg"
+                badge="Mango"
+                item="Button Through Strap Mini Dress"
+                size="S"
+                color="Red"
+                price="45.00"
+              />
+              <CartItem
+                href="#"
+                src="assets/img/product-img/product-3.jpg"
+                badge="Mango"
+                item="Button Through Strap Mini Dress"
+                size="S"
+                color="Red"
+                price="45.00"
+              />
+            </div>
+
+            <div className="cart-amount-summary">
+              <h2>Summary</h2>
+              <ul className="summary-table">
+                <li>
+                  <span>subtotal:</span> <span>$274.00</span>
+                </li>
+                <li>
+                  <span>delivery:</span> <span>Free</span>
+                </li>
+                <li>
+                  <span>discount:</span> <span>-15%</span>
+                </li>
+                <li>
+                  <span>total:</span> <span>$232.00</span>
+                </li>
+              </ul>
+              <div className="checkout-btn mt-100">
+                <a href="#" className="btn essence-btn">
+                  Finalizar Compra
+                </a>
+              </div>
+            </div>
+          </div>
+        </div> */}
       </header>
     </>
   );
-};
+}
