@@ -22,8 +22,8 @@ export default function Login(){
                   <div className="form-group first">
                     <label for="username">Como te llamas?</label>
                     <input
-                      type="text"
-                      className="form-control"
+                      type="email"
+                      class="form-control"
                       placeholder="tu usuario"
                       id="username"
                       required

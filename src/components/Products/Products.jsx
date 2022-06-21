@@ -24,10 +24,14 @@ export default function Products(){
           <img src={product.image} alt={product.name} />
           <p className="card-text">{product.description}</p>
           <p className="card-text">{product.price} €</p>
-
-          <a className="btn btn-primary" href={product.url}>
-            Detalles...
-          </a>
+          <div class="d-flex justify-content-around">
+            <a class="btn btn-primary text-white" href={product.url}>
+              Anadir al carro
+            </a>
+            <a class="btn btn-primary text-white" href={product.url}>
+              Detalles...
+            </a>
+          </div>
         </div>
       </div>
     );
