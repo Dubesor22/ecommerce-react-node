@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 import "./Register.css";
 
 export default function Register(){
-  const form = document.getElementById('form');
+  // const form = document.getElementById('form');
   const { register } = useContext(UserContext);
   const navigate = useNavigate()
-  function submit(e) {
-    e.preventDefault();
-    navigate("/products")
-  }
+  // function submit(e) {
+  //   e.preventDefault();
+  //   navigate("/products")
+  // }
   // form.onsubmit = submit;
   useEffect(() => {
       setTimeout(() => {
@@ -59,6 +59,7 @@ export default function Register(){
                   </div>
                   <input type="submit" value="Sign up" className="btn btn-block btn-primary"/>
                 </form>
+                {/* {document.getElementById('form').onsubmit = submit('form')} */}
               </div>
             </div>
           </div>

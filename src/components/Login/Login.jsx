@@ -5,14 +5,14 @@ import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 export default function Login() {
-  const form = document.getElementById('form');
+  // const form = document.getElementById('form');
   // form.onsubmit = submit;
   const { login } = useContext(UserContext);
   const navigate = useNavigate()
-  function submit(event) {
-    event.preventDefault();
-    navigate("/products")
-  }
+  // function submit(event) {
+  //   event.preventDefault();
+  //   navigate("/products")
+  // }
 function alert1(){
   alert('Estás jodido, aquí no hacemos eso.');
 }
