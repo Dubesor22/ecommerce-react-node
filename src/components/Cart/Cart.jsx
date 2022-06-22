@@ -6,8 +6,7 @@ import { Link } from "react-router-dom";
 import carrito from "../../assets/img/pngwing.com.png";
 
 const Cart = () => {
-  const { cart, clearCart } = useContext(GlobalContext);
-
+  const { cart, clearCart, clearOneCartItem } = useContext(GlobalContext);
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
@@ -21,12 +20,13 @@ const Cart = () => {
       </div>
     );
   }
-  const createNewOrder = () => {
-    createOrder(cart);
-    clearCart();
-  };
+  // const createNewOrder = () => {
+  //   createOrder(cart);
+  //   clearCart();
+  // };
 
   const cartItem = cart.map((cartItem, i) => {
+    console.log(cartItem);
     return (
       <tbody>
         <tr>
@@ -73,10 +73,13 @@ const Cart = () => {
               <i class="fa fa-heart"></i>
             </a>{" "}
             <br />
-            <a href="" class="btn btn-outline-danger" data-abc="true">
-              {" "}
-              Remove
-            </a>{" "}
+            <button
+              class="btn btn-outline-danger"
+              onClick={() => clearOneCartItem(cartItem.id)}
+              data-abc="true"
+            >
+              ❌
+            </button>{" "}
           </td>
         </tr>
       </tbody>

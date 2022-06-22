@@ -35,6 +35,13 @@ export const GlobalProvider = ({ children }) => {
     });
   };
 
+  const clearOneCartItem = (id) => {
+    dispatch({
+      type: "CLEAR_ONE_CART_ITEM",
+      payload: id,
+    });
+  };
+
   return (
     <GlobalContext.Provider
       value={{
@@ -43,6 +50,7 @@ export const GlobalProvider = ({ children }) => {
         getProducts,
         addCart,
         clearCart,
+        clearOneCartItem,
       }}
     >
       {children}

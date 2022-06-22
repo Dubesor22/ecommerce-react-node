@@ -26,7 +26,7 @@ const Product = ({ product }) => {
         <div class="row m-0">
           <div class="col-lg-7 pb-5 pe-lg-5">
             <div class="row">
-              <div class="col-10 p-5">
+              <div class="col-10 p-3 ml-3">
                 <img
                   src="https://cdn.crazy-factory.com/images/product_images_2010/BC/BC/modelshots/BC_MS_F_2_LL.JPG?dt=1626256958"
                   alt=""
@@ -35,9 +35,7 @@ const Product = ({ product }) => {
               <div class="row ml-0 bg-light">
                 <div class="col-md-4 col-6 ps-30 pe-0 my-4">
                   <p class="text-muted">Categoria</p>
-                  <p class="h5">
-                    Helix<span class="ps-1">Km</span>
-                  </p>
+                  <p class="h5">Helix</p>
                 </div>
                 <div class="col-md-4 col-6  ps-30 my-4">
                   <p class="text-muted">Material</p>
@@ -62,11 +60,11 @@ const Product = ({ product }) => {
               </div>
             </div>
           </div>
-          <div class="col-lg-5 p-0 ps-lg-4">
+          <div class="mt-3 col-lg-5 p-0 ps-lg-4">
             <div class="row m-0">
               <div class="col-12 px-4">
                 <div class="d-flex align-items-end mt-4 mb-2">
-                  <p class="h4 m-0">
+                  <p class="h4 m-0 ">
                     <span class="pe-1">BALL CLOSURE RING</span>
                   </p>
                 </div>
@@ -95,25 +93,24 @@ const Product = ({ product }) => {
               <div class="col-12 px-0">
                 <div class="row bg-light m-0 d-flex flex-column">
                   <div class="col-12 px-4 my-4">
-                    <p class="fw-bold">Selecciona tu Opcion</p>
+                    <p class="fw-bold">Selecciona tu Opcion:</p>
                   </div>
 
                   <div class="row m-0">
                     <div class="col-12  mb-4 p-0">
-                      <div class="btn btn-primary">Favoritos</div>
+                      <div class="btn btn-primary text-white ">Favoritos</div>
                     </div>
                   </div>
                   <div class="row m-0">
                     <div class="col-12  mb-4 p-0">
-                      <div class="btn btn-primary">Agregar al carro</div>
+                      <button
+                        onClick={() => addCart(product)}
+                        className="btn btn-primary text-white "
+                      >
+                        Anadir al carro
+                      </button>
                     </div>
                   </div>
-                  <button
-                    onClick={() => addCart(product)}
-                    className="btn btn-primary text-white"
-                  >
-                    Anadir al carro
-                  </button>
                 </div>
               </div>
             </div>
