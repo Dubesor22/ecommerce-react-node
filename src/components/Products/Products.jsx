@@ -1,10 +1,11 @@
 import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
+import ProductItem from "./ProductItem/ProductItem";
 import "./Products.css";
 import { Link } from "react-router-dom";
 
 export default function Products() {
-  const { products, getProducts, addCart, cart } = useContext(GlobalContext);
+  const { products, getProducts, cart, addCart } = useContext(GlobalContext);
   useEffect(() => {
     getProducts();
   }, []);

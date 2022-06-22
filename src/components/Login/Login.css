@@ -5,3 +5,10 @@
 .pt-n5 {
   padding-top: -15em !important;
 }
+#name,
+#confirmed-password,
+#email,
+#password,
+#username{
+  padding-left: 1rem;
+}

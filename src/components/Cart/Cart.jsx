@@ -1,9 +1,10 @@
-import React, { useContext, useEffect, createOrder } from "react";
+import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
-import { OrdersContext } from "../../context/OrdersState";
 import "./Cart.css";
 import { Link } from "react-router-dom";
 import carrito from "../../assets/img/pngwing.com.png";
+import CartItem from "./CartItem.jsx/CartItem";
+import { OrdersContext } from "../../context/OrdersState";
 
 const Cart = () => {
   const { cart, clearCart, clearOneCartItem } = useContext(GlobalContext);
@@ -19,6 +20,13 @@ const Cart = () => {
         <h2>Tu Lista de la compra esta vacia</h2>
         <br />
         <img src={carrito} alt=" carrito" />
+        <div className="checkout-btn mt-100">
+          <Link to="/products">
+            <a href="#" className="btn essence-btn" id="btnWrong">
+              Add items to cart
+            </a>
+          </Link>
+        </div>
       </div>
     );
   }
