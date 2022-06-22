@@ -55,7 +55,7 @@ export default function Register(){
                   </div>
                   <div className="form-group last mb-3">
                     <label for="confirmed password">Repite tu contraseña</label>
-                    <input type="password" className="form-control" placeholder="Tu secretito 2.0" id="confirmed password" required/>
+                    <input type="password" className="form-control" placeholder="Tu secretito 2.0" id="confirmed-password" required/>
                   </div>
                   <input type="submit" value="Sign up" className="btn btn-block btn-primary"/>
                 </form>

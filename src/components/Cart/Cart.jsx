@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, createOrder } from "react";
+import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import "./Cart.css";
 import { Link } from "react-router-dom";

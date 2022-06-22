@@ -31,7 +31,7 @@ export default function DarkMode(){
   
   return (
     <div className="toggle-theme-wrapper">
-      <span>☀️</span>
+      <span>🌣</span>
       <label className="toggle-theme" htmlFor="checkbox">
         <input
           type="checkbox"
@@ -41,7 +41,7 @@ export default function DarkMode(){
         />
         <div className="slider round"></div>
       </label>
-      <span>🌒</span>
+      <span>☽</span>
     </div>
   );
 };
