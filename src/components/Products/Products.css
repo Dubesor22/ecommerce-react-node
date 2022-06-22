@@ -1,6 +1,6 @@
-:root {
+/* :root {
   --image-size: 800px;
-}
+} */
 
 *,
 *:before,
@@ -53,15 +53,21 @@
   justify-content: space-between;
 }
 
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 1em !important;
+}
+
 .heading {
   display: flex;
   align-items: left;
   justify-content: center;
   background-image: url(../../assets/img/new-piercings.jpg);
-  background-position: center center;
+  background-position: center right;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  width: 100vw;
   height: 30vh;
 }
 
@@ -73,4 +79,10 @@
 
 .subtitle {
   margin-left: 5rem;
+}
+
+@media (max-width: 540px) {
+  .heading {
+    width: 540px;
+  }
 }

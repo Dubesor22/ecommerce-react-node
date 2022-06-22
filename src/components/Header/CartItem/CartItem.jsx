@@ -1,9 +1,9 @@
 import React from 'react'
 import "./CartItem.css"
-export default function CartItem({href, src, badge, item, size, color, price}) {
+export default function CartItem({href, src, badge, item, size, color, price, i}) {
   return (
     <>
-            <div className="single-cart-item">
+            <div className="single-cart-item" key={i}>
               <a href={href} className="product-image">
                 <img
                   src={src}

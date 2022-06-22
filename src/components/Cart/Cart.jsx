@@ -6,8 +6,7 @@ import carrito from "../../assets/img/pngwing.com.png";
 import CartItem from "./CartItem.jsx/CartItem";
 
 const Cart = () => {
-  const { cart, clearCart } = useContext(GlobalContext);
-
+  const { cart, clearCart, clearOneCartItem } = useContext(GlobalContext);
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
@@ -26,12 +25,13 @@ const Cart = () => {
       </div>
     );
   }
-  const createNewOrder = () => {
-    createOrder(cart);
-    clearCart();
-  };
+  // const createNewOrder = () => {
+  //   createOrder(cart);
+  //   clearCart();
+  // };
 
   const cartItem = cart.map((cartItem, i) => {
+    console.log(cartItem);
     return (
       <CartItem cartItem={cartItem} i={i}/>
     );
@@ -132,14 +132,6 @@ const Cart = () => {
                       onClick={() => clearCart()}
                     >
                       Vacia Carrito
-                    </button>
-                    <br />
-
-                    <button
-                      className="col btn btn-primary w-100"
-                      onClick={() => createNewOrder()}
-                    >
-                      Crea Nuevo Pedido
                     </button>
                   </div>
                 </div>

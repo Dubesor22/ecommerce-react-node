@@ -15,6 +15,11 @@ export default function products(state, action) {
         ...state,
         cart: [],
       };
+    case "CLEAR_ONE_CART_ITEM":
+      return {
+        ...state,
+        cart: state.cart.filter((item) => item.id !== action.payload),
+      };
     default:
       return state;
   }
