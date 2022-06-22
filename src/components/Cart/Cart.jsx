@@ -179,14 +179,6 @@ const Cart = () => {
                     >
                       Vacia Carrito
                     </button>
-                    <br />
-
-                    <button
-                      className="col btn btn-primary w-100"
-                      onClick={() => createNewOrder()}
-                    >
-                      Crea Nuevo Pedido
-                    </button>
                   </div>
                 </div>
               </div>

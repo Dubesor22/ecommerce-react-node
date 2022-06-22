@@ -6,6 +6,7 @@ import Main from "./components/Main/Main";
 import Products from "./components/Products/Products";
 import Login from "./components/Login/Login";
 import Cart from "./components/Cart/Cart";
+import Product from "./components/Products/Product/Product";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { GlobalProvider } from "./context/GlobalState";
@@ -23,6 +24,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/product" element={<Product />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<ProfilePage />} />

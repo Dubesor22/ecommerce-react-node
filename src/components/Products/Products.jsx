@@ -28,10 +28,10 @@ export default function Products() {
           <img src={product.image} alt={product.name} />
           <p className="card-text">{product.description}</p>
           <p className="card-text">{product.price} €</p>
-          <div className="d-flex justify-content-around">
+          <div className="btn-group">
             <button
               onClick={() => addCart(product)}
-              className="btn btn-primary text-white"
+              className="btn-group btn btn-primary text-white"
             >
               Anadir al carro
             </button>
