@@ -17,9 +17,9 @@ export default function Main() {
               <div className="hero-content">
                 <h6>Yolanda Lopez</h6>
                 <h2>"Lo mas intimo de mi"</h2>
-                <a href="#" className="btn essence-btn">
+                <Link to="/products" className="btn essence-btn">
                   Ver Coleccion
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -59,7 +59,7 @@ export default function Main() {
                   <div class="cta--text">
                     <h6>-60%</h6>
                     <h2>Lanzamiento</h2>
-                    <Link to="#" class="btn essence-btn">
+                    <Link to="/products" class="btn essence-btn">
                       Comprar
                     </Link>
                   </div>
