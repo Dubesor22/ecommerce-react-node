@@ -2,21 +2,21 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
 
-export default function Login(){
+export default function Login() {
   return (
     <>
       <div className="d-lg-flex half">
         <div className="bg order-2 order-md-1 portada"></div>
         <div className="contents order-1 order-md-2 ">
-          <div className="container">
-            <div className="row align-items-center justify-content-center">
+          <div className="container ">
+            <div className="row align-items-center justify-content-center pb-5 ">
               <div className="col-md-7">
                 <h3>
                   Entra en <strong>Komorebi</strong>
                 </h3>
                 <p className="mb-4">
-                  Entra y pertenece a esta exclusiva tienda de Piercings
-                  con envio a toda España.
+                  Entra y pertenece a esta exclusiva tienda de Piercings con
+                  envio a toda España.
                 </p>
                 <form action="#" method="post">
                   <div className="form-group first">
@@ -58,9 +58,13 @@ export default function Login(){
                     value="Log In"
                     className="btn btn-block btn-primary"
                   />
-                  <span className="ml-auto align-items-center">
-                        ¿Todavía no eres miembro? <Link to="/register">Registrate aquí</Link>.
+                  <div className="container ">
+                    <span className="ml-auto align-items-center">
+                      ¿Todavía no eres miembro?{" "}
+                      <Link to="/register">Registrate aquí</Link>.
+                      <br />
                     </span>
+                  </div>
                 </form>
               </div>
             </div>
@@ -69,4 +73,4 @@ export default function Login(){
       </div>
     </>
   );
-};
+}

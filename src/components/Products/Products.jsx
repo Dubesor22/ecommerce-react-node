@@ -44,7 +44,12 @@ export default function Products() {
 
   return (
     <>
-      <h2>Productos disponibles</h2>
+      <div className="d-flex flex-column container-fluid heading">
+        <h2 className="piercing-title">Todos los Piercings</h2>
+        <p className="subtitle">
+          Trabus, Aros, Septums, Conch, Helix, y muchos mas...
+        </p>
+      </div>
       <div className="container-fluid container-products">
         <div className="side-bar">
           <div className="side-bar-item">
