@@ -1,4 +1,5 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
+import { GlobalContext } from "../../context/GlobalState";
 import { Link } from "react-router-dom";
 import Btnicon from "./Btnicon/Btnicon";
 import Cart from "./Cart/Cart";
@@ -6,13 +7,14 @@ import OutsideClickHandler from 'react-outside-click-handler';
 import DarkMode from "./DarkMode/DarkMode.tsx";
 
 export default function Header(){
+  const { cart } = useContext(GlobalContext);
   const token = localStorage.getItem('user_session_token');
-  const [cart, setCart] = useState(false);
+  const [cart1, setCart1] = useState(false);
   function handleClick(){
-    if(cart == false){
-      setCart(true)
+    if(cart1 == false){
+      setCart1(true)
     } else {
-      setCart(false)
+      setCart1(false)
     }
   }
 
@@ -156,9 +158,9 @@ export default function Header(){
               />
             )}
             <div  onClick={handleClick}>
-              <Btnicon onClick={handleClick} className="cart-area" href="#" src="assets/img/core-img/bag.svg" alternative="iconoCart" span="3"/>
+              <Btnicon onClick={handleClick} className="cart-area" href="#" src="assets/img/core-img/bag.svg" alternative="iconoCart" span={cart.length}/>
             </div>
-            {cart == true ? (
+            {cart1 == true ? (
               <OutsideClickHandler onOutsideClick={() => {handleClick();}}>
                 <Cart/>
               </OutsideClickHandler>

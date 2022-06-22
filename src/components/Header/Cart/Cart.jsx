@@ -18,13 +18,13 @@ export default function Cart(){
       <>
     <div  className="right-side-cart-area cart-on">
               <div className="cart-button">
-                <Btnicon className="cart-area" href="#" src="assets/img/core-img/bag.svg" alternative="iconoCart" span="3"/>
+                <Btnicon className="cart-area" href="#" src="assets/img/core-img/bag.svg" alternative="iconoCart" span={cart.length}/>
               </div>
       
               <div id="center" className="cart-content d-flex">
                 <div className="cart-amount-summary">
                   <h2>Tu lista de la compra esta vacia</h2>
-                  <img src={carrito} alt=" carrito" />
+                  <img id="carrito" src={carrito} alt=" carrito" />
                   <ul className="summary-table">
                     <li>
                       <span>subtotal:</span> <span>$0</span>

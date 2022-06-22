@@ -13,6 +13,9 @@ export default function Login() {
     event.preventDefault();
     navigate("/products")
   }
+function alert1(){
+  alert('Estás jodido, aquí no hacemos eso.');
+}
   useEffect(() => {
       setTimeout(() => {
         const foundToken = JSON.parse(localStorage.getItem("token"));
@@ -39,21 +42,21 @@ export default function Login() {
                 </p>
                 <form id="form" action="#" method="post">
                   <div className="form-group first">
-                    <label for="username">Como te llamas?</label>
+                    <label for="username">¿Como te llamas?</label>
                     <input
                       type="email"
                       class="form-control"
-                      placeholder="tu usuario"
+                      placeholder="Tu usuario"
                       id="username"
                       required
                     />
                   </div>
                   <div className="form-group last mb-3">
-                    <label for="password">contraseña</label>
+                    <label for="password">Contraseña</label>
                     <input
                       type="password"
                       className="form-control"
-                      placeholder="tu secretito"
+                      placeholder="Tu secretito"
                       id="password"
                       required
                     />
@@ -62,11 +65,11 @@ export default function Login() {
                   <div className="d-flex mb-5 align-items-center">
                     <label className="control control--checkbox mb-0">
                       <span className="caption">Recuerdame</span>
-                      <input type="checkbox" checked="checked" />
+                      <input type="checkbox" />
                       <div className="control__indicator"></div>
                     </label>
                     <span className="ml-auto">
-                      <a href="#" className="forgot-pass">
+                      <a onClick={alert1} className="forgot-pass">
                         Olvidaste Contraseña?
                       </a>
                     </span>
