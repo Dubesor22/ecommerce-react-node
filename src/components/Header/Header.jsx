@@ -1,18 +1,18 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Btnicon from "./Btnicon/Btnicon";
 import Cart from "./Cart/Cart";
-import OutsideClickHandler from 'react-outside-click-handler';
+import OutsideClickHandler from "react-outside-click-handler";
 import DarkMode from "./DarkMode/DarkMode.tsx";
 
-export default function Header(){
-  const token = localStorage.getItem('user_session_token');
+export default function Header() {
+  const token = localStorage.getItem("user_session_token");
   const [cart, setCart] = useState(false);
-  function handleClick(){
-    if(cart == false){
-      setCart(true)
+  function handleClick() {
+    if (cart == false) {
+      setCart(true);
     } else {
-      setCart(false)
+      setCart(false);
     }
   }
 
@@ -102,21 +102,33 @@ export default function Header(){
                         <Link to="/cart">Cesta de la compra</Link>
                       </li>
                       <li>
-                        <a href="#">Blog</a>
+                        <a
+                          href="https://gregarious-fairy-d838d8.netlify.app/#reservas"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Reserva tu cita
+                        </a>
                       </li>
                       <li>
-                        <a href="#">Contacto</a>
+                        <Link to="/contact">Contacto</Link>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="#">Blog</a>
+                    <a
+                      href="https://gregarious-fairy-d838d8.netlify.app/#reservas"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Reserva tu cita
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Contacto</a>
+                    <Link to="/contact">Contacto</Link>
                   </li>
                 </ul>
-              <DarkMode/>
+                <DarkMode />
               </div>
             </div>
           </nav>
@@ -155,14 +167,25 @@ export default function Header(){
                 alternative="iconoUser"
               />
             )}
-            <div  onClick={handleClick}>
-              <Btnicon onClick={handleClick} className="cart-area" href="#" src="assets/img/core-img/bag.svg" alternative="iconoCart" span="3"/>
+            <div onClick={handleClick}>
+              <Btnicon
+                onClick={handleClick}
+                className="cart-area"
+                href="#"
+                src="assets/img/core-img/bag.svg"
+                alternative="iconoCart"
+                span="3"
+              />
             </div>
             {cart == true ? (
-              <OutsideClickHandler onOutsideClick={() => {handleClick();}}>
-                <Cart/>
+              <OutsideClickHandler
+                onOutsideClick={() => {
+                  handleClick();
+                }}
+              >
+                <Cart />
               </OutsideClickHandler>
-            ):(
+            ) : (
               <></>
             )}
           </div>

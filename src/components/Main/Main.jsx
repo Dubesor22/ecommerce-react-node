@@ -29,9 +29,21 @@ export default function Main() {
       <div class="top_catagory_area section-padding-80 clearfix">
         <div class="container">
           <div class="row justify-content-center">
-            <LinkSecciones image="url(assets/img/bg-img/bg-2.jpg)" href="#" linkTitle="Tatuajes"/>
-            <LinkSecciones image="url(assets/img/bg-img/bg-3.jpg)" href="#" linkTitle="Piercing"/>
-            <LinkSecciones image="url(assets/img/bg-img/bg-4.jpg)" href="#" linkTitle="Microblading"/>
+            <LinkSecciones
+              image="url(assets/img/bg-img/bg-2.jpg)"
+              href="#"
+              linkTitle="Tatuajes"
+            />
+            <LinkSecciones
+              image="url(assets/img/bg-img/bg-3.jpg)"
+              href="/products"
+              linkTitle="Piercing"
+            />
+            <LinkSecciones
+              image="url(assets/img/bg-img/bg-4.jpg)"
+              href="#"
+              linkTitle="Microblading"
+            />
           </div>
         </div>
       </div>
@@ -73,10 +85,44 @@ export default function Main() {
           <div className="row">
             <div className="col-12">
               <div className="popular-products-slides owl-carousel">
-                <ProductWrapper image1="assets/img/product-img/product-1.jpg" image2="assets/img/product-img/product-2.jpg" href1="#" name="Disenyo oreja" href2="#" material="Plata de ley" price="80.00"/>
-                <ProductWrapper image1="assets/img/product-img/product-2.jpg" image2="assets/img/product-img/product-3.jpg" href1="#" name="Trabus" href2="#" material="Oro" price="80.00"/>
-                <ProductWrapper image1="assets/img/product-img/product-3.jpg" image2="assets/img/product-img/product-4.jpg" offer="30" href1="#" name="Conch" href2="#" material="Titanio" price="55.00"/>
-                <ProductWrapper image1="assets/img/product-img/product-4.jpg" image2="assets/img/product-img/product-5.jpg" nuevo="true" href1="#" name="Titanio" href2="#" material="Helix" price="30.00"/>
+                <ProductWrapper
+                  image1="assets/img/product-img/product-1.jpg"
+                  image2="assets/img/product-img/product-2.jpg"
+                  href1="#"
+                  name="Disenyo oreja"
+                  href2="#"
+                  material="Plata de ley"
+                  price="80.00"
+                />
+                <ProductWrapper
+                  image1="assets/img/product-img/product-2.jpg"
+                  image2="assets/img/product-img/product-3.jpg"
+                  href1="#"
+                  name="Trabus"
+                  href2="#"
+                  material="Oro"
+                  price="80.00"
+                />
+                <ProductWrapper
+                  image1="assets/img/product-img/product-3.jpg"
+                  image2="assets/img/product-img/product-4.jpg"
+                  offer="30"
+                  href1="#"
+                  name="Conch"
+                  href2="#"
+                  material="Titanio"
+                  price="55.00"
+                />
+                <ProductWrapper
+                  image1="assets/img/product-img/product-4.jpg"
+                  image2="assets/img/product-img/product-5.jpg"
+                  nuevo="true"
+                  href1="#"
+                  name="Titanio"
+                  href2="#"
+                  material="Helix"
+                  price="30.00"
+                />
               </div>
             </div>
           </div>

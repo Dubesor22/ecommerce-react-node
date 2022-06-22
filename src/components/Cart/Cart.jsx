@@ -7,6 +7,8 @@ import carrito from "../../assets/img/pngwing.com.png";
 
 const Cart = () => {
   const { cart, clearCart, clearOneCartItem } = useContext(GlobalContext);
+  const { createOrder } = useContext(OrdersContext);
+
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
@@ -20,10 +22,10 @@ const Cart = () => {
       </div>
     );
   }
-  // const createNewOrder = () => {
-  //   createOrder(cart);
-  //   clearCart();
-  // };
+  const createNewOrder = () => {
+    createOrder(cart);
+    clearCart();
+  };
 
   const cartItem = cart.map((cartItem, i) => {
     console.log(cartItem);
@@ -46,7 +48,7 @@ const Cart = () => {
           </td>
           <td>
             {" "}
-            <select class="form-control">
+            <select class=" ">
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -160,13 +162,7 @@ const Cart = () => {
                 <hr />{" "}
                 <div class="d-grid h-100 w-100 container">
                   <div class="column justify-content-around">
-                    <button className="col btn btn-primary w-100 mb-3">
-                      <Link to="#" class="btn btn-primary" data-abc="true">
-                        {" "}
-                        Tramita pedido
-                      </Link>{" "}
-                    </button>
-
+                    {" "}
                     <button class="col btn btn-primary  w-100 mb-3">
                       <Link
                         to="/products"
@@ -174,13 +170,27 @@ const Cart = () => {
                         data-abc="true"
                       >
                         Continua comprando
-                      </Link>
+                      </Link>{" "}
                     </button>
-                    <button
-                      className="col btn btn-primary w-100"
-                      onClick={() => clearCart()}
-                    >
-                      Vacia Carrito
+                    <button class="col btn btn-primary  w-100 mb-3">
+                      <Link
+                        to="/products"
+                        className="col btn btn-primary w-100"
+                        onClick={() => createNewOrder()}
+                        data-abc="true"
+                      >
+                        Tramita pedido
+                      </Link>{" "}
+                    </button>
+                    <button class="col btn btn-primary  w-100 mb-3">
+                      <Link
+                        to="/cart "
+                        className="col btn btn-primary w-100"
+                        onClick={() => clearCart()}
+                        data-abc="true"
+                      >
+                        Vacia Carrito
+                      </Link>{" "}
                     </button>
                   </div>
                 </div>

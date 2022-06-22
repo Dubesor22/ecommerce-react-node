@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import "./Products.css";
+import { Link } from "react-router-dom";
 
 export default function Products() {
   const { products, getProducts, addCart, cart } = useContext(GlobalContext);
@@ -31,11 +32,14 @@ export default function Products() {
           <div className="btn-group">
             <button
               onClick={() => addCart(product)}
-              className="btn-group btn btn-primary text-white"
+              className=" btn btn-primary text-white"
             >
               Anadir al carro
             </button>
-            <button className="btn btn-primary text-white">Detalles...</button>
+
+            <Link className="btn btn-primary text-white" to="/product">
+              Detalles...
+            </Link>
           </div>
         </div>
       </div>
