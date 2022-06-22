@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import "./Products.css";
-import heading from "../../assets/img/new-piercings.jpg";
 
 export default function Products() {
   const { products, getProducts, addCart, cart } = useContext(GlobalContext);
