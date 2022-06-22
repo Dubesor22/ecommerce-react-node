@@ -1,4 +1,8 @@
 #btnWrong{
-    width:80%;
+    width:120%;
     color: #fff;
+}
+#center{
+    display: flex;
+    justify-content: center;
 }

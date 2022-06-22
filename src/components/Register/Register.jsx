@@ -1,8 +1,26 @@
-import React from "react";
-// import { Link } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
+import { UserContext } from "../../context/UserContex/UserState";
+import { useNavigate } from "react-router-dom";
 import "./Register.css";
 
 export default function Register(){
+  const form = document.getElementById('form');
+  const { register } = useContext(UserContext);
+  const navigate = useNavigate()
+  function submit(e) {
+    e.preventDefault();
+    navigate("/products")
+  }
+  // form.onsubmit = submit;
+  useEffect(() => {
+      setTimeout(() => {
+        const foundToken = JSON.parse(localStorage.getItem("token"));
+        if (foundToken) {
+        navigate("/products")
+      }
+      },2000)
+ 
+  }, [register])
   return (
     <>
       <div className="d-lg-flex half">
@@ -18,7 +36,7 @@ export default function Register(){
                   Date de alta y pertenece a esta exclusiva tienda de Piercings
                   con envio a toda España.
                 </p>
-                <form action="#" method="post">
+                <form id="form" action="#" method="post">
                   <div className="form-group first">
                     <label for="name">Como te llamas?</label>
                     <input type="text" className="form-control" placeholder="Nombre" id="name" required/>

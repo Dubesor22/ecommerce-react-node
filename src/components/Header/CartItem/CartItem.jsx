@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "./CartItem.css"
 export default function CartItem({href, src, badge, item, size, color, price}) {
   return (
     <>
@@ -11,8 +11,8 @@ export default function CartItem({href, src, badge, item, size, color, price}) {
                   alt=""
                 />
 
-                <div className="cart-item-desc">
-                  <span className="product-remove">
+                <div id="cartitem" className="cart-item-desc">
+                  <span id="X" className="product-remove">
                     <i className="fa fa-close" aria-hidden="true"></i>
                   </span>
                   <span className="badge">{badge}</span>

@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { UserContext } from "../../context/UserContex/UserState";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 export default function Login() {
+  const form = document.getElementById('form');
+  // form.onsubmit = submit;
+  const { login } = useContext(UserContext);
+  const navigate = useNavigate()
+  function submit(event) {
+    event.preventDefault();
+    navigate("/products")
+  }
+  useEffect(() => {
+      setTimeout(() => {
+        const foundToken = JSON.parse(localStorage.getItem("token"));
+        if (foundToken) {
+        navigate("/products")
+      }
+      },2000)
+ 
+  }, [login])
   return (
     <>
       <div className="d-lg-flex half">
@@ -18,7 +37,7 @@ export default function Login() {
                   Entra y pertenece a esta exclusiva tienda de Piercings con
                   envio a toda España.
                 </p>
-                <form action="#" method="post">
+                <form id="form" action="#" method="post">
                   <div className="form-group first">
                     <label for="username">Como te llamas?</label>
                     <input

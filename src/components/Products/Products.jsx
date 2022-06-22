@@ -1,9 +1,10 @@
 import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
+import ProductItem from "./ProductItem/ProductItem";
 import "./Products.css";
 
 export default function Products() {
-  const { products, getProducts, addCart, cart } = useContext(GlobalContext);
+  const { products, getProducts, cart } = useContext(GlobalContext);
   useEffect(() => {
     getProducts();
   }, []);
@@ -22,23 +23,7 @@ export default function Products() {
 
   const product = products.map((product) => {
     return (
-      <div className="card card-product container-sm">
-        <div className="card-body" key={product.id}>
-          <h3 className="card-title">{product.name}</h3>
-          <img src={product.image} alt={product.name} />
-          <p className="card-text">{product.description}</p>
-          <p className="card-text">{product.price} €</p>
-          <div className="d-flex justify-content-around">
-            <button
-              onClick={() => addCart(product)}
-              className="btn btn-primary text-white"
-            >
-              Anadir al carro
-            </button>
-            <button className="btn btn-primary text-white">Detalles...</button>
-          </div>
-        </div>
-      </div>
+      <ProductItem product={product}/>
     );
   });
 
