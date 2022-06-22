@@ -23,27 +23,7 @@ export default function Products() {
 
   const product = products.map((product) => {
     return (
-<<<<<<< HEAD
       <ProductItem product={product}/>
-=======
-      <div className="card card-product container-sm">
-        <div className="card-body" key={product.id}>
-          <h3 className="card-title">{product.name}</h3>
-          <img src={product.image} alt={product.name} />
-          <p className="card-text">{product.description}</p>
-          <p className="card-text">{product.price} €</p>
-          <div className="btn-group">
-            <button
-              onClick={() => addCart(product)}
-              className="btn-group btn btn-primary text-white"
-            >
-              Anadir al carro
-            </button>
-            <button className="btn btn-primary text-white">Detalles...</button>
-          </div>
-        </div>
-      </div>
->>>>>>> 351f45af48e36a75a65d7fb5740a7f765a3388b9
     );
   });
 

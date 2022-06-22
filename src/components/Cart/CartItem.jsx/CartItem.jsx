@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { GlobalContext } from "../../../context/GlobalState";
 
 export default function CartItem({cartItem, i}) {
+  const { clearOneCartItem } = useContext(GlobalContext);
+
   return (
     <>
        <tbody>

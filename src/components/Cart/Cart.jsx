@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, createOrder } from "react";
+import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import "./Cart.css";
 import { Link } from "react-router-dom";
@@ -6,7 +6,7 @@ import carrito from "../../assets/img/pngwing.com.png";
 import CartItem from "./CartItem.jsx/CartItem";
 
 const Cart = () => {
-  const { cart, clearCart, clearOneCartItem } = useContext(GlobalContext);
+  const { cart, clearCart } = useContext(GlobalContext);
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
