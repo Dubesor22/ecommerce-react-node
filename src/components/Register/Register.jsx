@@ -24,7 +24,7 @@ export default function Register(){
   return (
     <>
       <div className="d-lg-flex half">
-        <div className="bg order-2 order-md-1 portada-registro"></div>
+        <div id="not-invert" className="bg order-2 order-md-1 portada-registro"></div>
         <div className="contents order-1 order-md-2 ">
           <div className="container">
             <div className="row align-items-center justify-content-center">

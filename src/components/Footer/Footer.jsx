@@ -1,13 +1,13 @@
 import React from "react";
 import Sociallink from "./Sociallink/Sociallink";
 import { faFacebook, faInstagram, faTwitter, faPinterest, faYoutube } from "@fortawesome/free-brands-svg-icons"
-
+import { Link } from "react-router-dom";
 export default function Footer(){
 
   const year =  new Date().getFullYear();
   return (
     <>
-      <footer className="footer_area clearfix">
+      <footer className="footer_area clearfix" id="not-invert">
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-6">
@@ -19,10 +19,10 @@ export default function Footer(){
                 <div className="footer_menu">
                   <ul>
                     <li>
-                      <a href="#">Tienda</a>
+                    <Link to="/products">Tienda</Link>
                     </li>
                     <li>
-                      <a href="#">Contacto</a>
+                    <Link to="/contact">Contacto</Link>
                     </li>
                   </ul>
                 </div>

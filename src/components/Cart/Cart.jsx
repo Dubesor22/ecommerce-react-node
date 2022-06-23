@@ -19,7 +19,9 @@ const Cart = () => {
       <div className="empty">
         <h2>Tu Lista de la compra esta vacia</h2>
         <br />
-        <img src={carrito} alt=" carrito" />
+        <div id="not-invert">
+          <img  id="carrito" src={carrito} alt=" carrito" />
+        </div>
         <div className="checkout-btn mt-100">
           <Link to="/products">
             <a href="#" className="btn essence-btn" id="btnWrong">

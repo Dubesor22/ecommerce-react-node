@@ -1,5 +1,5 @@
 .contact-form {
-  background: whitesmoke;
+  background: #eeeeee;
   margin-top: 10%;
   margin-bottom: 5%;
   width: 70%;
@@ -13,7 +13,7 @@
 .contact-image img {
   border-radius: 6rem;
   width: 14%;
-  margin-top: -7%;
+  /* margin-top: -7%; */
 }
 .contact-form form {
   padding: 15%;

@@ -28,7 +28,7 @@ function alert1(){
   return (
     <>
       <div className="d-lg-flex half">
-        <div className="bg order-2 order-md-1 portada"></div>
+        <div id="not-invert" className="bg order-2 order-md-1 portada"></div>
         <div className="contents order-1 order-md-2 ">
           <div className="container ">
             <div className="row align-items-center justify-content-center pb-5 ">
@@ -63,7 +63,7 @@ function alert1(){
                   </div>
 
                   <div className="d-flex mb-5 align-items-center">
-                    <label className="control control--checkbox mb-0">
+                    <label id="not-invert" className="control control--checkbox mb-0">
                       <span className="caption">Recuerdame</span>
                       <input type="checkbox" />
                       <div className="control__indicator"></div>

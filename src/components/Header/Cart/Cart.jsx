@@ -24,7 +24,9 @@ export default function Cart(){
               <div id="center" className="cart-content d-flex">
                 <div className="cart-amount-summary">
                   <h2>Tu lista de la compra esta vacia</h2>
-                  <img id="carrito" src={carrito} alt=" carrito" />
+                  <div id="not-invert">
+                     <img id="carrito" src={carrito} alt=" carrito" />
+                  </div>
                   <ul className="summary-table">
                     <li>
                       <span>subtotal:</span> <span>$0</span>

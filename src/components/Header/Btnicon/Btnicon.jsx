@@ -6,13 +6,17 @@ export default function Btnicon({ src, className, href, span, alternative }) {
     <>{span<=0?(
       <div className={className}>
         <Link to={href} id="essenceCartBtn">
-          <img src={src} alt={alternative} />
+          <div id="not-invert">
+            <img src={src} alt={alternative} />
+          </div>
         </Link>
       </div>
     ):(
       <div className={className}>
         <Link to={href} id="essenceCartBtn">
-          <img src={src} alt={alternative} /> <span>{span}</span>
+          <div id="not-invert">
+            <img src={src} alt={alternative} /> <span>{span}</span>
+          </div>
         </Link>
       </div>
       )

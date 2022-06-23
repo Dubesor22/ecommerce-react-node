@@ -6,7 +6,7 @@ export default function ProfilePage() {
         <div className="container">
             <div className="row">
                 <div className="col-md-4 thirty">
-                    <div className="portada_perfil"></div>
+                    <div id="not-invert" className="portada_perfil"></div>
                 </div>
                 <div className="col-md-8 seventy">
                     <h2>Tu Perfil</h2>

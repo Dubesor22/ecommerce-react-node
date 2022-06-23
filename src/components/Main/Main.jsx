@@ -7,19 +7,19 @@ export default function Main() {
   return (
     <div>
       <div className="cart-bg-overlay"></div>
-      <section
+      <section id="not-invert"
         className="welcome_area bg-img background-overlay"
         style={{ backgroundImage: "url(assets/img/bg-img/bg-1.jpg)" }}
       >
-        <div className="container h-100">
+        <div className="container h-100" >
           <div className="row h-100 align-items-center">
             <div className="col-12">
               <div className="hero-content">
                 <h6>Yolanda Lopez</h6>
                 <h2>"Lo mas intimo de mi"</h2>
-                <a href="#" className="btn essence-btn">
-                  Ver Coleccion
-                </a>
+                <Link to="/products"><a href="#" className="btn essence-btn">
+                  Ver Colección
+                </a></Link>
               </div>
             </div>
           </div>
@@ -28,7 +28,7 @@ export default function Main() {
 
       <div class="top_catagory_area section-padding-80 clearfix">
         <div class="container">
-          <div class="row justify-content-center">
+          <div class="row justify-content-center" id="not-invert">
             <LinkSecciones
               image="url(assets/img/bg-img/bg-2.jpg)"
               href="#"
@@ -51,7 +51,7 @@ export default function Main() {
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <div
+              <div id="not-invert"
                 class="cta-content bg-img background-overlay"
                 style={{ backgroundImage: "url(assets/img/bg-img/bg-5.jpg)" }}
               >
@@ -59,7 +59,7 @@ export default function Main() {
                   <div class="cta--text">
                     <h6>-60%</h6>
                     <h2>Lanzamiento</h2>
-                    <Link to="#" class="btn essence-btn">
+                    <Link to="/products" class="btn essence-btn">
                       Comprar
                     </Link>
                   </div>
