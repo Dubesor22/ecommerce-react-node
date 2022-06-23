@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useState, useContext } from "react";
+import { UserContext } from "../../context/UserContex/UserState";
 import './ProfilePage.css';
 export default function ProfilePage() {
+    const { getUserInfo , register } = useContext(UserContext);
+    const template = {username:"@SofiaLaProfe",name:"Sofia",email:"sofia@gmail.com" };
+    const getUserInfo1= getUserInfo ? getUserInfo : template;
   return (
     <>
         <div className="container">
@@ -12,14 +16,14 @@ export default function ProfilePage() {
                     <h2>Tu Perfil</h2>
                     <div  className="row justify-content-around">
                         <div>
-                            <input type="text" className="inputProfile" placeholder="Username" defaultValue="@SofiLaProfe" id="username" required/>
+                            <input type="text" className="inputProfile" placeholder="Username" defaultValue={getUserInfo1.username} id="username" required/>
                         </div>
                         <div>
                         </div>
                     </div>
                     <div  className="row justify-content-around">
                         <div>
-                            <input type="text" className="inputProfile" placeholder="Nombre" defaultValue="Sofía" id="name" required/>
+                            <input type="text" className="inputProfile" placeholder="Nombre" defaultValue={getUserInfo1.name} id="name" required/>
                         </div>
                         <div>
                             <input type="text" className="inputProfile" placeholder="Apellido" defaultValue="" id="surname"/>
@@ -35,7 +39,7 @@ export default function ProfilePage() {
                     </div>
                     <div  className="row justify-content-around">
                         <div>
-                            <input type="email" className="inputProfile" placeholder="Email" defaultValue="sofia@gmail.com" id="email" required/>
+                            <input type="email" className="inputProfile" placeholder="Email" defaultValue={getUserInfo1.email} id="email" required/>
                         </div>
                         <div>
                         <input type="tel" className="inputProfile" placeholder="Phone" defaultValue="" id="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/>

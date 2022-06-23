@@ -47,49 +47,6 @@ export default function Header() {
                 <ul>
                   <li>
                     <Link to="/products">Tienda</Link>
-                    {/* <div className="megamenu">
-                      <ul className="single-mega cn-col-4">
-                        <li className="title">Coleccion para ellas</li>
-                        <li>
-                          <a href="#">
-                            <span>Titanio</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">Oro</a>
-                        </li>
-                        <li>
-                          <a href="#">Acero</a>
-                        </li>
-                      </ul>
-                      <ul className="single-mega cn-col-4">
-                        <li className="title">Para ellos</li>
-                        <li>
-                          <a href="#">Titanio</a>
-                        </li>
-                        <li>
-                          <a href="#">Oro</a>
-                        </li>
-                        <li>
-                          <a href="#">Acero</a>
-                        </li>
-                      </ul>
-                      <ul className="single-mega cn-col-4">
-                        <li className="title">Unisex</li>
-                        <li>
-                          <a href="#">Titanio</a>
-                        </li>
-                        <li>
-                          <a href="#">Oro</a>
-                        </li>
-                        <li>
-                          <a href="#">Acero</a>
-                        </li>
-                      </ul>
-                      <div className="single-mega cn-col-4">
-                        <img src="assets/img/bg-img/bg-6.jpg" alt="" />
-                      </div>
-                    </div> */}
                   </li>
                   <li>
                     <a href="#">Menu</a>
@@ -192,70 +149,6 @@ export default function Header() {
             )}
           </div>
         </div>
-
-        {/* <div className="cart-bg-overlay"></div>
-        <div className="right-side-cart-area">
-          <div className="cart-button">
-            <a href="#" id="rightSideCart">
-              <img src="assets/img/core-img/bag.svg" alt="" /> <span>3</span>
-            </a>
-          </div>
-
-          <div className="cart-content d-flex">
-            <div className="cart-list">
-              <CartItem
-                href="#"
-                src="assets/img/product-img/product-1.jpg"
-                badge="Acero"
-                item="Button Through Strap Mini Dress"
-                size="S"
-                color="Red"
-                price="45.00"
-              />
-              <CartItem
-                href="#"
-                src="assets/img/product-img/product-2.jpg"
-                badge="Mango"
-                item="Button Through Strap Mini Dress"
-                size="S"
-                color="Red"
-                price="45.00"
-              />
-              <CartItem
-                href="#"
-                src="assets/img/product-img/product-3.jpg"
-                badge="Mango"
-                item="Button Through Strap Mini Dress"
-                size="S"
-                color="Red"
-                price="45.00"
-              />
-            </div>
-
-            <div className="cart-amount-summary">
-              <h2>Summary</h2>
-              <ul className="summary-table">
-                <li>
-                  <span>subtotal:</span> <span>$274.00</span>
-                </li>
-                <li>
-                  <span>delivery:</span> <span>Free</span>
-                </li>
-                <li>
-                  <span>discount:</span> <span>-15%</span>
-                </li>
-                <li>
-                  <span>total:</span> <span>$232.00</span>
-                </li>
-              </ul>
-              <div className="checkout-btn mt-100">
-                <a href="#" className="btn essence-btn">
-                  Finalizar Compra
-                </a>
-              </div>
-            </div>
-          </div>
-        </div> */}
       </header>
     </>
   );
