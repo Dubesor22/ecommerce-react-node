@@ -89,7 +89,7 @@ export default function Main() {
                   image1="assets/img/product-img/product-1.jpg"
                   image2="assets/img/product-img/product-2.jpg"
                   href1="#"
-                  name="Disenyo oreja"
+                  name="Diseño oreja"
                   href2="#"
                   material="Plata de ley"
                   price="80.00"

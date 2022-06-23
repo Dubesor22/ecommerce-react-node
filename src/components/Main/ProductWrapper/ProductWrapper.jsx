@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "./ProductWrapper.css"
 export default function ProductWrapper({image1, image2, nuevo, offer, href1, name, href2, material, price}) {
   return (
     <>
