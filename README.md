@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+#eCommerce React Website 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+![Web Mockup](Mockup.png) 
+<div align:center style="text-align:center"><img src="MobileMockUp.png" /></div>
 
-In the project directory, you can run:
 
-### `npm start`
+This is a real eCommerce website for a tattoo and piercing shop.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+Well, just visit the website at [komorebi-alpha.vercel.app](https://komorebi-alpha.vercel.app/) and get yurself a cool earring! 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### You want to own this website?
 
-### `npm run build`
+On the other hand if you'd like to host this website on your local machine just clone this repository with ``` git clone https://github.com/Dubesor22/ecommerce-react-node.git```. just copy and paste that command on your terminal, then write ```npm init && npm install```  to install all dependencies, and start a local server with ```npm start```. That's it.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deployment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This website it's been deployed and made available to the public thanks to [Vercel](https://vercel.com), which is a completely free hosting.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Built With
 
-### `npm run eject`
+* [React.js](https://reactjs.org/) - Your favourite framework!
+* [CSS](https://www.w3.org/Style/CSS/Overview.en.html) - A simple mechanism for adding style (e.g., fonts, colors, spacing) to Web documents. 
+* [HTML](https://html.com/) - Your Markup Languaje
+* [Axios](https://axios-http.com/) - Fetch, APIS.
+* [React Router v6](https://reactrouter.com/) - When you just want to take the easy route.
+* [React Context](https://reactjs.org/docs/context.html) - A way to share values like these between components without having to explicitly pass a prop through every level of the tree.
+* [SQL](https://blog.schauderhaft.de/2010/02/15/why-sql-sucks/) - Your favourite Structured Query Language.
+* [MySql2](https://www.mysql.com/) - Create high-performance and scalable Online Transaction Processing (OLTP) applications.
+* [Sequelize](https://html.com/) - A modern TypeScript and Node.js ORM for Postgres, MySQL, MariaDB, SQLite and SQL Server, and more.
+* [TypeScript](https://www.typescriptlang.org/) - What's up with your types?
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  Like, share, subscribe, follow and join my Patreon! Just kidding this is totally for free. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Authors
+* **David Ubeda, aka Dubesor, your favorite web developer.** - *Initial work* - [Dubesor22](https://github.com/Dubesor22)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributors
+* **Gabriel Clemente, aka Gabo, your favorite web developer.** - *Added components and fixes* - [Gabo](https://github.com/Gabo-Tech)
+Maybe it's you.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
+This project is licensed under the Creative Commons Public Domain License - Feel free to copy the code, I did it too.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![Creative Commons Public Domain License](https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Public_Domain_Mark_button.svg/220px-Public_Domain_Mark_button.svg.png)
 
-### Analyzing the Bundle Size
+![This meme represents you](https://preview.redd.it/hwurhp7crzf81.png?auto=webp&s=3f230e79f360c9fbc9394e70ea72330391bf8f27)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
