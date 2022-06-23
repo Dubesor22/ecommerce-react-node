@@ -8,7 +8,7 @@ import DarkMode from "./DarkMode/DarkMode.tsx";
 
 export default function Header() {
   const { cart } = useContext(GlobalContext);
-  const token = localStorage.getItem("user_session_token");
+  const token = localStorage.getItem("token");
   const [cart1, setCart1] = useState(false);
   function handleClick() {
     if (cart1 == false) {

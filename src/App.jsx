@@ -12,6 +12,7 @@ import Contact from "./components/Contact/Contact";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { GlobalProvider } from "./context/GlobalState";
 import { OrdersProvider } from "./context/OrdersState";
+import { UserProvider } from "./context/UserContext/UserState";
 
 import Register from "./components/Register/Register";
 import ProfilePage from "./components/ProfilePage/ProfilePage";
@@ -22,18 +23,20 @@ export default function App() {
       <BrowserRouter>
         <GlobalProvider>
           <OrdersProvider>
-            <Header />
-            <Routes>
-              <Route path="/" element={<Main />} />
-              <Route path="/products" element={<Products />} />
-              <Route path="/product" element={<Product />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
-              <Route path="/profile" element={<ProfilePage />} />
-              <Route path="/cart" element={<Cart />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-            <Footer />
+            <UserProvider>
+              <Header />
+              <Routes>
+                <Route path="/" element={<Main />} />
+                <Route path="/products" element={<Products />} />
+                <Route path="/product" element={<Product />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/profile" element={<ProfilePage />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+              <Footer />
+            </UserProvider>
           </OrdersProvider>
         </GlobalProvider>
       </BrowserRouter>

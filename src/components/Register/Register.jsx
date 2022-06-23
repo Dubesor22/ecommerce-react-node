@@ -1,30 +1,38 @@
 import React, { useContext, useEffect } from "react";
-import { UserContext } from "../../context/UserContex/UserState";
+import { UserContext } from "../../context/UserContext/UserState";
 import { useNavigate } from "react-router-dom";
 import "./Register.css";
 
-export default function Register(){
-  // const form = document.getElementById('form');
+export default function Register() {
   const { register } = useContext(UserContext);
-  const navigate = useNavigate()
-  // function submit(e) {
-  //   e.preventDefault();
-  //   navigate("/products")
-  // }
-  // form.onsubmit = submit;
+  const navigate = useNavigate();
   useEffect(() => {
-      setTimeout(() => {
-        const foundToken = JSON.parse(localStorage.getItem("token"));
-        if (foundToken) {
-        navigate("/products")
+    setTimeout(() => {
+      const foundToken = JSON.parse(localStorage.getItem("token"));
+      if (foundToken) {
+        navigate("/products");
       }
-      },2000)
- 
-  }, [register])
+    }, 2000);
+  }, [register]);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const user = {
+      password: document.getElementById("password").value,
+      username: document.getElementById("username").value,
+      email: document.getElementById("email").value,
+      firstName: document.getElementById("name").value,
+      lastname: document.getElementById("lastname").value,
+    };
+    console.log(user);
+    register(user);
+  };
   return (
     <>
       <div className="d-lg-flex half">
-        <div id="not-invert" className="bg order-2 order-md-1 portada-registro"></div>
+        <div
+          id="not-invert"
+          className="bg order-2 order-md-1 portada-registro"
+        ></div>
         <div className="contents order-1 order-md-2 ">
           <div className="container">
             <div className="row align-items-center justify-content-center">
@@ -36,30 +44,77 @@ export default function Register(){
                   Date de alta y pertenece a esta exclusiva tienda de Piercings
                   con envio a toda España.
                 </p>
-                <form id="form" action="#" method="post">
+                <form
+                  className="form-register"
+                  id="form"
+                  onSubmit={handleSubmit}
+                >
                   <div className="form-group first">
                     <label for="name">Como te llamas?</label>
-                    <input type="text" className="form-control" placeholder="Nombre" id="name" required/>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Nombre"
+                      id="name"
+                      required
+                    />
+                  </div>
+                  <div className="form-group first">
+                    <label for="lastname">Apellido</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder=" Apellido"
+                      id="lastname"
+                      required
+                    />
                   </div>
                   <div className="form-group second">
                     <label for="username">Nombre de usuario?</label>
-                    <input type="text" className="form-control" placeholder="Nombre de usuario" id="username" required/>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Nombre de usuario"
+                      id="username"
+                      required
+                    />
                   </div>
                   <div className="form-group third">
                     <label for="email">Email</label>
-                    <input type="email" className="form-control" placeholder="Email" id="email" required/>
+                    <input
+                      type="email"
+                      className="form-control"
+                      placeholder="Email"
+                      id="email"
+                      required
+                    />
                   </div>
                   <div className="form-group forth mb-3">
                     <label for="password">Contraseña</label>
-                    <input type="password" className="form-control" placeholder="Tu secretito" id="password" required/>
+                    <input
+                      type="password"
+                      className="form-control"
+                      placeholder="Tu secretito"
+                      id="password"
+                      required
+                    />
                   </div>
                   <div className="form-group last mb-3">
                     <label for="confirmed password">Repite tu contraseña</label>
-                    <input type="password" className="form-control" placeholder="Tu secretito 2.0" id="confirmed-password" required/>
+                    <input
+                      type="password"
+                      className="form-control"
+                      placeholder="Tu secretito 2.0"
+                      id="confirmed-password"
+                      required
+                    />
                   </div>
-                  <input type="submit" value="Sign up" className="btn btn-block btn-primary"/>
+                  <input
+                    type="submit"
+                    value="Sign up"
+                    className="btn btn-block btn-primary"
+                  />
                 </form>
-                {/* {document.getElementById('form').onsubmit = submit('form')} */}
               </div>
             </div>
           </div>
@@ -67,4 +122,4 @@ export default function Register(){
       </div>
     </>
   );
-};
+}

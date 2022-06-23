@@ -1,30 +1,34 @@
 import React, { useContext, useEffect } from "react";
-import { UserContext } from "../../context/UserContex/UserState";
+import { UserContext } from "../../context/UserContext/UserState";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 export default function Login() {
-  // const form = document.getElementById('form');
-  // form.onsubmit = submit;
   const { login } = useContext(UserContext);
-  const navigate = useNavigate()
-  // function submit(event) {
-  //   event.preventDefault();
-  //   navigate("/products")
-  // }
-function alert1(){
-  alert('Estás jodido, aquí no hacemos eso.');
-}
+  const navigate = useNavigate();
+
+  function alert1() {
+    alert("Estás jodido, aquí no hacemos eso.");
+  }
   useEffect(() => {
-      setTimeout(() => {
-        const foundToken = JSON.parse(localStorage.getItem("token"));
-        if (foundToken) {
-        navigate("/products")
+    setTimeout(() => {
+      const foundToken = JSON.parse(localStorage.getItem("token"));
+      if (foundToken) {
+        navigate("/products");
       }
-      },2000)
- 
-  }, [login])
+    }, 2000);
+  }, [login]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const user = {
+      email: document.getElementById("username").value,
+      password: document.getElementById("password").value,
+    };
+    login(user);
+  };
+
   return (
     <>
       <div className="d-lg-flex half">
@@ -40,11 +44,11 @@ function alert1(){
                   Entra y pertenece a esta exclusiva tienda de Piercings con
                   envio a toda España.
                 </p>
-                <form id="form" action="#" method="post">
+                <form id="form" onSubmit={handleSubmit}>
                   <div className="form-group first">
                     <label for="username">¿Como te llamas?</label>
                     <input
-                      type="email"
+                      type="text"
                       class="form-control"
                       placeholder="Tu usuario"
                       id="username"
@@ -63,7 +67,10 @@ function alert1(){
                   </div>
 
                   <div className="d-flex mb-5 align-items-center">
-                    <label id="not-invert" className="control control--checkbox mb-0">
+                    <label
+                      id="not-invert"
+                      className="control control--checkbox mb-0"
+                    >
                       <span className="caption">Recuerdame</span>
                       <input type="checkbox" />
                       <div className="control__indicator"></div>
@@ -77,7 +84,7 @@ function alert1(){
 
                   <input
                     type="submit"
-                    value="Log In"
+                    value="Iniciar sesión"
                     className="btn btn-block btn-primary"
                   />
                   <div className="container ">

@@ -1,3 +1,7 @@
 .portada-registro {
   background-image: url("../../assets/img/modelo-piercing-2.jpg");
 }
+
+.form-register {
+  margin-bottom: 10em;
+}
