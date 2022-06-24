@@ -1,18 +1,41 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import "./Cart.css";
 import { Link } from "react-router-dom";
 import carrito from "../../assets/img/pngwing.com.png";
-import CartItem from "./CartItem.jsx/CartItem";
+// import CartItem from "./CartItem.jsx/CartItem";
 import { OrdersContext } from "../../context/OrdersState";
 
 const Cart = () => {
   const { cart, clearCart, clearOneCartItem } = useContext(GlobalContext);
   const { createOrder } = useContext(OrdersContext);
+  const [amount, setAmount] = useState([]);
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
+
+  const handleDecrement = (card_id) => {
+    setAmount(
+      amount.map((cartItem) => {
+        if (cartItem.card_id === card_id) {
+          cartItem.amount -= 1;
+        }
+        return cartItem;
+      })
+    );
+  };
+
+  const handleIncrement = (card_id) => {
+    setAmount(
+      amount.map((cartItem) => {
+        if (cartItem.card_id === card_id) {
+          cartItem.amount += 1;
+        }
+        return cartItem;
+      })
+    );
+  };
 
   if (cart.length <= 0) {
     return (
@@ -20,7 +43,7 @@ const Cart = () => {
         <h2>Tu Lista de la compra esta vacia</h2>
         <br />
         <div id="not-invert">
-          <img  id="carrito" src={carrito} alt=" carrito" />
+          <img id="carrito" src={carrito} alt=" carrito" />
         </div>
         <div className="checkout-btn mt-100">
           <Link to="/products">
@@ -58,12 +81,26 @@ const Cart = () => {
           </td>
           <td>
             {" "}
-            <select class=" ">
+            <button
+              class="btn btn-primary"
+              onClick={() => handleDecrement(cartItem.id)}
+            >
+              -
+            </button>
+            <div className="cart-quantity"> {cartItem.amount} </div>
+            <button
+              class="btn btn-primary"
+              onClick={() => handleIncrement(cartItem.id)}
+            >
+              +
+            </button>
+            {/* <select class=" ">
               <option>1</option>
               <option>2</option>
               <option>3</option>
               <option>4</option>
-            </select>{" "}
+              <option>5</option>
+            </select>{" "} */}
           </td>
           <td>
             <div class="price-wrap">

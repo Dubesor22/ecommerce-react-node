@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { UserContext } from "../../context/UserContext/UserState";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Register.css";
 
 export default function Register() {
@@ -12,8 +13,9 @@ export default function Register() {
       if (foundToken) {
         navigate("/products");
       }
-    }, 2000);
+    }, 3000);
   }, [register]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const user = {
@@ -23,9 +25,13 @@ export default function Register() {
       firstName: document.getElementById("name").value,
       lastname: document.getElementById("lastname").value,
     };
-    console.log(user);
     register(user);
+    alert("Usuario registrado correctamente");
+    setTimeout(() => {
+      navigate("/login");
+    }, 1000);
   };
+
   return (
     <>
       <div className="d-lg-flex half">
