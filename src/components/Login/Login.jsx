@@ -76,9 +76,9 @@ export default function Login() {
                       <div className="control__indicator"></div>
                     </label>
                     <span className="ml-auto">
-                      <a onClick={alert1} className="forgot-pass">
+                      <Link to="#" onClick={alert1} className="forgot-pass">
                         Olvidaste Contraseña?
-                      </a>
+                      </Link>
                     </span>
                   </div>
 

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
-import ProductItem from "./ProductItem/ProductItem";
+// import ProductItem from "./ProductItem/ProductItem";
 import "./Products.css";
 import { Link } from "react-router-dom";
 
@@ -61,13 +61,13 @@ export default function Products() {
             <h3>Categorias</h3>
             <ul className="list-group">
               <li className="list-group-item">
-                <a href="#">Titanio</a>
+                <Link to="#">Titanio</Link>
               </li>
               <li className="list-group-item">
-                <a href="#">Oro</a>
+                <Link to="#">Oro</Link>
               </li>
               <li className="list-group-item">
-                <a href="#">Acero</a>
+                <Link to="#">Acero</Link>
               </li>
             </ul>
           </div>

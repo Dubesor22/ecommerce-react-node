@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { UserContext } from "../../context/UserContext/UserState";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 import "./Register.css";
 
 export default function Register() {

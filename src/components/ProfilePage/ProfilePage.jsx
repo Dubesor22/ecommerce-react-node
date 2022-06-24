@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { UserContext } from "../../context/UserContext/UserState";
 import "./ProfilePage.css";
 export default function ProfilePage() {

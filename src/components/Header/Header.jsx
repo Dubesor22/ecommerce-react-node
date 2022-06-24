@@ -11,7 +11,7 @@ export default function Header() {
   const token = localStorage.getItem("token");
   const [cart1, setCart1] = useState(false);
   function handleClick() {
-    if (cart1 == false) {
+    if (cart1 === false) {
       setCart1(true);
     } else {
       setCart1(false);
@@ -49,7 +49,7 @@ export default function Header() {
                     <Link to="/products">Tienda</Link>
                   </li>
                   <li>
-                    <a href="#">Menu</a>
+                    <Link to="#">Menu</Link>
                     <ul className="dropdown">
                       <li>
                         <Link to="/">Potrtada</Link>
@@ -136,7 +136,7 @@ export default function Header() {
                 span={cart.length}
               />
             </div>
-            {cart1 == true ? (
+            {cart1 === true ? (
               <OutsideClickHandler
                 onOutsideClick={() => {
                   handleClick();
