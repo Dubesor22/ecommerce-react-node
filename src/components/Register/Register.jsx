@@ -59,17 +59,17 @@ export default function Register() {
                       required
                     />
                   </div>
-                  <div className="form-group first">
+                  <div className="form-group second">
                     <label for="lastname">Apellido</label>
                     <input
                       type="text"
                       className="form-control"
-                      placeholder=" Apellido"
+                      placeholder="Apellido"
                       id="lastname"
                       required
                     />
                   </div>
-                  <div className="form-group second">
+                  <div className="form-group third">
                     <label for="username">Nombre de usuario?</label>
                     <input
                       type="text"
@@ -79,7 +79,7 @@ export default function Register() {
                       required
                     />
                   </div>
-                  <div className="form-group third">
+                  <div className="form-group forth">
                     <label for="email">Email</label>
                     <input
                       type="email"
@@ -89,7 +89,7 @@ export default function Register() {
                       required
                     />
                   </div>
-                  <div className="form-group forth mb-3">
+                  <div className="form-group fifth mb-3">
                     <label for="password">Contraseña</label>
                     <input
                       type="password"

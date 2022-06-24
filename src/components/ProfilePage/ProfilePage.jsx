@@ -4,18 +4,20 @@ import "./ProfilePage.css";
 export default function ProfilePage() {
   const { getUserInfo } = useContext(UserContext);
   const template = {
+    id:0,
     username: "@SofiaLaProfe",
     name: "Sofia",
     email: "sofia@gmail.com",
+    avatar:"https://uploads-ssl.webflow.com/60782404b8e195845053206a/620a0cbe2bd6e05c7fafbcec_foto1%20(2)-p-1080.jpeg"
   };
-  const getUserInfo1 = getUserInfo ? getUserInfo : template;
+  const getUserInfo1 = getUserInfo.user ? getUserInfo.user : template;
   console.log(JSON.stringify(getUserInfo1));
   return (
     <>
       <div className="container">
         <div className="row">
           <div className="col-md-4 thirty">
-            <div id="not-invert" className="portada_perfil"></div>
+            <div className="portada_perfil"><img id="not-invert" src={getUserInfo1.avatar} alt="" /></div>
           </div>
           <div className="col-md-8 seventy">
             <h2>Tu Perfil</h2>
@@ -91,7 +93,7 @@ export default function ProfilePage() {
                   placeholder="Phone"
                   defaultValue=""
                   id="tel"
-                  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
                 />
               </div>
             </div>
