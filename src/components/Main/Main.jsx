@@ -12,8 +12,8 @@ export default function Main() {
       <div className="cart-bg-overlay"></div>
       <div className="container-video">
         <div class="overlay">
-          <a className="flecha .fade" href="#primera">
-            <img src={arrow} alt="flecha" />
+          <a href="#primera">
+            <img className="flecha" src={arrow} alt="flecha" />
           </a>
         </div>
         <div

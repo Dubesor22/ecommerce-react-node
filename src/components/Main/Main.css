@@ -3,12 +3,13 @@ html {
 }
 
 video {
-  -webkit-filter: grayscale(30%);
+  /* -webkit-filter: grayscale(30%);
   -moz-filter: grayscale(30%);
   -ms-filter: grayscale(30%);
   -o-filter: grayscale(30%);
-  filter: grayscale(30%);
+  filter: grayscale(30%); */
   height: 100vh;
+  filter: brightness(70%);
 }
 
 .container-video {
@@ -19,9 +20,17 @@ video {
   position: relative;
   z-index: 0;
 }
+
+/* fade in overlay */
+
 .overlay {
   position: absolute;
-  bottom: 5%;
+  bottom: 6%;
   left: 50%;
   z-index: 1;
+  opacity: 0.5;
+}
+
+.overlay:hover {
+  opacity: 1;
 }
