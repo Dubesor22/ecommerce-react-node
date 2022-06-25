@@ -9,7 +9,7 @@ import Cart from "./components/Cart/Cart";
 import Product from "./components/Products/Product/Product";
 import Contact from "./components/Contact/Contact";
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { GlobalProvider } from "./context/GlobalState";
 import { OrdersProvider } from "./context/OrdersState";
 import { UserProvider } from "./context/UserContext/UserState";
@@ -26,7 +26,8 @@ export default function App() {
             <UserProvider>
               <Header />
               <Routes>
-                <Route path="/" element={<Main />} />
+                <Route path="/" element={<Navigate replace to="/intro" />} />
+                <Route path="/intro" element={<Main />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/product" element={<Product />} />
                 <Route path="/login" element={<Login />} />

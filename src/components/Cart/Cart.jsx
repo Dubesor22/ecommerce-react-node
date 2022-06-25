@@ -194,16 +194,16 @@ const Cart = () => {
               <div class="card-body">
                 <dl class="dlist-align">
                   <dt>Precio Total:</dt>
-                  <dd class="text-right ml-3">69.97</dd>
+                  <dd class="text-right ml-3">{cart.map(item => item.price).reduce((prev, next) => prev + next)}</dd>
                 </dl>
                 <dl class="dlist-align">
                   <dt>Descuento:</dt>
-                  <dd class="text-right text-danger ml-3">- 10.00</dd>
+                  <dd class="text-right text-danger ml-3">10%</dd>
                 </dl>
                 <dl class="dlist-align">
                   <dt>Total:</dt>
                   <dd class="text-right text-dark b ml-3">
-                    <strong>59.97</strong>
+                    <strong>{cart.map(item => item.price).reduce((prev, next) => prev + next)-(cart.map(item => item.price).reduce((prev, next) => prev + next)*0.1)}</strong>
                   </dd>
                 </dl>
                 <hr />{" "}

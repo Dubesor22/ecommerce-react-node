@@ -83,10 +83,10 @@ export default function Cart(){
                       <span>delivery:</span> <span>Free</span>
                     </li>
                     <li>
-                      <span>discount:</span> <span>0%</span>
+                      <span>discount:</span> <span>10%</span>
                     </li>
                     <li>
-                      <span>total:</span> <span>{cart.map(item => item.price).reduce((prev, next) => prev + next)}</span>
+                      <span>total:</span> <span>{cart.map(item => item.price).reduce((prev, next) => prev + next)-(cart.map(item => item.price).reduce((prev, next) => prev + next)*0.1)}</span>
                     </li>
                   </ul>
                   <div className="checkout-btn mt-100">
