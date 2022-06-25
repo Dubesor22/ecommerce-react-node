@@ -5214,13 +5214,6 @@
     A();
 });
 
-// :: 7.0 Scrollup js
-/*!
- * scrollup v2.4.1
- * Url: http://markgoodyear.com/labs/scrollup/
- * Copyright (c) Mark Goodyear — @markgdyr — http://markgoodyear.com
- * License: MIT
- */
 (function($, window, document) {
   "use strict";
 
@@ -5256,7 +5249,7 @@
     } else {
       $self = $("<a/>", {
         id: o.scrollName,
-        href: "#top",
+        href: "#primera",
       });
     }
 

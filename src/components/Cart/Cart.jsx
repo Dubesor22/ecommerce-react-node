@@ -31,7 +31,7 @@ const Cart = () => {
   const totalPrice = () => {
     let total = 0;
     cart.map((item) => {
-      total += item.price * amount; //total price of cart
+      total += item.price * amount;
     });
     return total;
   };

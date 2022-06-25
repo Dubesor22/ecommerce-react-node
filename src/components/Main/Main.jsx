@@ -2,16 +2,40 @@ import React from "react";
 import { Link } from "react-router-dom";
 import LinkSecciones from "./Link/LinkSecciones";
 import ProductWrapper from "./ProductWrapper/ProductWrapper";
+import video1 from "../../assets/video/videoIntro.mp4";
+import "./Main.css";
+import arrow from "../../assets/img/downArrow.png";
 
 export default function Main() {
   return (
     <div>
       <div className="cart-bg-overlay"></div>
-      <section id="not-invert"
+      <div className="container-video">
+        <div class="overlay">
+          <a className="flecha .fade" href="#primera">
+            <img src={arrow} alt="flecha" />
+          </a>
+        </div>
+        <div
+          id="video_box"
+          className="embed-responsive embed-responsive-16by9 container-video"
+        >
+          <video
+            className="embed-responsive-item video-intro"
+            autoPlay
+            loop
+            muted
+          >
+            <source src={video1} type="video/mp4" />
+          </video>
+        </div>
+      </div>
+      <section
+        id="not-invert"
         className="welcome_area bg-img background-overlay"
         style={{ backgroundImage: "url(assets/img/bg-img/bg-1.jpg)" }}
       >
-        <div className="container h-100" >
+        <div id="primera" className="container h-100">
           <div className="row h-100 align-items-center">
             <div className="col-12">
               <div className="hero-content">
@@ -51,7 +75,8 @@ export default function Main() {
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <div id="not-invert"
+              <div
+                id="not-invert"
                 class="cta-content bg-img background-overlay"
                 style={{ backgroundImage: "url(assets/img/bg-img/bg-5.jpg)" }}
               >

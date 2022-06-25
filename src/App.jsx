@@ -8,8 +8,10 @@ import Login from "./components/Login/Login";
 import Cart from "./components/Cart/Cart";
 import Product from "./components/Products/Product/Product";
 import Contact from "./components/Contact/Contact";
+import Intro from "./components/Intro/Intro";
+import { Redirect } from "react";
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { GlobalProvider } from "./context/GlobalState";
 import { OrdersProvider } from "./context/OrdersState";
 import { UserProvider } from "./context/UserContext/UserState";

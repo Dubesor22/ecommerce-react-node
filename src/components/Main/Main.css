@@ -1,0 +1,27 @@
+html {
+  scroll-behavior: smooth;
+}
+
+video {
+  -webkit-filter: grayscale(30%);
+  -moz-filter: grayscale(30%);
+  -ms-filter: grayscale(30%);
+  -o-filter: grayscale(30%);
+  filter: grayscale(30%);
+  height: 100vh;
+}
+
+.container-video {
+  position: relative;
+}
+
+.container-video video {
+  position: relative;
+  z-index: 0;
+}
+.overlay {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  z-index: 1;
+}
