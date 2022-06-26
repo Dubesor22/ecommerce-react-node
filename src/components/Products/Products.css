@@ -90,3 +90,8 @@
 .texto a{
   color: #000;
 }
+@media screen and (min-device-width: 1546px){
+  .container-products {
+    justify-content: center;
+  }
+}
