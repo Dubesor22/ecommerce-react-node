@@ -90,3 +90,20 @@ margin: 8px 0px 0px;
   margin: 0;
   width: 20rem;
 }
+@media screen and (max-device-width: 910px) 
+ { 
+  .row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #profilepicDiv{
+  height: 10rem;
+}
+#birthdateDiv{
+  margin-left: 0px;
+}
+#profilepicDiv{
+  align-items: center;
+}
+}
