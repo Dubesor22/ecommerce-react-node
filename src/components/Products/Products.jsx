@@ -3,6 +3,7 @@ import { GlobalContext } from "../../context/GlobalState";
 // import ProductItem from "./ProductItem/ProductItem";
 import "./Products.css";
 import { Link } from "react-router-dom";
+import Search from "../Header/Search/Search";
 
 export default function Products() {
   const { products, getProducts, cart, addCart } = useContext(GlobalContext);
@@ -59,6 +60,7 @@ export default function Products() {
         <div className="side-bar">
           <div className="side-bar-item">
             <h3>Categorias</h3>
+            <Search />
             <ul className="list-group">
               <li className="list-group-item">
                 <Link to="#">Titanio</Link>
