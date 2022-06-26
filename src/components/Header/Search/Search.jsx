@@ -10,8 +10,9 @@ const Search = () => {
     await axios
       .get("http://localhost:8080/products/list/")
       .then((res) => {
-        setItem(res.data);
-        setSearchResultsItem(res.data);
+        setItem(res.data.product);
+        setSearchResultsItem(res.data.product);
+        console.log(res.data.product);
       })
       .catch((err) => {
         console.log(err);
@@ -20,13 +21,17 @@ const Search = () => {
 
   const handleChange = (e) => {
     setSearch(e.target.value);
-    // console.log(e.target.value);
+    console.log("Lo buscado:  " + e.target.value);
     filterItem(e.target.value);
   };
 
   const filterItem = (searched) => {
-    var resultSearched = searchResultsItem.filter((item) => {
-      if (item.name.toLowerCase().includes(searched.toLowerCase())) {
+    console.log(searchResultsItem);
+    let resultSearched = searchResultsItem.filter((item) => {
+      if (
+        item.name.toLowerCase().includes(searched.toLowerCase()) ||
+        item.description.toLowerCase().includes(searched.toLowerCase())
+      ) {
         return item;
       }
     });
@@ -55,6 +60,7 @@ const Search = () => {
 
       <div className="search-item">
         <p>{item.name}</p>
+        <p>{item.price}</p>
       </div>
     </div>
   );
