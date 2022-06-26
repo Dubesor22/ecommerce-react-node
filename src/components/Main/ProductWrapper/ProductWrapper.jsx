@@ -12,7 +12,7 @@ export default function ProductWrapper({image1, image2, nuevo, offer, href1, nam
                       src={image2}
                       alt=""
                     />
-                    {nuevo!=(""||null||undefined) ? (
+                    {nuevo!==(""||null||undefined) ? (
                         <div className="product-badge new-badge">
                             <span>Nuevo</span>
                         </div>

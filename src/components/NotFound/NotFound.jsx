@@ -1,12 +1,12 @@
 import React from 'react'
-import { useNavigate } from 'react-router';
+// import { useNavigate } from 'react-router';
 import "./NotFound.css";
 
 export default function NotFound() {
-	const navigate = useNavigate();
-	function handleSubmit(){
-		navigate("/products");
-	}
+	// const navigate = useNavigate();
+	// function handleSubmit(){
+	// 	navigate("/products");
+	// }
   return (
     // <div className="not">
     //     <div className="terminal">

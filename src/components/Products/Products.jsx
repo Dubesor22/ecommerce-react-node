@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
-import ProductItem from "./ProductItem/ProductItem";
+// import ProductItem from "./ProductItem/ProductItem";
 import "./Products.css";
 import { Link } from "react-router-dom";
 

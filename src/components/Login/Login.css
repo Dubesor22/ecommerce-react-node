@@ -12,3 +12,6 @@
 #username{
   padding-left: 1rem;
 }
+.forgot-pass{
+  cursor: pointer;
+}

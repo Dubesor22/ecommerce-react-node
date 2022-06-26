@@ -9,7 +9,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   function alert1() {
-    alert("Estás jodido, aquí no hacemos eso.");
+    alert("Jaja buena suerte, aquí no hacemos eso. Que la fuerza te acompañe.");
   }
   useEffect(() => {
     setTimeout(() => {
@@ -76,9 +76,9 @@ export default function Login() {
                       <div className="control__indicator"></div>
                     </label>
                     <span className="ml-auto">
-                      <a onClick={alert1} className="forgot-pass">
+                      <p onClick={alert1} className="forgot-pass">
                         Olvidaste Contraseña?
-                      </a>
+                      </p>
                     </span>
                   </div>
 

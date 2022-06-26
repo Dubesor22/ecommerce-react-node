@@ -47,9 +47,9 @@ const Cart = () => {
         </div>
         <div className="checkout-btn mt-100">
           <Link to="/products">
-            <a href="#" className="btn essence-btn" id="btnWrong">
+            <p className="btn essence-btn" id="btnWrong">
               Add items to cart
-            </a>
+            </p>
           </Link>
         </div>
       </div>
@@ -68,7 +68,7 @@ const Cart = () => {
           <td className="cart" key={i}>
             <figure class="itemside align-items-center">
               <div class="aside">
-                <img src={cartItem.image} class="img-sm w-100" />
+                <img src={cartItem.image} class="img-sm w-100" alt=""/>
               </div>
               <figcaption class="info">
                 {" "}

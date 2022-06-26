@@ -21,7 +21,7 @@ export default function ProfilePage() {
     e.preventDefault();
     const password= document.getElementById("password").value;
     let user = {}
-    if(password == "" ){
+    if(password === "" ){
           user = {
           username: document.getElementById("username").value.substring(1),
           email: document.getElementById("email").value,
