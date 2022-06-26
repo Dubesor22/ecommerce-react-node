@@ -46,11 +46,11 @@ export default function Login() {
                 </p>
                 <form id="form" onSubmit={handleSubmit}>
                   <div className="form-group first">
-                    <label for="username">¿Como te llamas?</label>
+                    <label for="username">Email</label>
                     <input
                       type="text"
                       class="form-control"
-                      placeholder="Tu usuario"
+                      placeholder="Email"
                       id="username"
                       required
                     />
