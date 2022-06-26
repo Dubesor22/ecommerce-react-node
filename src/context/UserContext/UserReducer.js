@@ -22,6 +22,11 @@ const users = (state, action) => {
           ...state,
           message: action.payload.message,
         };
+      case "UPDATE_USER":
+        return {
+          ...state,
+          message: action.payload.message,
+        };
         case "CLEARMESSAGE":
             return {
               ...state,

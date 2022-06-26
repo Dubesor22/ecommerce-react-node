@@ -1,33 +1,71 @@
-import React, { useState, useContext } from "react";
+import React, {  useEffect , useContext , useState} from "react";
 import { UserContext } from "../../context/UserContext/UserState";
 import "./ProfilePage.css";
+
 export default function ProfilePage() {
-  const { getUserInfo } = useContext(UserContext);
-  const template = {
-    id:0,
-    username: "@SofiaLaProfe",
-    name: "Sofia",
-    email: "sofia@gmail.com",
-    avatar:"https://uploads-ssl.webflow.com/60782404b8e195845053206a/620a0cbe2bd6e05c7fafbcec_foto1%20(2)-p-1080.jpeg"
+  const { user , getUserInfo, updateUserInfo } = useContext(UserContext);
+  useEffect(() => {
+    getUserInfo();
+  }, []);
+  if (!user) {
+    return <span>Cargando...</span>;
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const password= document.getElementById("password").value;
+    let user = {}
+    if(password == "" ){
+          user = {
+          username: document.getElementById("username").value.substring(1),
+          email: document.getElementById("email").value,
+          firstName: document.getElementById("name").value,
+          lastname: document.getElementById("lastname").value,
+          // gender: document.getElementById("gender").value,
+          avatar: document.getElementById("profilepic").value,
+          birthDate: document.getElementById("birthdate").value
+        }
+    }else{
+        user = {
+        password: password,
+        username: document.getElementById("username").value.substring(1),
+        email: document.getElementById("email").value,
+        firstName: document.getElementById("name").value,
+        lastname: document.getElementById("lastname").value,
+        // gender: document.getElementById("gender").value,
+        avatar: document.getElementById("profilepic").value,
+        birthDate: document.getElementById("birthdate").value
+      }
+    }
+    updateUserInfo(user);
+    alert("Usuario actualizado correctamente");
   };
-  const getUserInfo1 = getUserInfo.user ? getUserInfo.user : template;
-  console.log(JSON.stringify(getUserInfo1));
   return (
     <>
       <div className="container">
+      <form className="form-update" id="form-update" onSubmit={handleSubmit}>
         <div className="row">
           <div className="col-md-4 thirty">
-            <div className="portada_perfil"><img id="not-invert" src={getUserInfo1.avatar} alt="" /></div>
+            <div className="portada_perfil"><img id="not-invert" src={user.avatar} alt="" /></div>
+           <div id="profilepicDiv">
+           <label>Profile picture</label>
+           <input
+                  type="text"
+                  className="inputProfile"
+                  placeholder="Change profile image (add URL)"
+                  defaultValue={user.avatar}
+                  id="profilepic"
+                /></div>
           </div>
           <div className="col-md-8 seventy">
             <h2>Tu Perfil</h2>
             <div className="row justify-content-around">
-              <div>
+              <div id="birthdateDiv">
+              <label>Nombre de usuario</label>
                 <input
                   type="text"
                   className="inputProfile"
                   placeholder="Username"
-                  defaultValue={getUserInfo1.username}
+                  defaultValue={"@"+user.username}
                   id="username"
                   required
                 />
@@ -35,28 +73,31 @@ export default function ProfilePage() {
               <div></div>
             </div>
             <div className="row justify-content-around">
-              <div>
+              <div id="birthdateDiv">
+              <label>Nombre</label>
                 <input
                   type="text"
                   className="inputProfile"
                   placeholder="Nombre"
-                  defaultValue={getUserInfo1.name}
+                  defaultValue={user.firstname}
                   id="name"
                   required
                 />
               </div>
-              <div>
+              <div id="birthdateDiv">
+                <label>Apellido</label>
                 <input
                   type="text"
                   className="inputProfile"
                   placeholder="Apellido"
-                  defaultValue=""
-                  id="surname"
+                  defaultValue={user.lastname}
+                  id="lastname"
                 />
               </div>
             </div>
             <div className="row justify-content-around">
-              <div>
+              <div id="birthdateDiv">
+              <label>New password</label>
                 <input
                   type="password"
                   className="inputProfile"
@@ -65,80 +106,41 @@ export default function ProfilePage() {
                   id="password"
                 />
               </div>
-              <div>
+              <div id="birthdateDiv">
+              <label>Repeat new password</label>
                 <input
                   type="password"
                   className="inputProfile"
                   placeholder="Confirm new password"
                   defaultValue=""
-                  id="confirmed-pasword"
+                  id="confirmed_pasword"
                 />
               </div>
             </div>
             <div className="row justify-content-around">
-              <div>
+              <div id="birthdateDiv">
+              <label>Email</label>
                 <input
                   type="email"
                   className="inputProfile"
                   placeholder="Email"
-                  defaultValue={getUserInfo1.email}
+                  defaultValue={user.email}
                   id="email"
                   required
                 />
               </div>
-              <div>
+              <div id="birthdateDiv">
+                <label>Birthdate</label>
                 <input
-                  type="tel"
+                  type="text"
                   className="inputProfile"
-                  placeholder="Phone"
-                  defaultValue=""
-                  id="tel"
-                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+                  placeholder="Birth date (yyyy/mm/dd)"
+                  defaultValue={JSON.stringify(user.birthDate).substring(1,11)}
+                  id="birthdate"
                 />
               </div>
             </div>
-            <div className="row justify-content-around">
-              <div>
-                <input
-                  type="text"
-                  className="inputProfile"
-                  placeholder="Address"
-                  defaultValue=""
-                  id="adress"
-                />
-              </div>
-              <div></div>
-            </div>
-            <div className="row justify-content-around">
-              <div>
-                <input
-                  type="text"
-                  className="inputProfile"
-                  placeholder="Ciudad"
-                  defaultValue=""
-                  id="name"
-                  required
-                />
-              </div>
-              <div>
-                <input
-                  type="text"
-                  className="inputProfile"
-                  placeholder="Provincia"
-                  defaultValue=""
-                  id="surname"
-                />
-              </div>
-              <div>
-                <input
-                  type="text"
-                  className="inputProfile"
-                  placeholder="Código Postal"
-                  defaultValue=""
-                  id="surname"
-                />
-              </div>
-            </div>
+
             <input
               type="submit"
               value="Guardar"
@@ -146,6 +148,7 @@ export default function ProfilePage() {
             />
           </div>
         </div>
+       </form>
       </div>
     </>
   );
