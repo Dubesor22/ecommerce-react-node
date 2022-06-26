@@ -14,9 +14,7 @@ html[data-theme="dark"] #not-invert{
 html[data-theme="dark"] img{
   filter: invert(1) hue-rotate(180deg);
 }
-/* #not-invert[data-theme="dark"]{
-  filter: invert(1) hue-rotate(180deg);
-} */
+
 html {
     transition: color 300ms, background-color 300ms;
 }
