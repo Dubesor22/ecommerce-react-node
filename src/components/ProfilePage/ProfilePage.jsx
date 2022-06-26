@@ -52,11 +52,11 @@ export default function ProfilePage() {
           <div className="col-md-4 thirty">
             <div className="portada_perfil"><img id="not-invert" src={user.avatar} alt="" /></div>
            <div id="profilepicDiv">
-           <label>Profile image</label>
+           <label>Foto de perfil</label>
            <input
                   type="text"
                   className="inputProfile"
-                  placeholder="Change profile image (add URL)"
+                  placeholder="Cambia tu foto de perfil (pega la URL)"
                   defaultValue={user.avatar}
                   id="profilepic"
                 /></div>
@@ -69,7 +69,7 @@ export default function ProfilePage() {
                 <input
                   type="text"
                   className="inputProfile"
-                  placeholder="Username"
+                  placeholder="Nombre de usuario"
                   defaultValue={"@"+user.username}
                   id="username"
                   required
@@ -102,21 +102,21 @@ export default function ProfilePage() {
             </div>
             <div className="row justify-content-around">
               <div id="birthdateDiv">
-              <label>New password</label>
+              <label>Nueva contraseña</label>
                 <input
                   type="password"
                   className="inputProfile"
-                  placeholder="New password"
+                  placeholder="Nueva contraseña"
                   defaultValue=""
                   id="password"
                 />
               </div>
               <div id="birthdateDiv">
-              <label>Repeat new password</label>
+              <label>Nueva contraseña</label>
                 <input
                   type="password"
                   className="inputProfile"
-                  placeholder="Confirm new password"
+                  placeholder="Confirma tu nueva contraseña"
                   defaultValue=""
                   id="confirmed_pasword"
                 />
@@ -135,11 +135,11 @@ export default function ProfilePage() {
                 />
               </div>
               <div id="birthdateDiv">
-                <label>Birthdate</label>
+                <label>¿Nos dices tu cumple?</label>
                 <input
                   type="text"
                   className="inputProfile"
-                  placeholder="Birth date (yyyy/mm/dd)"
+                  placeholder="(yyyy/mm/dd)"
                   defaultValue={JSON.stringify(user.birthDate).substring(1,11)}
                   id="birthdate"
                 />

@@ -2,13 +2,17 @@ import React, { useContext, useEffect, createOrder } from "react";
 import CartItem from '../CartItem/CartItem'
 import Btnicon from '../Btnicon/Btnicon'
 import { GlobalContext } from "../../../context/GlobalState";
+import { UserContext } from "../../../context/UserContext/UserState";
 import carrito from "../../../assets/img/pngwing.com.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Cart.css";
+import axios from "axios";
+
 
 export default function Cart(){
   const { cart, clearCart } = useContext(GlobalContext);
-
+  const { user } = useContext(UserContext);
+  const navigate = useNavigate();
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
@@ -54,8 +58,20 @@ export default function Cart(){
   }
   const createNewOrder = () => {
     createOrder(cart);
+    axios.post("http://localhost:8080/orders/create-checkout-session", {
+      cart,
+      userId: user.id
+    }).then((response) => {
+      if (response.data.url) {
+        window.location.href = response.data.url;
+      } else {
+        navigate("/404");
+      }
+    })
+    .catch((err) => console.log(err.message));
     clearCart();
-  };
+    navigate("/checkout");
+    };
   const cartItem = cart.map((cartItem, i) => {
     return (
       <CartItem href={cartItem.id} src={cartItem.image} i={i} badge={cartItem.badge} item={cartItem.item} size={cartItem.size} color={cartItem.color} price={cartItem.price}/>
@@ -89,11 +105,13 @@ export default function Cart(){
                       <span>total:</span> <span>{cart.map(item => item.price).reduce((prev, next) => prev + next)-(cart.map(item => item.price).reduce((prev, next) => prev + next)*0.1)}</span>
                     </li>
                   </ul>
-                  <div className="checkout-btn mt-100">
-                    <a href="#" onClick={() => createNewOrder()} className="btn essence-btn" id="btnWrong">
-                      Finalizar Compra
-                    </a>
-                  </div>
+                  <form action="/create-checkout-session" method="POST">
+                    <div className="checkout-btn mt-100">
+                      <button type="submit" href="#" onClick={() => createNewOrder()} className="btn essence-btn" id="btnWrong">
+                        Finalizar Compra
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>

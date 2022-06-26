@@ -16,6 +16,9 @@ import { UserProvider } from "./context/UserContext/UserState";
 
 import Register from "./components/Register/Register";
 import ProfilePage from "./components/ProfilePage/ProfilePage";
+import PaymentSuccesful from "./components/PaymentSuccesful/PaymentSuccesful";
+import NotFound from "./components/NotFound/NotFound";
+
 
 export default function App() {
   return (
@@ -35,6 +38,8 @@ export default function App() {
                 <Route path="/profile" element={<ProfilePage />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/checkout" element={<PaymentSuccesful/>} />
+                <Route path="*" element={<NotFound/>} />
               </Routes>
               <Footer />
             </UserProvider>
