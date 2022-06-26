@@ -1,14 +1,20 @@
-import React, {  useEffect , useContext , useState} from "react";
+import React, {  useEffect , useContext } from "react";
 import { UserContext } from "../../context/UserContext/UserState";
 import "./ProfilePage.css";
+import { useNavigate } from "react-router-dom";
 
 export default function ProfilePage() {
+  const navigate = useNavigate();
   const { user , getUserInfo, updateUserInfo } = useContext(UserContext);
   useEffect(() => {
     getUserInfo();
   }, []);
   if (!user) {
     return <span>Cargando...</span>;
+  }
+  function logOut() {
+    localStorage.clear();
+    navigate("/login");
   }
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,7 +26,6 @@ export default function ProfilePage() {
           email: document.getElementById("email").value,
           firstName: document.getElementById("name").value,
           lastname: document.getElementById("lastname").value,
-          // gender: document.getElementById("gender").value,
           avatar: document.getElementById("profilepic").value,
           birthDate: document.getElementById("birthdate").value
         }
@@ -31,12 +36,12 @@ export default function ProfilePage() {
         email: document.getElementById("email").value,
         firstName: document.getElementById("name").value,
         lastname: document.getElementById("lastname").value,
-        // gender: document.getElementById("gender").value,
         avatar: document.getElementById("profilepic").value,
         birthDate: document.getElementById("birthdate").value
       }
     }
     updateUserInfo(user);
+    window.location.reload();
     alert("Usuario actualizado correctamente");
   };
   return (
@@ -47,7 +52,7 @@ export default function ProfilePage() {
           <div className="col-md-4 thirty">
             <div className="portada_perfil"><img id="not-invert" src={user.avatar} alt="" /></div>
            <div id="profilepicDiv">
-           <label>Profile picture</label>
+           <label>Profile image</label>
            <input
                   type="text"
                   className="inputProfile"
@@ -140,13 +145,21 @@ export default function ProfilePage() {
                 />
               </div>
             </div>
-
-            <input
-              type="submit"
-              value="Guardar"
-              className="btn btn-block btn-primary padding"
-            />
+            <div id="profileBtn">
+              <input
+                type="submit"
+                value="Guardar"
+                className="btn btn-block btn-primary padding"
+              />
+              <input
+                onClick={logOut}
+                type="submit"
+                value="Cerrar sesión"
+                className="btn btn-block btn-primary padding"
+              />
+            </div>
           </div>
+          
         </div>
        </form>
       </div>
