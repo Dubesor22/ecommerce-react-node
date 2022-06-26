@@ -54,14 +54,14 @@
   outline: none;
 }
 
-#username,
-#name,
-#lastname,
-#password,
-#confirmed_pasword,
-#email,
-#birthdate,
-#gender{
+#usernameP,
+#nameP,
+#lastnameP,
+#passwordP,
+#confirmed_paswordP,
+#emailP,
+#birthdateP,
+#genderP{
   padding: 0.1rem;
   width: 15rem;
   margin-left: 0;

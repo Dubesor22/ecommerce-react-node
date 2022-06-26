@@ -481,7 +481,7 @@ img{
 .breakpoint-off .classynav ul li.megamenu-item .dd-arrow{
     display:none
 }
-@media only screen and (max-width:1257px){
+@media only screen and (max-width:1366px){
     .classy-navbar-toggler,.classycloseIcon{
         display:block
     }

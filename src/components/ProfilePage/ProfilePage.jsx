@@ -13,8 +13,9 @@ export default function ProfilePage() {
     return <span>Cargando...</span>;
   }
   function logOut() {
-    localStorage.clear();
+    localStorage.removeItem("token");
     navigate("/login");
+    window.location.reload();
   }
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -71,7 +72,7 @@ export default function ProfilePage() {
                   className="inputProfile"
                   placeholder="Nombre de usuario"
                   defaultValue={"@"+user.username}
-                  id="username"
+                  id="usernameP"
                   required
                 />
               </div>
@@ -85,7 +86,7 @@ export default function ProfilePage() {
                   className="inputProfile"
                   placeholder="Nombre"
                   defaultValue={user.firstname}
-                  id="name"
+                  id="nameP"
                   required
                 />
               </div>
@@ -96,7 +97,7 @@ export default function ProfilePage() {
                   className="inputProfile"
                   placeholder="Apellido"
                   defaultValue={user.lastname}
-                  id="lastname"
+                  id="lastnameP"
                 />
               </div>
             </div>
@@ -108,7 +109,7 @@ export default function ProfilePage() {
                   className="inputProfile"
                   placeholder="Nueva contraseña"
                   defaultValue=""
-                  id="password"
+                  id="passwordP"
                 />
               </div>
               <div id="birthdateDiv">
@@ -118,7 +119,7 @@ export default function ProfilePage() {
                   className="inputProfile"
                   placeholder="Confirma tu nueva contraseña"
                   defaultValue=""
-                  id="confirmed_pasword"
+                  id="confirmed_paswordP"
                 />
               </div>
             </div>
@@ -130,7 +131,7 @@ export default function ProfilePage() {
                   className="inputProfile"
                   placeholder="Email"
                   defaultValue={user.email}
-                  id="email"
+                  id="emailP"
                   required
                 />
               </div>
@@ -141,7 +142,7 @@ export default function ProfilePage() {
                   className="inputProfile"
                   placeholder="(yyyy/mm/dd)"
                   defaultValue={JSON.stringify(user.birthDate).substring(1,11)}
-                  id="birthdate"
+                  id="birthdateP"
                 />
               </div>
             </div>

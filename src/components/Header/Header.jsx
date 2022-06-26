@@ -111,17 +111,17 @@ export default function Header() {
               src="assets/img/core-img/heart.svg"
               alternative="iconoFav"
             />
-            {token ? (
+            {!token || token=="" || token == null ? (
               <Btnicon
                 className="user-login-info"
-                href="/profile"
+                href="/login"
                 src="assets/img/core-img/user.svg"
                 alternative="iconoUser"
               />
             ) : (
               <Btnicon
                 className="user-login-info"
-                href="/login"
+                href="/profile"
                 src="assets/img/core-img/user.svg"
                 alternative="iconoUser"
               />
