@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, createOrder } from "react";
-import CartItem from '../CartItem/CartItem'
-import Btnicon from '../Btnicon/Btnicon'
+import CartItem from "../CartItem/CartItem";
+import Btnicon from "../Btnicon/Btnicon";
 import { GlobalContext } from "../../../context/GlobalState";
 import { UserContext } from "../../../context/UserContext/UserState";
 import carrito from "../../../assets/img/pngwing.com.png";
@@ -9,7 +9,7 @@ import "./Cart.css";
 import axios from "axios";
 
 
-export default function Cart(){
+export default function Cart() {
   const { cart, clearCart } = useContext(GlobalContext);
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
@@ -20,40 +20,48 @@ export default function Cart(){
   if (cart.length <= 0) {
     return (
       <>
-    <div  className="right-side-cart-area cart-on">
-              <div className="cart-button">
-                <Btnicon className="cart-area" href="#" src="assets/img/core-img/bag.svg" alternative="iconoCart" span={cart.length}/>
+        <div className="right-side-cart-area cart-on">
+          <div className="cart-button">
+            <Btnicon
+              className="cart-area"
+              href="#"
+              src="assets/img/core-img/bag.svg"
+              alternative="iconoCart"
+              span={cart.length}
+            />
+          </div>
+
+          <div id="center" className="cart-content d-flex">
+            <div className="cart-amount-summary">
+              <h2>Tu lista de la compra esta vacia</h2>
+              <div id="not-invert">
+                <img id="carrito" src={carrito} alt=" carrito" />
               </div>
-      
-              <div id="center" className="cart-content d-flex">
-                <div className="cart-amount-summary">
-                  <h2>Tu lista de la compra esta vacia</h2>
-                  <div id="not-invert">
-                     <img id="carrito" src={carrito} alt=" carrito" />
-                  </div>
-                  <ul className="summary-table">
-                    <li>
-                      <span>subtotal:</span> <span>$0</span>
-                    </li>
-                    <li>
-                      <span>delivery:</span> <span>Free</span>
-                    </li>
-                    <li>
-                      <span>discount:</span> <span>0</span>
-                    </li>
-                    <li>
-                      <span>total:</span> <span>$0</span>
-                    </li>
-                  </ul>
-                  <div className="checkout-btn mt-100">
-                  <Link to="/products"><a href="#" className="btn essence-btn" id="btnWrong">
-                      Add items to cart
-                    </a></Link>
-                  </div>
-                </div>
+              <ul className="summary-table">
+                <li>
+                  <span>subtotal:</span> <span>$0</span>
+                </li>
+                <li>
+                  <span>delivery:</span> <span>Free</span>
+                </li>
+                <li>
+                  <span>discount:</span> <span>0</span>
+                </li>
+                <li>
+                  <span>total:</span> <span>$0</span>
+                </li>
+              </ul>
+              <div className="checkout-btn mt-100">
+                <Link to="/products">
+                  <Link to="#" className="btn essence-btn" id="btnWrong">
+                    Add items to cart
+                  </Link>
+                </Link>
               </div>
             </div>
-    </>
+          </div>
+        </div>
+      </>
     );
   }
   const createNewOrder = () => {
@@ -74,13 +82,22 @@ export default function Cart(){
     };
   const cartItem = cart.map((cartItem, i) => {
     return (
-      <CartItem href={cartItem.id} src={cartItem.image} i={i} badge={cartItem.badge} item={cartItem.item} size={cartItem.size} color={cartItem.color} price={cartItem.price}/>
+      <CartItem
+        href={cartItem.id}
+        src={cartItem.image}
+        i={i}
+        badge={cartItem.badge}
+        item={cartItem.item}
+        size={cartItem.size}
+        color={cartItem.color}
+        price={cartItem.price}
+      />
     );
   });
 
   return (
     <>
-    <div className="right-side-cart-area cart-on">
+            <div className="right-side-cart-area cart-on">
               <div className="cart-button">
                 <Btnicon className="cart-area" href="#" src="assets/img/core-img/bag.svg" alternative="iconoCart" span="3"/>
               </div>
@@ -116,5 +133,5 @@ export default function Cart(){
               </div>
             </div>
     </>
-  )
+  );
 }

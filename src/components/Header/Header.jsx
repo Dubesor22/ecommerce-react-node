@@ -5,6 +5,7 @@ import Btnicon from "./Btnicon/Btnicon";
 import Cart from "./Cart/Cart";
 import OutsideClickHandler from "react-outside-click-handler";
 import DarkMode from "./DarkMode/DarkMode.tsx";
+import "./Header.css";
 
 export default function Header() {
   const { cart } = useContext(GlobalContext);
@@ -21,7 +22,7 @@ export default function Header() {
   return (
     <>
       <header className="header_area">
-        <div className="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
+        <div className="nav-color classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
           <nav className="classy-navbar" id="essenceNav">
             <Link className="nav-brand" to="/">
               Komorebi
@@ -46,10 +47,10 @@ export default function Header() {
               <div className="classynav">
                 <ul>
                   <li>
-                    <Link to="/products">Tienda</Link>
+                    <Link to="/products">Piercings</Link>
                   </li>
                   <li>
-                    <a href="#">Menu</a>
+                    <Link to="#">Menu</Link>
                     <ul className="dropdown">
                       <li>
                         <Link to="/">Potrtada</Link>
@@ -136,7 +137,7 @@ export default function Header() {
                 span={cart.length}
               />
             </div>
-            {cart1 == true ? (
+            {cart1 === true ? (
               <OutsideClickHandler
                 onOutsideClick={() => {
                   handleClick();

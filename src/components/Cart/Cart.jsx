@@ -9,32 +9,31 @@ import { OrdersContext } from "../../context/OrdersState";
 const Cart = () => {
   const { cart, clearCart, clearOneCartItem } = useContext(GlobalContext);
   const { createOrder } = useContext(OrdersContext);
-  const [amount, setAmount] = useState([]);
-
+  const [amount, setAmount] = useState(1);
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-  const handleDecrement = (card_id) => {
-    setAmount(
-      amount.map((cartItem) => {
-        if (cartItem.card_id === card_id) {
-          cartItem.amount -= 1;
-        }
-        return cartItem;
-      })
-    );
+  const increment = () => {
+    setAmount(amount + 1);
   };
 
-  const handleIncrement = (card_id) => {
-    setAmount(
-      amount.map((cartItem) => {
-        if (cartItem.card_id === card_id) {
-          cartItem.amount += 1;
-        }
-        return cartItem;
-      })
-    );
+  const decrement = () => {
+    if (amount > 1) {
+      setAmount(amount - 1);
+    }
+  };
+
+  const oneItemPrice = (item) => {
+    return item.price * amount;
+  };
+
+  const totalPrice = () => {
+    let total = 0;
+    cart.map((item) => {
+      total += item.price * amount;
+    });
+    return total;
   };
 
   if (cart.length <= 0) {
@@ -46,11 +45,9 @@ const Cart = () => {
           <img id="carrito" src={carrito} alt=" carrito" />
         </div>
         <div className="checkout-btn mt-100">
-          <Link to="/products">
-            <p className="btn essence-btn" id="btnWrong">
+            <Link to="/products" className="btn essence-btn" id="btnWrong">
               Add items to cart
-            </p>
-          </Link>
+            </Link>
         </div>
       </div>
     );
@@ -72,62 +69,53 @@ const Cart = () => {
               </div>
               <figcaption class="info">
                 {" "}
-                <a href="#" class="title text-dark" data-abc="true">
+                <Link to="#" class="title text-dark" data-abc="true">
                   {cartItem.name}
-                </a>
+                </Link>
                 <p class="text-muted small">aqui la categoria</p>
               </figcaption>
             </figure>
           </td>
-          <td>
-            {" "}
-            <button
-              class="btn btn-primary"
-              onClick={() => handleDecrement(cartItem.id)}
-            >
+          <td className="d-flex">
+            <button class="btn btn-primary w-50" onClick={decrement}>
               -
             </button>
-            <div className="cart-quantity"> {cartItem.amount} </div>
-            <button
-              class="btn btn-primary"
-              onClick={() => handleIncrement(cartItem.id)}
-            >
+            <span class="text-dark">{amount}</span>
+            <div className="cart-quantity w-50">
+              <p className="text-center"> {cartItem.amount} </p>
+            </div>
+            <button class="btn btn-primary w-50" onClick={increment}>
               +
             </button>
-            {/* <select class=" ">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>{" "} */}
           </td>
           <td>
             <div class="price-wrap">
               {" "}
-              <span>{cartItem.price.toFixed(2)}</span>
+              <span>{oneItemPrice(cartItem)}</span>
             </div>
           </td>
           <td class="text-right d-none d-md-block">
             {" "}
-            <a
+            <Link
               data-original-title="Save to Wishlist"
               title=""
-              href=""
+              to="#"
               class="btn btn-outline-primary"
               data-toggle="tooltip"
               data-abc="true"
             >
               {" "}
               <i class="fa fa-heart"></i>
-            </a>{" "}
+            </Link>{" "}
             <br />
             <button
               class="btn btn-outline-danger"
               onClick={() => clearOneCartItem(cartItem.id)}
               data-abc="true"
             >
-              ❌
+              <span role="img" aria-label="cross">
+                ❌
+              </span>
             </button>{" "}
           </td>
         </tr>
@@ -194,7 +182,8 @@ const Cart = () => {
               <div class="card-body">
                 <dl class="dlist-align">
                   <dt>Precio Total:</dt>
-                  <dd class="text-right ml-3">{cart.map(item => item.price).reduce((prev, next) => prev + next)}</dd>
+                  {/* <dd class="text-right ml-3">{cart.map(item => item.price).reduce((prev, next) => prev + next)}</dd> */}
+                  <dd class="text-right ml-3">{totalPrice()}</dd>
                 </dl>
                 <dl class="dlist-align">
                   <dt>Descuento:</dt>
@@ -204,6 +193,7 @@ const Cart = () => {
                   <dt>Total:</dt>
                   <dd class="text-right text-dark b ml-3">
                     <strong>{cart.map(item => item.price).reduce((prev, next) => prev + next)-(cart.map(item => item.price).reduce((prev, next) => prev + next)*0.1)}</strong>
+                    {/* <strong>{totalPrice() - 10}</strong> */}
                   </dd>
                 </dl>
                 <hr />{" "}

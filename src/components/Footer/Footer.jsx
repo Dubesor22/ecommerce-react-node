@@ -1,10 +1,15 @@
 import React from "react";
 import Sociallink from "./Sociallink/Sociallink";
-import { faFacebook, faInstagram, faTwitter, faPinterest, faYoutube } from "@fortawesome/free-brands-svg-icons"
+import {
+  faFacebook,
+  faInstagram,
+  faTwitter,
+  faPinterest,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
-export default function Footer(){
-
-  const year =  new Date().getFullYear();
+export default function Footer() {
+  const year = new Date().getFullYear();
   return (
     <>
       <footer className="footer_area clearfix" id="not-invert">
@@ -13,16 +18,16 @@ export default function Footer(){
             <div className="col-12 col-md-6">
               <div className="single_widget_area d-flex mb-30">
                 <div className="footer-logo mr-50">
-                  <a href="#">Komorebi</a>
+                  <Link to="/main">Komorebi</Link>
                 </div>
 
                 <div className="footer_menu">
                   <ul>
                     <li>
-                    <Link to="/products">Tienda</Link>
+                      <Link to="/products">Tienda</Link>
                     </li>
                     <li>
-                    <Link to="/contact">Contacto</Link>
+                      <Link to="/contact">Contacto</Link>
                     </li>
                   </ul>
                 </div>
@@ -33,22 +38,22 @@ export default function Footer(){
               <div className="single_widget_area mb-30">
                 <ul className="footer_widget_menu">
                   <li>
-                    <a href="#">Estado del pedido</a>
+                    <Link to="#">Estado del pedido</Link>
                   </li>
                   <li>
-                    <a href="#">Opciones de pago</a>
+                    <Link to="#">Opciones de pago</Link>
                   </li>
                   <li>
-                    <a href="#">Envio</a>
+                    <Link to="#">Envio</Link>
                   </li>
                   <li>
-                    <a href="#">Guias</a>
+                    <Link to="#">Guias</Link>
                   </li>
                   <li>
-                    <a href="#">Privacidad</a>
+                    <Link to="#">Privacidad</Link>
                   </li>
                   <li>
-                    <a href="#">Terminos de uso</a>
+                    <Link to="#">Terminos de uso</Link>
                   </li>
                 </ul>
               </div>
@@ -70,7 +75,10 @@ export default function Footer(){
                       placeholder="Your email here"
                     />
                     <button type="button" className="submit">
-                      <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
+                      <i
+                        className="fa fa-long-arrow-right"
+                        aria-hidden="true"
+                      ></i>
                     </button>
                   </form>
                 </div>
@@ -93,14 +101,18 @@ export default function Footer(){
           <div className="row mtc-5">
             <div className="col-md-12 text-center">
               <p>
-                Copyright &copy; {year} All rights reserved | Made with{" 💖"} by{" "}
-                <a href="https://github.com/Dubesor22/ecommerce-react-node" target="_blank">
+                Copyright &copy; {year} All rights reserved | Made with{" 💖"}{" "}
+                by{" "}
+                <Link
+                  to="https://github.com/Dubesor22/ecommerce-react-node"
+                  target="_blank"
+                >
                   David & Gabo
-                </a>
+                </Link>
                 , distributed by{" "}
-                <a href="#" target="_blank">
+                <Link to="#" target="_blank">
                   Komorebi
-                </a>
+                </Link>
               </p>
             </div>
           </div>
@@ -108,4 +120,4 @@ export default function Footer(){
       </footer>
     </>
   );
-};
+}

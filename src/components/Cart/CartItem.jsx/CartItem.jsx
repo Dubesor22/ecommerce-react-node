@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../../context/GlobalState";
-export default function CartItem({cartItem, i}) {
+export default function CartItem({ cartItem, i }) {
   const { clearOneCartItem } = useContext(GlobalContext);
   return (
     <>
-       <tbody>
+      <tbody>
         <tr>
           <td className="cart" key={i}>
             <figure class="itemside align-items-center">
@@ -54,11 +54,13 @@ export default function CartItem({cartItem, i}) {
               onClick={() => clearOneCartItem(cartItem.id)}
               data-abc="true"
             >
-              ❌
+              <span role="img" aria-label="cross">
+                ❌
+              </span>
             </button>{" "}
           </td>
         </tr>
       </tbody>
     </>
-  )
+  );
 }
