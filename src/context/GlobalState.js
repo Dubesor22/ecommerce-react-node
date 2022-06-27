@@ -15,7 +15,7 @@ export const GlobalProvider = ({ children }) => {
 
   const getProducts = async () => {
     const res = await axios.get("http://localhost:8080/products/list");
-    console.log("holiiiiii ", res);
+    console.log("holiiiiii ", res.data);
     dispatch({
       type: "GET_PRODUCTS",
       payload: res.data.product,

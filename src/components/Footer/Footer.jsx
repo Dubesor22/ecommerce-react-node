@@ -88,17 +88,17 @@ export default function Footer() {
             <div className="col-12 col-md-6">
               <div className="single_widget_area">
                 <div className="footer_social_area">
-                  <Sociallink href="#" title="Facebook" icon={faFacebook} />
-                  <Sociallink href="#" title="Instagram" icon={faInstagram} />
-                  <Sociallink href="#" title="Twitter" icon={faTwitter} />
-                  <Sociallink href="#" title="Pinterest" icon={faPinterest} />
-                  <Sociallink href="#" title="YouTube" icon={faYoutube} />
+                  <Sociallink href="#" title="Facebook" icon={faFacebook}/>
+                  <Sociallink href="https://instagram.com/yol_rnd" title="Instagram" icon={faInstagram}/>
+                  <Sociallink href="#" title="Twitter" icon={faTwitter}/>
+                  <Sociallink href="#" title="Pinterest" icon={faPinterest}/>
+                  <Sociallink href="#" title="YouTube" icon={faYoutube}/>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="row mt-5">
+          <div className="row mtc-5">
             <div className="col-md-12 text-center">
               <p>
                 Copyright &copy; {year} All rights reserved | Made with{" 💖"}{" "}

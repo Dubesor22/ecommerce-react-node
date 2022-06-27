@@ -18,7 +18,7 @@ const Contact = () => {
                   type="text"
                   name="txtName"
                   className="form-control"
-                  placeholder="  Tu Nombre *"
+                  placeholder="Tu Nombre *"
                 />
               </div>
               <div className="form-group">
@@ -26,7 +26,7 @@ const Contact = () => {
                   type="text"
                   name="txtEmail"
                   className="form-control"
-                  placeholder="  Tu Email *"
+                  placeholder="Tu Email *"
                 />
               </div>
               <div className="form-group">
@@ -34,7 +34,7 @@ const Contact = () => {
                   type="text"
                   name="txtPhone"
                   className="form-control"
-                  placeholder="  Tu Telefono *"
+                  placeholder="Tu Telefono *"
                 />
               </div>
               <div className="form-group">

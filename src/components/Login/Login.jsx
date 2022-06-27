@@ -9,7 +9,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   function alert1() {
-    alert("Estás jodido, aquí no hacemos eso.");
+    alert("Jaja buena suerte, aquí no hacemos eso. Que la fuerza te acompañe.");
   }
   useEffect(() => {
     setTimeout(() => {
@@ -46,11 +46,11 @@ export default function Login() {
                 </p>
                 <form id="form" onSubmit={handleSubmit}>
                   <div className="form-group first">
-                    <label for="username">¿Como te llamas?</label>
+                    <label for="username">Email</label>
                     <input
                       type="text"
                       class="form-control"
-                      placeholder="Tu usuario"
+                      placeholder="Email"
                       id="username"
                       required
                     />

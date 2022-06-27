@@ -1,6 +1,8 @@
 import React, { createContext, useReducer } from "react";
 import axios from "axios";
 import UserReducer from "./UserReducer";
+import jwt from "jsonwebtoken";
+
 
 const token = JSON.parse(localStorage.getItem("token"));
 
@@ -31,18 +33,14 @@ export const UserProvider = ({ children }) => {
   };
 
   const getUserInfo = async () => {
-    const token = JSON.parse(localStorage.getItem("token"));
-    const res = await axios.get(API_URL + "/users/", {
-      headers: {
-        authorization: token,
-      },
-    });
-    dispatch({
-      type: "GET_USER_INFO",
-      payload: res.data,
-    });
-    return res;
-  };
+  const token = JSON.parse(localStorage.getItem("token"));
+  var decoded = jwt.verify(token, "secret");
+  const res = await axios.get(API_URL + "/users/"+JSON.stringify((decoded.id)));
+  dispatch({
+    type: "GET_USER_INFO",
+    payload: res.data.user,
+  });
+};
 
   const logout = async () => {
     const token = JSON.parse(localStorage.getItem("token"));
@@ -69,6 +67,19 @@ export const UserProvider = ({ children }) => {
     });
   };
 
+  const updateUserInfo = async (user) => {
+    const token = JSON.parse(localStorage.getItem("token"));
+    var decoded = jwt.verify(token, "secret");
+    console.log("This is UserSTate =",decoded.id)
+    console.log("USER BODY  ", user);
+    const res = await axios.put(API_URL + "/users/"+JSON.stringify((decoded.id)), user);
+    console.log("ressss",res.data);
+    dispatch({
+      type: "UPDATE_USER",
+      payload: res.data,
+    });
+  };
+
   const clearMessage = async () => {
     dispatch({
       type: "CLEARMESSAGE",
@@ -86,6 +97,7 @@ export const UserProvider = ({ children }) => {
         logout,
         register,
         clearMessage,
+        updateUserInfo,
       }}
     >
       {children}

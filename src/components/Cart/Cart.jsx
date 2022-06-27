@@ -7,7 +7,7 @@ import carrito from "../../assets/img/pngwing.com.png";
 import { OrdersContext } from "../../context/OrdersState";
 
 const Cart = () => {
-  const { cart, clearCart, clearOneCartItem } = useContext(GlobalContext);
+  const { cart, clearCart, clearOneCartItem1 } = useContext(GlobalContext);
   const { createOrder } = useContext(OrdersContext);
   const [amount, setAmount] = useState(1);
   useEffect(() => {
@@ -22,6 +22,26 @@ const Cart = () => {
     if (amount > 1) {
       setAmount(amount - 1);
     }
+  };
+
+  const clearOneCartItem = (idl) => {
+    console.log("This is idx",idx);
+    const idx = cart.map(object => object.id).indexOf(idl);
+    if (idx >= 0) {
+          const cart1 = cart.filter(function( obj ) {
+            return obj.id !== idx;
+          });
+          console.log("cart1...",cart1);
+          for (let i = 0; i < cart.length; i++) {
+            cart.splice(i, cart.length);
+          }
+          console.log("empty cart...",cart);
+          for (const obj of cart1) {
+            cart.push(obj);
+          }
+          console.log("Last cart...",cart);
+          return cart;
+        }
   };
 
   const oneItemPrice = (item) => {
@@ -45,11 +65,9 @@ const Cart = () => {
           <img id="carrito" src={carrito} alt=" carrito" />
         </div>
         <div className="checkout-btn mt-100">
-          <Link to="/products">
-            <Link to="#" className="btn essence-btn" id="btnWrong">
-              Add items to cart
+            <Link to="/products" className="btn essence-btn" id="btnWrong">
+            Añade productos al carrito
             </Link>
-          </Link>
         </div>
       </div>
     );
@@ -58,7 +76,7 @@ const Cart = () => {
     createOrder(cart);
     clearCart();
   };
-
+  console.log("this is cart",cart);
   const cartItem = cart.map((cartItem, i) => {
     console.log(cartItem);
     return (
@@ -67,11 +85,7 @@ const Cart = () => {
           <td className="cart" key={i}>
             <figure class="itemside align-items-center">
               <div class="aside">
-                <img
-                  src={cartItem.image}
-                  alt="imagen producto"
-                  class="img-sm w-100"
-                />
+                <img src={cartItem.image} class="img-sm w-100" alt=""/>
               </div>
               <figcaption class="info">
                 {" "}
@@ -188,16 +202,18 @@ const Cart = () => {
               <div class="card-body">
                 <dl class="dlist-align">
                   <dt>Precio Total:</dt>
+                  {/* <dd class="text-right ml-3">{cart.map(item => item.price).reduce((prev, next) => prev + next)}</dd> */}
                   <dd class="text-right ml-3">{totalPrice()}</dd>
                 </dl>
                 <dl class="dlist-align">
                   <dt>Descuento:</dt>
-                  <dd class="text-right text-danger ml-3">- 10.00</dd>
+                  <dd class="text-right text-danger ml-3">10%</dd>
                 </dl>
                 <dl class="dlist-align">
                   <dt>Total:</dt>
                   <dd class="text-right text-dark b ml-3">
-                    <strong>{totalPrice() - 10}</strong>
+                    <strong>{cart.map(item => item.price).reduce((prev, next) => prev + next)-(cart.map(item => item.price).reduce((prev, next) => prev + next)*0.1)}</strong>
+                    {/* <strong>{totalPrice() - 10}</strong> */}
                   </dd>
                 </dl>
                 <hr />{" "}

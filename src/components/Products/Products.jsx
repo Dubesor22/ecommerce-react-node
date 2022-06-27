@@ -28,7 +28,7 @@ export default function Products() {
       <div className="card card-product container-sm">
         <div className="card-body" key={product.id}>
           <h3 className="card-title">{product.name}</h3>
-          <img src={product.image} alt={product.name} />
+          <img id="not-invert" src={product.image} alt={product.name} />
           <p className="card-text">{product.description}</p>
           <p className="card-text">{product.price} €</p>
           <div className="btn-group">
@@ -50,7 +50,7 @@ export default function Products() {
 
   return (
     <>
-      <div className="d-flex flex-column container-fluid heading">
+      <div id="not-invert" className="d-flex flex-column container-fluid heading">
         <h2 className="piercing-title">Todos los Piercings</h2>
         <p className="subtitle">
           Trabus, Aros, Septums, Conch, Helix, y muchos mas...
@@ -60,8 +60,12 @@ export default function Products() {
         <div className="side-bar">
           <div className="side-bar-item">
             <h3>Categorias</h3>
+<<<<<<< HEAD
             <Search />
             <ul className="list-group">
+=======
+            <ul className="texto list-group">
+>>>>>>> develop
               <li className="list-group-item">
                 <Link to="#">Titanio</Link>
               </li>

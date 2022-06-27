@@ -1,5 +1,6 @@
 #cartitem{
     padding-top: 20px;
+    min-height: 12rem;
 }
 #X{
     position: absolute;

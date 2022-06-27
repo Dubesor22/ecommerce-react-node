@@ -1,26 +1,30 @@
-import React from "react";
+import React, {useRef} from "react";
 import { Link } from "react-router-dom";
 import LinkSecciones from "./Link/LinkSecciones";
 import ProductWrapper from "./ProductWrapper/ProductWrapper";
 import video1 from "../../assets/video/videoIntro.mp4";
 import "./Main.css";
-import arrow from "../../assets/img/downArrow.png";
+import useScrollSnap from 'react-use-scroll-snap';
+// import arrow from "../../assets/img/downArrow.png";
 
 export default function Main() {
+  const scrollRef = useRef(null);
+    useScrollSnap({ ref: scrollRef, duration: 30, delay: 0 });
   return (
-    <div>
-      <div className="cart-bg-overlay"></div>
-      <div className="container-video">
-        <div class="overlay">
+    <div ref={scrollRef} id="main">
+      <section className="cart-bg-overlay"></section>
+      <section className="container-video">
+        {/* <div class="overlay">
           <a href="#primera">
             <img className="flecha" src={arrow} alt="flecha" />
           </a>
-        </div>
+        </div> */}
         <div
           id="video_box"
           className="embed-responsive embed-responsive-16by9 container-video"
         >
           <video
+            id="not-invert"
             className="embed-responsive-item video-intro"
             autoPlay
             loop
@@ -29,7 +33,7 @@ export default function Main() {
             <source src={video1} type="video/mp4" />
           </video>
         </div>
-      </div>
+      </section>
       <section
         id="not-invert"
         className="welcome_area bg-img background-overlay"
@@ -50,7 +54,7 @@ export default function Main() {
         </div>
       </section>
 
-      <div class="top_catagory_area section-padding-80 clearfix">
+      <section class="top_catagory_area section-padding-80 clearfix">
         <div class="container">
           <div class="row justify-content-center" id="not-invert">
             <LinkSecciones
@@ -70,8 +74,8 @@ export default function Main() {
             />
           </div>
         </div>
-      </div>
-      <div class="cta-area">
+      </section>
+      <section class="cta-area">
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -93,7 +97,7 @@ export default function Main() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <section className="new_arrivals_area section-padding-80 clearfix">
         <div className="container">
