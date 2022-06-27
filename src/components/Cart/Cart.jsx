@@ -7,7 +7,7 @@ import carrito from "../../assets/img/pngwing.com.png";
 import { OrdersContext } from "../../context/OrdersState";
 
 const Cart = () => {
-  const { cart, clearCart, clearOneCartItem1 } = useContext(GlobalContext);
+  const { cart, clearCart, clearOneCartItem, clearOnlyOneCartItem } = useContext(GlobalContext);
   const { createOrder } = useContext(OrdersContext);
   const [amount, setAmount] = useState(1);
   useEffect(() => {
@@ -24,25 +24,10 @@ const Cart = () => {
     }
   };
 
-  const clearOneCartItem = (idl) => {
-    console.log("This is idx",idx);
-    const idx = cart.map(object => object.id).indexOf(idl);
-    if (idx >= 0) {
-          const cart1 = cart.filter(function( obj ) {
-            return obj.id !== idx;
-          });
-          console.log("cart1...",cart1);
-          for (let i = 0; i < cart.length; i++) {
-            cart.splice(i, cart.length);
-          }
-          console.log("empty cart...",cart);
-          for (const obj of cart1) {
-            cart.push(obj);
-          }
-          console.log("Last cart...",cart);
-          return cart;
-        }
-  };
+  // const clearOnlyOneCartItem = (idl) => {
+  //   const idx = cart.map(object => object.id).indexOf(id);
+  //   cart.splice(idx, 1);
+  // };
 
   const oneItemPrice = (item) => {
     return item.price * amount;
@@ -130,7 +115,7 @@ const Cart = () => {
             <br />
             <button
               class="btn btn-outline-danger"
-              onClick={() => clearOneCartItem(cartItem.id)}
+              onClick={() => clearOnlyOneCartItem(cartItem.id)}
               data-abc="true"
             >
               <span role="img" aria-label="cross">

@@ -112,7 +112,7 @@ export default function Header() {
               src="assets/img/core-img/heart.svg"
               alternative="iconoFav"
             />
-            {!token || token=="" || token == null ? (
+            {!token || token==="" || token === null ? (
               <Btnicon
                 className="user-login-info"
                 href="/login"

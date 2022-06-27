@@ -42,6 +42,15 @@ export const GlobalProvider = ({ children }) => {
     });
   };
 
+  const clearOnlyOneCartItem = (id) => {
+    const item = state.cart.map(object => object.id).indexOf(id);
+    const newCart =state.cart.splice(item, 1);
+    dispatch({
+      type:"CLEAR_ONLY_ONE_CART_ITEM",
+      payload: newCart,
+    });
+  };
+
   return (
     <GlobalContext.Provider
       value={{
@@ -51,6 +60,7 @@ export const GlobalProvider = ({ children }) => {
         addCart,
         clearCart,
         clearOneCartItem,
+        clearOnlyOneCartItem,
       }}
     >
       {children}

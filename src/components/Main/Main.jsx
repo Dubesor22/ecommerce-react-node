@@ -12,7 +12,7 @@ export default function Main() {
     useScrollSnap({ ref: scrollRef, duration: 30, delay: 0 });
   return (
     <div ref={scrollRef} id="main">
-      <section className="cart-bg-overlay"></section>
+      {/* <section className="cart-bg-overlay"></section> */}
       <section className="container-video">
         {/* <div class="overlay">
           <a href="#primera">
