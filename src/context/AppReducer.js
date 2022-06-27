@@ -19,6 +19,11 @@ export default function products(state, action) {
       return {
         ...state,
         cart: state.cart.filter((item) => item.id !== action.payload),
+        // .filter((item) => item.id !== action.payload)
+        // var idx = arr.indexOf(2)
+        // if (idx >= 0) {
+        //     arr.splice(idx, 1);
+        // }
       };
     default:
       return state;

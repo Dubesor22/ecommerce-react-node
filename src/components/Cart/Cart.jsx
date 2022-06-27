@@ -7,7 +7,7 @@ import carrito from "../../assets/img/pngwing.com.png";
 import { OrdersContext } from "../../context/OrdersState";
 
 const Cart = () => {
-  const { cart, clearCart, clearOneCartItem } = useContext(GlobalContext);
+  const { cart, clearCart, clearOneCartItem1 } = useContext(GlobalContext);
   const { createOrder } = useContext(OrdersContext);
   const [amount, setAmount] = useState(1);
   useEffect(() => {
@@ -22,6 +22,26 @@ const Cart = () => {
     if (amount > 1) {
       setAmount(amount - 1);
     }
+  };
+
+  const clearOneCartItem = (idl) => {
+    console.log("This is idx",idx);
+    const idx = cart.map(object => object.id).indexOf(idl);
+    if (idx >= 0) {
+          const cart1 = cart.filter(function( obj ) {
+            return obj.id !== idx;
+          });
+          console.log("cart1...",cart1);
+          for (let i = 0; i < cart.length; i++) {
+            cart.splice(i, cart.length);
+          }
+          console.log("empty cart...",cart);
+          for (const obj of cart1) {
+            cart.push(obj);
+          }
+          console.log("Last cart...",cart);
+          return cart;
+        }
   };
 
   const oneItemPrice = (item) => {
@@ -46,7 +66,7 @@ const Cart = () => {
         </div>
         <div className="checkout-btn mt-100">
             <Link to="/products" className="btn essence-btn" id="btnWrong">
-              Add items to cart
+            Añade productos al carrito
             </Link>
         </div>
       </div>
@@ -56,7 +76,7 @@ const Cart = () => {
     createOrder(cart);
     clearCart();
   };
-
+  console.log("this is cart",cart);
   const cartItem = cart.map((cartItem, i) => {
     console.log(cartItem);
     return (

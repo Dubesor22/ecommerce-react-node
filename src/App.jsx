@@ -1,5 +1,4 @@
 import React from "react";
-
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
@@ -8,13 +7,10 @@ import Login from "./components/Login/Login";
 import Cart from "./components/Cart/Cart";
 import Product from "./components/Products/Product/Product";
 import Contact from "./components/Contact/Contact";
-import { Redirect } from "react";
-
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { GlobalProvider } from "./context/GlobalState";
 import { OrdersProvider } from "./context/OrdersState";
 import { UserProvider } from "./context/UserContext/UserState";
-
 import Register from "./components/Register/Register";
 import ProfilePage from "./components/ProfilePage/ProfilePage";
 import PaymentSuccesful from "./components/PaymentSuccesful/PaymentSuccesful";

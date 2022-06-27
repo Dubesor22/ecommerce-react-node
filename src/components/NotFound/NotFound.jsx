@@ -22,9 +22,9 @@ export default function NotFound() {
     // </div>
 	<>
 		<div id="body">
-			<div id="div">Hola!<br/>Bro</div> 
+			<div id="div">Hola<br/>Bro</div> 
 			<div  id="div"> 
-				<span>Parece que te has perdido<br/>,¿Por qué no vuelves atras?</span>
+				<span>¿Te has perdido?<br/>, deberías volver atras.</span>
 			</div>
 		</div>
 	</>
