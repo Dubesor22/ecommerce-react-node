@@ -37,7 +37,6 @@ const Cart = () => {
     });
     return total;
   };
-
   if (cart.length <= 0) {
     return (
       <div className="empty">
@@ -60,6 +59,31 @@ const Cart = () => {
     navigate("/checkout");
   };
   console.log("this is cart",cart);
+  // array.reduce((function(hash){
+  //   return function(array,obj){
+  //    if(!hash[obj.id])
+  //     array.push(hash[obj.id]={id:obj.id,times:1});
+  //    else
+  //      hash[obj.id].times++;
+  //     return array;
+  //     };    
+  //   })({}),[])
+  const cartArray = [];
+  const getEachNumberOfItems = cart.reduce((function(hash){
+    return function(cart,obj){
+     if(!hash[obj.id])
+      cart.push(hash[obj.id]={id:obj.id,times:1});
+     else
+       hash[obj.id].times++;
+      return cart;
+      };    
+    })({}),[]).map((cartItem, i) => {
+        console.log(cartItem);
+        cartArray.push(cartItem);
+        console.log(cartArray);
+      }
+    );
+
   const cartItem = cart.map((cartItem, i) => {
     console.log(cartItem);
     return (
@@ -149,7 +173,7 @@ const Cart = () => {
                       ></th>
                     </tr>
                   </thead>
-
+                  {getEachNumberOfItems}
                   {cartItem}
                 </table>
               </div>
