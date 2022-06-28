@@ -1,13 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import "./Cart.css";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import carrito from "../../assets/img/pngwing.com.png";
 // import CartItem from "./CartItem.jsx/CartItem";
 import { OrdersContext } from "../../context/OrdersState";
 
 const Cart = () => {
   const token = localStorage.getItem("token");
+  const navigate = useNavigate();
   const { cart, clearCart, clearOneCartItem, clearOnlyOneCartItem } = useContext(GlobalContext);
   const { createOrder } = useContext(OrdersContext);
   const [amount, setAmount] = useState(1);
@@ -56,6 +57,7 @@ const Cart = () => {
   const createNewOrder = () => {
     createOrder(cart);
     clearCart();
+    navigate("/checkout");
   };
   console.log("this is cart",cart);
   const cartItem = cart.map((cartItem, i) => {
@@ -222,7 +224,7 @@ const Cart = () => {
                        ) : (
                               <button class="col btn btn-primary  w-100 mb-3">
                               <Link
-                                to="/products"
+                                to="/checkout"
                                 className="col btn btn-primary w-100"
                                 onClick={() => createNewOrder()}
                                 data-abc="true"

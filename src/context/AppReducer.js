@@ -25,7 +25,5 @@ export default function products(state, action) {
         ...state,
         cart: state.cart,
       };
-    default:
-      return state;
   }
 }

@@ -54,7 +54,7 @@ export default function Header() {
                     <Link to="#">Menu</Link>
                     <ul className="dropdown">
                       <li>
-                        <Link to="/">Potrtada</Link>
+                        <Link to="/">Portada</Link>
                       </li>
                       <li>
                         <Link to="/products">Tienda</Link>

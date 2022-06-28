@@ -19,26 +19,26 @@ export default function ProfilePage() {
   }
   const handleSubmit = (e) => {
     e.preventDefault();
-    const password= document.getElementById("password").value;
+    const password= document.getElementById("passwordP").value;
     let user = {}
-    if(password === "" ){
+    if(password === "" || password === null || password === undefined ){
           user = {
-          username: document.getElementById("username").value.substring(1),
-          email: document.getElementById("email").value,
-          firstName: document.getElementById("name").value,
-          lastname: document.getElementById("lastname").value,
+          username: document.getElementById("usernameP").value.substring(1),
+          email: document.getElementById("emailP").value,
+          firstName: document.getElementById("nameP").value,
+          lastName: document.getElementById("lastnameP").value,
           avatar: document.getElementById("profilepic").value,
-          birthDate: document.getElementById("birthdate").value
+          birthDate: document.getElementById("birthdateP").value
         }
     }else{
         user = {
         password: password,
-        username: document.getElementById("username").value.substring(1),
-        email: document.getElementById("email").value,
-        firstName: document.getElementById("name").value,
-        lastname: document.getElementById("lastname").value,
+        username: document.getElementById("usernameP").value.substring(1),
+        email: document.getElementById("emailP").value,
+        firstName: document.getElementById("nameP").value,
+        lastName: document.getElementById("lastnameP").value,
         avatar: document.getElementById("profilepic").value,
-        birthDate: document.getElementById("birthdate").value
+        birthDate: document.getElementById("birthdateP").value
       }
     }
     updateUserInfo(user);

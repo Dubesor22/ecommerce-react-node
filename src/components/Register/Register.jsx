@@ -22,8 +22,9 @@ export default function Register() {
       username: document.getElementById("username").value,
       email: document.getElementById("email").value,
       firstName: document.getElementById("name").value,
-      lastname: document.getElementById("lastname").value,
+      lastName: document.getElementById("lastname").value,
     };
+    console.log(JSON.stringify(user));
     register(user);
     alert("Usuario registrado correctamente");
     setTimeout(() => {

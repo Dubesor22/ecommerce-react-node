@@ -88,7 +88,7 @@
 }
 
 .texto a{
-  color: #000;
+  color: #000 !important;
 }
 @media screen and (min-device-width: 1546px){
   .container-products {

@@ -15,7 +15,7 @@ export default function CartItem({href, src, badge, item, size, color, price, i}
                 />
 
                 <div id="cartitem" className="cart-item-desc">
-                  <span id="X" onClick={() => clearOnlyOneCartItem({href})} className="product-remove">
+                  <span id="X" onClick={() => clearOnlyOneCartItem(href)} className="product-remove">
                     <i className="fa fa-close" aria-hidden="true"></i>
                   </span>
                   <span className="badge">{badge}</span>

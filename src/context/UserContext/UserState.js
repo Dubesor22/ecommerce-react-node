@@ -26,7 +26,7 @@ export const UserProvider = ({ children }) => {
       type: "LOGIN",
       payload: res.data,
     });
-
+    console.log(res.data);
     if (res.data) {
       localStorage.setItem("token", JSON.stringify(res.data.token));
     }
@@ -60,7 +60,7 @@ export const UserProvider = ({ children }) => {
 
   const register = async (user) => {
     const res = await axios.post(API_URL + "/users", user);
-
+    console.log(res.data);
     dispatch({
       type: "REGISTER",
       payload: res.data,
