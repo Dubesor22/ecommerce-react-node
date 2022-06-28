@@ -16,6 +16,10 @@ We have used Trello as a work control tool and to report failures and bugs in th
 
 ![trello](./public/assets/img/trello.jpg)
 
+We have also used Selenium for automatic tests and page stress tests. Here I leave a sample of what this application is capable of.
+
+![selenium](./public/assets/img/selenium-test-register.gif)
+
 ### You want to own this website?
 
 On the other hand if you'd like to host this website on your local machine just clone this repository with `git clone https://github.com/Dubesor22/ecommerce-react-node.git`. just copy and paste that command on your terminal, then write `npm init && npm install` to install all dependencies, and start a local server with `npm start`. That's it.
@@ -36,6 +40,14 @@ This website it's been deployed and made available to the public thanks to [Verc
 - [MySql2](https://www.mysql.com/) - Create high-performance and scalable Online Transaction Processing (OLTP) applications.
 - [Sequelize](https://html.com/) - A modern TypeScript and Node.js ORM for Postgres, MySQL, MariaDB, SQLite and SQL Server, and more.
 - [TypeScript](https://www.typescriptlang.org/) - What's up with your types?
+
+## API
+
+The API we make the calls to is the one we built in a previous MySQL-based project using Sequelize. All information about the API can be found here:
+
+```
+https://github.com/Dubesor22/eCommerce-backEnd
+```
 
 ## Contributing
 
