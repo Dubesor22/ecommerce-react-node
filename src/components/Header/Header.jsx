@@ -6,6 +6,7 @@ import Cart from "./Cart/Cart";
 import OutsideClickHandler from "react-outside-click-handler";
 import DarkMode from "./DarkMode/DarkMode.tsx";
 import "./Header.css";
+import Search from "./Search/Search";
 
 export default function Header() {
   const { cart } = useContext(GlobalContext);
@@ -93,19 +94,7 @@ export default function Header() {
             </div>
           </nav>
           <div className="header-meta d-flex clearfix justify-content-end">
-            <div className="search-area">
-              <form action="#" method="post">
-                <input
-                  type="search"
-                  name="search"
-                  id="headerSearch"
-                  placeholder="Buscar..."
-                />
-                <button type="submit">
-                  <i className="fa fa-search" aria-hidden="true"></i>
-                </button>
-              </form>
-            </div>
+            <Search />
             <Btnicon
               className="favourite-area"
               href="#"

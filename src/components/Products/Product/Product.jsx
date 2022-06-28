@@ -3,22 +3,22 @@ import "./Product.css";
 import { GlobalContext } from "../../../context/GlobalState";
 
 const Product = ({ product }) => {
-  const { products, getProducts, addCart, cart } = useContext(GlobalContext);
-  useEffect(() => {
-    getProducts();
-  }, []);
+  // const { products, getProducts, addCart, cart } = useContext(GlobalContext);
+  // useEffect(() => {
+  //   getProducts();
+  // }, []);
 
-  useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }, [cart]);
+  // useEffect(() => {
+  //   localStorage.setItem("cart", JSON.stringify(cart));
+  // }, [cart]);
 
-  if (products.length <= 0) {
-    return (
-      <div className="spinner-border text-dark spin" role="status">
-        <span className="sr-only">.</span>
-      </div>
-    );
-  }
+  // if (products.length <= 0) {
+  //   return (
+  //     <div className="spinner-border text-dark spin" role="status">
+  //       <span className="sr-only">.</span>
+  //     </div>
+  //   );
+  // }
 
   return (
     <>
@@ -104,8 +104,8 @@ const Product = ({ product }) => {
                   <div class="row m-0">
                     <div class="col-12  mb-4 p-0">
                       <button
-                        onClick={() => addCart(product)}
-                        className="btn btn-primary text-white "
+                      // onClick={() => addCart(product)}
+                      // className="btn btn-primary text-white "
                       >
                         Anadir al carro
                       </button>
