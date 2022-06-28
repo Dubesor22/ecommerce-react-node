@@ -7,6 +7,7 @@ import carrito from "../../assets/img/pngwing.com.png";
 import { OrdersContext } from "../../context/OrdersState";
 
 const Cart = () => {
+  const token = localStorage.getItem("token");
   const { cart, clearCart, clearOneCartItem, clearOnlyOneCartItem } = useContext(GlobalContext);
   const { createOrder } = useContext(OrdersContext);
   const [amount, setAmount] = useState(1);
@@ -208,16 +209,28 @@ const Cart = () => {
                         Continua comprando
                       </Link>{" "}
                     </button>
-                    <button class="col btn btn-primary  w-100 mb-3">
-                      <Link
-                        to="/products"
-                        className="col btn btn-primary w-100"
-                        onClick={() => createNewOrder()}
-                        data-abc="true"
-                      >
-                        Tramita pedido
-                      </Link>{" "}
-                    </button>
+                    {!token || token==="" || token === null ? (
+                                <button class="col btn btn-primary  w-100 mb-3">
+                                <Link
+                                  to="/login"
+                                  className="col btn btn-primary w-100"
+                                  data-abc="true"
+                                >
+                                  Tramita pedido
+                                </Link>{" "}
+                              </button>
+                       ) : (
+                              <button class="col btn btn-primary  w-100 mb-3">
+                              <Link
+                                to="/products"
+                                className="col btn btn-primary w-100"
+                                onClick={() => createNewOrder()}
+                                data-abc="true"
+                              >
+                                Tramita pedido
+                              </Link>{" "}
+                            </button>
+                        )}
                     <button class="col btn btn-primary  w-100 mb-3">
                       <Link
                         to="/cart "
