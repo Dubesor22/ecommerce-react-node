@@ -24,11 +24,6 @@ const Cart = () => {
     }
   };
 
-  // const clearOnlyOneCartItem = (idl) => {
-  //   const idx = cart.map(object => object.id).indexOf(id);
-  //   cart.splice(idx, 1);
-  // };
-
   const oneItemPrice = (item) => {
     return item.price * amount;
   };
@@ -96,7 +91,7 @@ const Cart = () => {
           <td>
             <div class="price-wrap">
               {" "}
-              <span>{oneItemPrice(cartItem)}</span>
+              <span>{oneItemPrice(cartItem)}€</span>
             </div>
           </td>
           <td class="text-right d-none d-md-block">
@@ -188,7 +183,7 @@ const Cart = () => {
                 <dl class="dlist-align">
                   <dt>Precio Total:</dt>
                   {/* <dd class="text-right ml-3">{cart.map(item => item.price).reduce((prev, next) => prev + next)}</dd> */}
-                  <dd class="text-right ml-3">{totalPrice()}</dd>
+                  <dd class="text-right ml-3">{totalPrice()}€</dd>
                 </dl>
                 <dl class="dlist-align">
                   <dt>Descuento:</dt>
@@ -197,8 +192,7 @@ const Cart = () => {
                 <dl class="dlist-align">
                   <dt>Total:</dt>
                   <dd class="text-right text-dark b ml-3">
-                    <strong>{cart.map(item => item.price).reduce((prev, next) => prev + next)-(cart.map(item => item.price).reduce((prev, next) => prev + next)*0.1)}</strong>
-                    {/* <strong>{totalPrice() - 10}</strong> */}
+                    <strong>{totalPrice()-(totalPrice()*0.1)}€</strong>
                   </dd>
                 </dl>
                 <hr />{" "}

@@ -12,11 +12,12 @@ import axios from "axios";
 export default function Cart() {
   const { cart, clearCart } = useContext(GlobalContext);
   const { user } = useContext(UserContext);
+  const token = localStorage.getItem("token");
   const navigate = useNavigate();
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
-
+  
   if (cart.length <= 0) {
     return (
       <>
@@ -111,7 +112,7 @@ export default function Cart() {
                   <h2>Summary</h2>
                   <ul className="summary-table">
                     <li>
-                      <span>subtotal:</span> <span>{cart.map(item => item.price).reduce((prev, next) => prev + next)}</span>
+                      <span>subtotal:</span> <span>{cart.map(item => item.price).reduce((prev, next) => prev + next)}€</span>
                     </li>
                     <li>
                       <span>delivery:</span> <span>Free</span>
@@ -120,14 +121,20 @@ export default function Cart() {
                       <span>discount:</span> <span>10%</span>
                     </li>
                     <li>
-                      <span>total:</span> <span>{cart.map(item => item.price).reduce((prev, next) => prev + next)-(cart.map(item => item.price).reduce((prev, next) => prev + next)*0.1)}</span>
+                      <span>total:</span> <span>{cart.map(item => item.price).reduce((prev, next) => prev + next)-(cart.map(item => item.price).reduce((prev, next) => prev + next)*0.1)}€</span>
                     </li>
                   </ul>
                   <form action="/create-checkout-session" method="POST">
                     <div className="checkout-btn mt-100">
-                      <button type="submit" href="#" onClick={() => createNewOrder()} className="btn essence-btn" id="btnWrong">
+                    {!token || token==="" || token === null ? (
+                      <p onClick={() => (navigate("/login"), window.location.reload())} className="btn essence-btn" id="btnWrong">
+                        Finalizar Compra
+                      </p>
+                       ) : (
+                      <button type="submit" onClick={() => createNewOrder()} className="btn essence-btn" id="btnWrong">
                         Finalizar Compra
                       </button>
+                        )}
                     </div>
                   </form>
                 </div>
