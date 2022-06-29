@@ -55,12 +55,14 @@ Like, share, subscribe, follow and join my Patreon! Just kidding this is totally
 
 ## Authors
 
-- **David Ubeda, aka Dubesor, your favorite web developer.** - _Initial work_ - [Dubesor22](https://github.com/Dubesor22)
+- **David Ubeda, aka Dubesor, your second favorite web developer.** - _Initial work_ - [Dubesor22](https://github.com/Dubesor22)
 
 ## Contributors
 
 - **Gabriel Clemente, aka Gabo, your favorite web developer.** - _Added components and fixes_ - [Gabo](https://github.com/Gabo-Tech)
-  Maybe it's you.
+
+
+Maybe it's you.
 
 ## License
 
