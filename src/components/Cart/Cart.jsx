@@ -8,17 +8,8 @@ import { OrdersContext } from "../../context/OrdersState";
 
 const Cart = () => {
   const token = localStorage.getItem("token");
-<<<<<<< HEAD
   const navigate = useNavigate();
   const { cart, clearCart, clearOneCartItem, clearOnlyOneCartItem } = useContext(GlobalContext);
-=======
-  const {
-    cart,
-    clearCart,
-    clearOneCartItem,
-    clearOnlyOneCartItem,
-  } = useContext(GlobalContext);
->>>>>>> develop
   const { createOrder } = useContext(OrdersContext);
   const [amount, setAmount] = useState(1);
   useEffect(() => {
@@ -251,7 +242,6 @@ const Cart = () => {
                         Continua comprando
                       </Link>{" "}
                     </button>
-<<<<<<< HEAD
                     {!token || token==="" || token === null ? (
                                 <button class="col btn btn-primary  w-100 mb-3">
                                 <Link
@@ -274,30 +264,6 @@ const Cart = () => {
                               </Link>{" "}
                             </button>
                         )}
-=======
-                    {!token || token === "" || token === null ? (
-                      <button class="col btn btn-primary  w-100 mb-3">
-                        <Link
-                          to="/login"
-                          className="col btn btn-primary w-100"
-                          data-abc="true"
-                        >
-                          Tramita pedido
-                        </Link>{" "}
-                      </button>
-                    ) : (
-                      <button class="col btn btn-primary  w-100 mb-3">
-                        <Link
-                          to="/products"
-                          className="col btn btn-primary w-100"
-                          onClick={() => createNewOrder()}
-                          data-abc="true"
-                        >
-                          Tramita pedido
-                        </Link>{" "}
-                      </button>
-                    )}
->>>>>>> develop
                     <button class="col btn btn-primary  w-100 mb-3">
                       <Link
                         to="/cart "

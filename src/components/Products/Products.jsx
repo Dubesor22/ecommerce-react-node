@@ -60,9 +60,11 @@ export default function Products() {
         <div className="side-bar">
           <div className="side-bar-item">
             <h3>Categorias</h3>
+            <div id="searchSidebar">
             <Search />
+            </div>
             <ul className="list-group">
-              <li className="list-group-item">
+              <li id="color-categorias" className="list-group-item">
                 <Link to="#">Titanio</Link>
               </li>
               <li className="list-group-item">

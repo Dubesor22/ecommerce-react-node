@@ -95,3 +95,10 @@
     justify-content: center;
   }
 }
+#color-categorias{
+  color:#000 !important;
+}
+#searchSidebar{
+  display: flex;
+  border: none;
+}
