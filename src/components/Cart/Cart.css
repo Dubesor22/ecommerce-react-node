@@ -64,6 +64,8 @@ a {
 }
 .coupon {
   border-radius: 1px;
+  width: 4rem !important;
+  height: 2.5rem !important;
 }
 .price {
   font-weight: 600;
@@ -103,7 +105,20 @@ a {
   width: 25em;
 }
 
-#carrito{
+#carrito {
   height: 15rem;
   width: 15rem;
+}
+
+.cantidad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-cantidad {
+  border-radius: 50% !important;
+  width: 5rem !important;
 }
