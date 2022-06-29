@@ -39,7 +39,7 @@ This website it's been deployed and made available to the public thanks to [Verc
 - [SQL](https://blog.schauderhaft.de/2010/02/15/why-sql-sucks/) - Your favourite Structured Query Language.
 - [MySql2](https://www.mysql.com/) - Create high-performance and scalable Online Transaction Processing (OLTP) applications.
 - [Sequelize](https://html.com/) - A modern TypeScript and Node.js ORM for Postgres, MySQL, MariaDB, SQLite and SQL Server, and more.
-- [TypeScript](https://www.typescriptlang.org/) - What's up with your types?
+
 
 ## API
 
