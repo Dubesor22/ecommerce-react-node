@@ -4,21 +4,21 @@ import LinkSecciones from "./Link/LinkSecciones";
 import ProductWrapper from "./ProductWrapper/ProductWrapper";
 import video1 from "../../assets/video/videoIntro.mp4";
 import "./Main.css";
-import useScrollSnap from 'react-use-scroll-snap';
-// import arrow from "../../assets/img/downArrow.png";
+// import useScrollSnap from 'react-use-scroll-snap';
+import arrow from "../../assets/img/downArrow.png";
 
 export default function Main() {
   const scrollRef = useRef(null);
-    useScrollSnap({ ref: scrollRef, duration: 30, delay: 0 });
+    // useScrollSnap({ ref: scrollRef, duration: 30, delay: 0 });
   return (
     <div ref={scrollRef} id="main">
-      {/* <section className="cart-bg-overlay"></section> */}
+      <section className="cart-bg-overlay"></section>
       <section className="container-video">
-        {/* <div class="overlay">
+        <div class="overlay">
           <a href="#primera">
             <img className="flecha" src={arrow} alt="flecha" />
           </a>
-        </div> */}
+        </div>
         <div
           id="video_box"
           className="embed-responsive embed-responsive-16by9 container-video"
